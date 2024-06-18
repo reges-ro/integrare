@@ -453,7 +453,7 @@
     </xs:simpleType>
     <xs:complexType name="Contract">
         <xs:sequence>
-            <xs:element name="Actiune" type="reges:Actiune"/>
+            <xs:element name="Actiune" type="reges:Actiune" minOccurs="0"/>
             <xs:choice>
                 <xs:element name="Contract" type="reges:Contract"/>
                 <xs:element name="ContractRef" type="reges:GUID"/>                
@@ -720,8 +720,6 @@
             <xs:element minOccurs="0" name="DataIncetareDetasare" nillable="true" type="xs:dateTime"/>
             <xs:element minOccurs="0" name="DataIncetareSuspendare" nillable="true"
                 type="xs:dateTime"/>
-            <xs:element minOccurs="0" name="StarePrecedenta" nillable="true"
-                type="reges:Actiune"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="ActiuneMutare">
