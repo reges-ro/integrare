@@ -52,6 +52,7 @@
             <xs:element maxOccurs="1" minOccurs="1" name="Version" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Operation" type="reges:MessageType"/>
             <xs:element maxOccurs="1" minOccurs="1" name="AuthorId" type="reges:GUID"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="User" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Timestamp" type="xs:dateTime"/>
         </xs:all>
     </xs:complexType>
@@ -65,8 +66,10 @@
             <xs:element maxOccurs="1" minOccurs="1" name="ClientApplication" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Version" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Timestamp" type="xs:dateTime"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="MessageType" type="reges:MessageType"/>            
         </xs:all>
     </xs:complexType>
+    <xs:element name="MessageResponse" type="reges:MessageResponse"/>
     <xs:simpleType name="ResultCode">
         <xs:restriction base="xs:string">
             <xs:enumeration value="SUCCES"></xs:enumeration>
@@ -75,9 +78,10 @@
     </xs:simpleType>
     <xs:complexType name="Result">
         <xs:sequence>
-            <xs:element name="Code" type="reges:ResultCode">
+            <xs:element name="Code" type="reges:ResultCode" minOccurs="1" maxOccurs="1">
             </xs:element>
-            <xs:element name="Description" type="xs:string"></xs:element>
+            <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+            <xs:element name="Ref" type="reges:GUID" minOccurs="0" maxOccurs="1"></xs:element>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="MessageResult">
@@ -90,9 +94,11 @@
             <xs:element maxOccurs="1" minOccurs="1" name="ClientApplication" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Version" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Timestamp" type="xs:dateTime"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="MessageType" type="reges:MessageType"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Result" type="reges:Result"/>
         </xs:all>
     </xs:complexType>
+    <xs:element name="MessageResult" type="reges:MessageResult"/>
     <xs:complexType name="Notification">
         <xs:annotation>
             <xs:documentation>Mesaj trimis asincron catre aplicatia client, pentru a semnaliza o notificare</xs:documentation>
@@ -107,6 +113,7 @@
             <xs:element maxOccurs="1" minOccurs="1" name="Timestamp" type="xs:dateTime"/>
         </xs:all>
     </xs:complexType>
+    <xs:element name="Notification" type="reges:Notification"/>
     <xs:complexType name="Angajator">
         <xs:sequence>
             <xs:element minOccurs="1" name="Adresa">
@@ -446,6 +453,19 @@
     </xs:simpleType>
     <xs:complexType name="Contract">
         <xs:sequence>
+            <xs:element name="Actiune" type="reges:Actiune"/>
+            <xs:choice>
+                <xs:element name="Contract" type="reges:Contract"/>
+                <xs:element name="ContractRef" type="reges:GUID"/>                
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Continut">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="Salariat" type="reges:Salariat"></xs:element>
+                <xs:element name="SalariatRef" type="reges:GUID"></xs:element>
+            </xs:choice>
             <xs:element minOccurs="1" name="Cor" type="reges:Cor"/>
             <xs:element minOccurs="1" name="DataConsemnare" type="xs:dateTime"/>
             <xs:element minOccurs="1" name="DataContract" type="xs:dateTime"/>
@@ -486,7 +506,7 @@
             <xs:element minOccurs="1" name="Radiat" type="xs:boolean"/>
             <xs:element minOccurs="1" name="Salariu" type="xs:int"/>
             <xs:element minOccurs="0" name="SporuriSalariu" nillable="true" type="reges:ArrayOfSpor"/>
-            <xs:element minOccurs="1" name="StareCurenta" type="reges:ContractStare"/>
+            <xs:element minOccurs="1" name="StareCurenta" type="reges:Actiune"/>
             <xs:element minOccurs="1" name="TimpMunca" type="reges:TimpMunca"/>
             <xs:element minOccurs="1" name="TipContract" type="reges:TipContract"/>
             <xs:element minOccurs="1" name="TipDurata" type="reges:TipDurata"/>
@@ -695,18 +715,18 @@
             <xs:element minOccurs="1" name="Valoare" type="xs:double"/>
         </xs:sequence>
     </xs:complexType>
-    <xs:complexType name="ContractStare">
+    <xs:complexType name="Actiune">
         <xs:sequence>
             <xs:element minOccurs="0" name="DataIncetareDetasare" nillable="true" type="xs:dateTime"/>
             <xs:element minOccurs="0" name="DataIncetareSuspendare" nillable="true"
                 type="xs:dateTime"/>
             <xs:element minOccurs="0" name="StarePrecedenta" nillable="true"
-                type="reges:ContractStare"/>
+                type="reges:Actiune"/>
         </xs:sequence>
     </xs:complexType>
-    <xs:complexType name="ContractStareMutare">
+    <xs:complexType name="ActiuneMutare">
         <xs:complexContent mixed="false">
-            <xs:extension base="reges:ContractStare">
+            <xs:extension base="reges:Actiune">
                 <xs:sequence>
                     <xs:element minOccurs="1" name="AngajatorCui">
                         <xs:simpleType>
@@ -735,9 +755,9 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:complexType name="ContractStareReactivare">
+    <xs:complexType name="ActiuneReactivare">
         <xs:complexContent mixed="false">
-            <xs:extension base="reges:ContractStareActiv">
+            <xs:extension base="reges:ActiuneActiv">
                 <xs:sequence>
                     <xs:element minOccurs="1" name="DataReactivare" type="xs:dateTime"/>
                     <xs:element minOccurs="0" name="Explicatie" nillable="true">
@@ -752,16 +772,16 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:complexType name="ContractStareActiv">
+    <xs:complexType name="ActiuneActiv">
         <xs:complexContent mixed="false">
-            <xs:extension base="reges:ContractStare">
+            <xs:extension base="reges:Actiune">
                 <xs:sequence/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:complexType name="ContractStareSuspendare">
+    <xs:complexType name="ActiuneSuspendare">
         <xs:complexContent mixed="false">
-            <xs:extension base="reges:ContractStare">
+            <xs:extension base="reges:Actiune">
                 <xs:sequence>
                     <xs:element minOccurs="1" name="DataInceput" type="xs:dateTime"/>
                     <xs:element minOccurs="0" name="DataIncetare" nillable="true" type="xs:dateTime"/>
@@ -778,9 +798,9 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:complexType name="ContractStareIncetare">
+    <xs:complexType name="ActiuneIncetare">
         <xs:complexContent mixed="false">
-            <xs:extension base="reges:ContractStare">
+            <xs:extension base="reges:Actiune">
                 <xs:sequence>
                     <xs:element minOccurs="1" name="DataIncetare" type="xs:dateTime"/>
                     <xs:element minOccurs="0" name="Explicatie" nillable="true">
@@ -795,9 +815,9 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    <xs:complexType name="ContractStareDetasare">
+    <xs:complexType name="ActiuneDetasare">
         <xs:complexContent mixed="false">
-            <xs:extension base="reges:ContractStare">
+            <xs:extension base="reges:Actiune">
                 <xs:sequence>
                     <xs:element minOccurs="1" name="AngajatorCui">
                         <xs:simpleType>
@@ -843,4 +863,13 @@
         </xs:sequence>
     </xs:complexType>
     <xs:element name="Message" type="reges:Message"/>
+
+    <xs:complexType name="Batch">
+        <xs:choice>
+            <xs:element type="reges:Message" name="Message" maxOccurs="unbounded"/>
+            <xs:element type="reges:MessageResponse" name="MessageResponse" maxOccurs="unbounded"/>
+            <xs:element type="reges:MessageResult" name="MessageResult" maxOccurs="unbounded"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:element name="Batch" type="reges:Batch"/>
 </xs:schema>
