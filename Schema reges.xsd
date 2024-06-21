@@ -60,14 +60,13 @@
         <xs:annotation>
             <xs:documentation>Mesaj de raspuns trimis sincron la receptia unui mesaj de tip Message. GUID-ul din campul ResponseId este recipisa de incarcare a mesajului, dovada ca acesta a fost receptionat cu succes si ransmis spre procesare</xs:documentation>
         </xs:annotation>
-        <xs:all>
-            <xs:element maxOccurs="1" minOccurs="1" name="ResponseId" type="reges:GUID"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="MessageId" type="reges:GUID"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="ClientApplication" type="xs:string"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="Version" type="xs:string"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="Timestamp" type="xs:dateTime"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="MessageType" type="reges:MessageType"/>            
-        </xs:all>
+        <xs:complexContent>
+            <xs:extension base="reges:Message">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="1" name="ResponseId" type="reges:GUID"/>
+                </xs:sequence>                
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     <xs:element name="MessageResponse" type="reges:MessageResponse"/>
     <xs:simpleType name="ResultCode">
@@ -88,15 +87,13 @@
         <xs:annotation>
             <xs:documentation>Mesaj trimis asincron catre aplicatia client, pentru a semnaliza ca un mesaj a fost procesat cu un anumit cod de succes sau eroare</xs:documentation>
         </xs:annotation>
-        <xs:all>
-            <xs:element maxOccurs="1" minOccurs="1" name="ResponseId" type="reges:GUID"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="MessageId" type="reges:GUID"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="ClientApplication" type="xs:string"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="Version" type="xs:string"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="Timestamp" type="xs:dateTime"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="MessageType" type="reges:MessageType"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="Result" type="reges:Result"/>
-        </xs:all>
+        <xs:complexContent>
+            <xs:extension base="reges:MessageResponse">
+                <xs:sequence>
+                    <xs:element maxOccurs="1" minOccurs="1" name="Result" type="reges:Result"/>                    
+                </xs:sequence>                
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     <xs:element name="MessageResult" type="reges:MessageResult"/>
     <xs:complexType name="Notification">
@@ -115,18 +112,22 @@
     </xs:complexType>
     <xs:element name="Notification" type="reges:Notification"/>
     <xs:complexType name="Angajator">
-        <xs:sequence>
-            <xs:element minOccurs="1" name="Adresa">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="0" name="Contact" nillable="true" type="reges:Contact"/>
-            <xs:element minOccurs="1" name="Detalii" type="reges:DetaliiAngajator"/>
-            <xs:element minOccurs="1" name="Localitate" type="reges:Localitate"/>
-        </xs:sequence>
+        <xs:complexContent>
+            <xs:extension base="reges:Message">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="Adresa">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Contact" nillable="true" type="reges:Contact"/>
+                    <xs:element minOccurs="1" name="Detalii" type="reges:DetaliiAngajator"/>
+                    <xs:element minOccurs="1" name="Localitate" type="reges:Localitate"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     <xs:complexType name="Contact">
         <xs:sequence>
@@ -367,58 +368,62 @@
         </xs:complexContent>
     </xs:complexType>
     <xs:complexType name="Salariat">
-        <xs:sequence>
-            <xs:element minOccurs="1" name="Adresa">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="0" name="Apatrid" nillable="true" type="reges:Apatrid"/>
-            <xs:element minOccurs="1" name="Cnp">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="0" name="CnpVechi" nillable="true">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="0" name="DetaliiSalariatStrain" nillable="true"
-                type="reges:DetaliiSalariatStrain"/>
-            <xs:element minOccurs="0" name="Localitate" nillable="true" type="reges:Localitate"/>
-            <xs:element minOccurs="0" name="Mentiuni" nillable="true">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="0" name="Nationalitate" nillable="true"
-                type="reges:Nationalitate"/>
-            <xs:element minOccurs="1" name="Nume">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="1" name="Prenume">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="1" name="TaraDomiciliu" type="reges:Nationalitate"/>
-            <xs:element minOccurs="1" name="TipActIdentitate" type="reges:TipActIdentitate"/>
-        </xs:sequence>
+        <xs:complexContent>
+            <xs:extension base="reges:Message">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="Adresa">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Apatrid" nillable="true" type="reges:Apatrid"/>
+                    <xs:element minOccurs="1" name="Cnp">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="CnpVechi" nillable="true">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="DetaliiSalariatStrain" nillable="true"
+                        type="reges:DetaliiSalariatStrain"/>
+                    <xs:element minOccurs="0" name="Localitate" nillable="true" type="reges:Localitate"/>
+                    <xs:element minOccurs="0" name="Mentiuni" nillable="true">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Nationalitate" nillable="true"
+                        type="reges:Nationalitate"/>
+                    <xs:element minOccurs="1" name="Nume">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="1" name="Prenume">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="1" name="TaraDomiciliu" type="reges:Nationalitate"/>
+                    <xs:element minOccurs="1" name="TipActIdentitate" type="reges:TipActIdentitate"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     <xs:simpleType name="Apatrid">
         <xs:restriction base="xs:string">
@@ -452,13 +457,17 @@
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="Contract">
-        <xs:sequence>
-            <xs:element name="Actiune" type="reges:Actiune" minOccurs="0"/>
-            <xs:choice>
-                <xs:element name="Contract" type="reges:Contract"/>
-                <xs:element name="ContractRef" type="reges:GUID"/>                
-            </xs:choice>
-        </xs:sequence>
+        <xs:complexContent>
+            <xs:extension base="reges:Message">
+                <xs:sequence>
+                    <xs:element name="Actiune" type="reges:Actiune" minOccurs="0"/>
+                    <xs:choice>
+                        <xs:element name="Continut" type="reges:Continut"/>
+                        <xs:element name="ContractRef" type="reges:GUID"/>                
+                    </xs:choice>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     <xs:complexType name="Continut">
         <xs:sequence>
@@ -853,11 +862,6 @@
     <xs:complexType name="Message">
         <xs:sequence>
             <xs:element maxOccurs="1" minOccurs="1" name="Header" type="reges:Header"/>
-            <xs:choice>
-                <xs:element type="reges:Angajator" name="Angajator" maxOccurs="1"/>
-                <xs:element type="reges:Salariat" name="Salariat" maxOccurs="1"/>
-                <xs:element type="reges:Contract" name="Contract" maxOccurs="1"/>
-            </xs:choice>
         </xs:sequence>
     </xs:complexType>
     <xs:element name="Message" type="reges:Message"/>
