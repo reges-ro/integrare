@@ -14,27 +14,35 @@
             <xs:documentation>Tip mesaj</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
-            <xs:enumeration value="InregistrareContract"/>
+            <xs:enumeration value="Greseala"/>
+            <xs:enumeration value="AdaugareContract"/>
             <xs:enumeration value="ModificareContract"/>
             <xs:enumeration value="CorectieContract"/>
             <xs:enumeration value="RadiereContract"/>
+            <xs:enumeration value="RevalidareContract"/>
+            <xs:enumeration value="IncetareContract"/>
+            <xs:enumeration value="ReactivareContract"/>
+            <xs:enumeration value="CorectieIncetareContract"/>
+            <xs:enumeration value="AnulareIncetareContract"/>
             <xs:enumeration value="SuspendareContract"/>
-            <xs:enumeration value="IncetareSuspendareContract"/>
-            <xs:enumeration value="ModificareSuspendareContract"/>
             <xs:enumeration value="CorectieSuspendareContract"/>
+            <xs:enumeration value="ModificareSuspendareContract"/>
+            <xs:enumeration value="IncetareSuspendareContract"/>
             <xs:enumeration value="AnulareSuspendareContract"/>
-            <xs:enumeration value="CorectieIncetareSuspendareContract"/>
             <xs:enumeration value="DetasareContract"/>
-            <xs:enumeration value="IncetareDetasareContract"/>
-            <xs:enumeration value="PrelungireDetasareContract"/>
             <xs:enumeration value="CorectieDetasareContract"/>
             <xs:enumeration value="AnulareDetasareContract"/>
-            <xs:enumeration value="CorectieIncetareDetasareContract"/>
-            <xs:enumeration value="IncetareContract"/>
-            <xs:enumeration value="AnulareIncetareContract"/>
-            <xs:enumeration value="ReactivareIncetareContract"/>
-            <xs:enumeration value="CorectieIncetareContract"/>
-            <xs:enumeration value="CorectieReactivareIncetareContract"/>
+            <xs:enumeration value="IncetareDetasareContract"/>
+            <xs:enumeration value="TransferContract"/>
+            <xs:enumeration value="AnulareTransferContract"/>
+            <xs:enumeration value="SchimbareLocMuncaContract"/>
+            <xs:enumeration value="AnulareSchimbareLocMuncaContract"/>
+            <xs:enumeration value="SchimbareGestiuneRegistruContract"/>
+            <xs:enumeration value="AnulareSchimbareGestiuneRegistruContract"/>
+            <xs:enumeration value="ModificareDetasareContract"/>
+            <xs:enumeration value="CorectieReactivareContract"/>
+            <xs:enumeration value="AnulareReactivareContract"/>
+            <xs:enumeration value="RadiereContract"/>
             <xs:enumeration value="InregistrareSalariat"/>
             <xs:enumeration value="ModificareSalariat"/>
             <xs:enumeration value="CorectieSalariat"/>
@@ -42,7 +50,7 @@
             <xs:enumeration value="InregistrareAngajator"/>
             <xs:enumeration value="ModificareAngajator"/>
             <xs:enumeration value="CorectieAngajator"/>
-            <xs:enumeration value="RadiereSalariat"/>
+            <xs:enumeration value="RadiereAngajator"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="Header">
@@ -129,6 +137,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+    <xs:element name="Angajator" type="reges:Angajator"></xs:element>
     <xs:complexType name="Contact">
         <xs:sequence>
             <xs:element minOccurs="0" name="Email" nillable="true">
@@ -425,6 +434,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+    <xs:element name="Salariat" type="reges:Salariat"></xs:element>
     <xs:simpleType name="Apatrid">
         <xs:restriction base="xs:string">
             <xs:enumeration value="FaraDreptDeSedereInUe"/>
@@ -469,6 +479,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+    <xs:element name="Contract" type="reges:Contract"></xs:element>
     <xs:complexType name="Continut">
         <xs:sequence>
             <xs:choice>
