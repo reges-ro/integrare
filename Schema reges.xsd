@@ -878,11 +878,9 @@
     <xs:element name="Message" type="reges:Message"/>
 
     <xs:complexType name="Batch">
-        <xs:choice>
+        <xs:sequence>
             <xs:element type="reges:Message" name="Message" maxOccurs="unbounded"/>
-            <xs:element type="reges:MessageResponse" name="MessageResponse" maxOccurs="unbounded"/>
-            <xs:element type="reges:MessageResult" name="MessageResult" maxOccurs="unbounded"/>
-        </xs:choice>
+        </xs:sequence>
     </xs:complexType>
     <xs:element name="Batch" type="reges:Batch"/>
 </xs:schema>
