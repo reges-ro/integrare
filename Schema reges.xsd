@@ -472,66 +472,91 @@
                 <xs:sequence>
                     <xs:element name="Actiune" type="reges:Actiune" minOccurs="0"/>
                     <xs:choice>
-                        <xs:element name="Continut" type="reges:Continut"/>
-                        <xs:element name="ContractRef" type="reges:GUID"/>                
+                        <xs:element name="Continut" type="reges:ContinutContract"/>
+                        <xs:element name="ReferintaContract" type="reges:Referinta"/>                
                     </xs:choice>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
     <xs:element name="Contract" type="reges:Contract"></xs:element>
-    <xs:complexType name="Continut">
-        <xs:sequence>
-            <xs:choice>
-                <xs:element name="Salariat" type="reges:Salariat"></xs:element>
-                <xs:element name="SalariatRef" type="reges:GUID"></xs:element>
-            </xs:choice>
-            <xs:element minOccurs="1" name="Cor" type="reges:Cor"/>
-            <xs:element minOccurs="1" name="DataConsemnare" type="xs:dateTime"/>
-            <xs:element minOccurs="1" name="DataContract" type="xs:dateTime"/>
-            <xs:element minOccurs="1" name="DataInceputContract" type="xs:dateTime"/>
-            <xs:element minOccurs="0" name="DataSfarsitContract" nillable="true" type="xs:dateTime"/>
-            <xs:element minOccurs="0" name="DateContractVechi" nillable="true">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="0" name="Detalii" nillable="true">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="0" name="DetaliiMutare" nillable="true"
-                type="reges:ContractMutareDetalii"/>
-            <xs:element minOccurs="0" name="ExceptieDataSfarsit" nillable="true"
-                type="reges:ExceptieDataSfarsit"/>
-            <xs:element minOccurs="1" name="NumarContract">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="0" name="NumereContractVechi" nillable="true">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:maxLength value="256"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element minOccurs="1" name="Radiat" type="xs:boolean"/>
-            <xs:element minOccurs="1" name="Salariu" type="xs:int"/>
-            <xs:element minOccurs="0" name="SporuriSalariu" nillable="true" type="reges:ArrayOfSpor"/>
-            <xs:element minOccurs="1" name="StareCurenta" type="reges:Actiune"/>
-            <xs:element minOccurs="1" name="TimpMunca" type="reges:TimpMunca"/>
-            <xs:element minOccurs="1" name="TipContract" type="reges:TipContract"/>
-            <xs:element minOccurs="1" name="TipDurata" type="reges:TipDurata"/>
-            <xs:element minOccurs="1" name="TipNorma" type="reges:TipNorma"/>
-        </xs:sequence>
+    
+    <xs:complexType name="Referinta">
+        <xs:complexContent>
+            <xs:extension base="reges:Info">
+                <xs:sequence>
+                    <xs:element name="Id" type="reges:GUID"/>   
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="DetaliiSalariat">
+        <xs:complexContent>
+            <xs:extension base="reges:Info">
+                <xs:sequence>
+                    <xs:element name="Detalii" type="reges:Salariat"/>   
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="ContinutContract">
+        <xs:complexContent>
+            <xs:extension base="reges:Info">
+                <xs:sequence>
+                    <xs:choice>
+                        <xs:element name="Salariat" type="reges:DetaliiSalariat"></xs:element>
+                        <xs:element name="ReferintaSalariat" type="reges:Referinta"></xs:element>
+                    </xs:choice>
+                    <xs:element minOccurs="1" name="Cor" type="reges:Cor"/>
+                    <xs:element minOccurs="1" name="DataConsemnare" type="xs:dateTime"/>
+                    <xs:element minOccurs="1" name="DataContract" type="xs:dateTime"/>
+                    <xs:element minOccurs="1" name="DataInceputContract" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="DataSfarsitContract" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="DateContractVechi" nillable="true">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Detalii" nillable="true">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="DetaliiMutare" nillable="true"
+                        type="reges:ContractMutareDetalii"/>
+                    <xs:element minOccurs="0" name="ExceptieDataSfarsit" nillable="true"
+                        type="reges:ExceptieDataSfarsit"/>
+                    <xs:element minOccurs="1" name="NumarContract">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="NumereContractVechi" nillable="true">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:maxLength value="256"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="1" name="Radiat" type="xs:boolean"/>
+                    <xs:element minOccurs="1" name="Salariu" type="xs:int"/>
+                    <xs:element minOccurs="0" name="SporuriSalariu" nillable="true" type="reges:ArrayOfSpor"/>
+                    <xs:element minOccurs="1" name="StareCurenta" type="reges:Actiune"/>
+                    <xs:element minOccurs="1" name="TimpMunca" type="reges:TimpMunca"/>
+                    <xs:element minOccurs="1" name="TipContract" type="reges:TipContract"/>
+                    <xs:element minOccurs="1" name="TipDurata" type="reges:TipDurata"/>
+                    <xs:element minOccurs="1" name="TipNorma" type="reges:TipNorma"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     <xs:complexType name="Cor">
         <xs:sequence>
@@ -869,6 +894,9 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="Info">
+    </xs:complexType>
+    <xs:element name="Info" type="reges:Info"/>
 
     <xs:complexType name="Message">
         <xs:sequence>
