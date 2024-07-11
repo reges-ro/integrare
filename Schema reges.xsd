@@ -930,6 +930,7 @@
             <xs:sequence>
                 <xs:element name="Nume" type="xs:string" minOccurs="1" maxOccurs="1"/>
                 <xs:element name="Tip" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="Id" type="reges:GUID" minOccurs="1" maxOccurs="1"/>
             </xs:sequence>
     </xs:complexType>
     
