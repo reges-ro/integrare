@@ -59,7 +59,11 @@
             <xs:element maxOccurs="1" minOccurs="1" name="ClientApplication" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Version" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Operation" type="reges:MessageType"/>
-            <xs:element maxOccurs="1" minOccurs="1" name="AuthorId" type="reges:GUID"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="AuthorId" type="reges:GUID">
+                <xs:annotation>
+                    <xs:documentation>Identificator unic in baza de date REGES al unei societati, asociat unui CIF</xs:documentation>
+                </xs:annotation>
+            </xs:element>
             <xs:element maxOccurs="1" minOccurs="1" name="SessionId" type="reges:GUID"/>
             <xs:element maxOccurs="1" minOccurs="1" name="User" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Timestamp" type="xs:dateTime"/>
@@ -905,6 +909,44 @@
         </xs:sequence>
     </xs:complexType>
     <xs:element name="Message" type="reges:Message"/>
+
+    <xs:simpleType name="TipIdentificare">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CIF"/>
+            <xs:enumeration value="CNP"/>
+            <xs:enumeration value="Alta"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TipCalitate">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Reprezentant legal"/>
+            <xs:enumeration value="Imputernicit"/>
+            <xs:enumeration value="Alta"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Fisier">
+            <xs:sequence>
+                <xs:element name="Nume" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="Tip" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+    </xs:complexType>
+    
+
+    <xs:complexType name="CerereAccesRegistru">
+        <xs:complexContent>
+            <xs:extension base="reges:Message">
+                <xs:sequence>
+                    <xs:element name="Calitate" type="reges:TipCalitate" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Identificare" type="reges:TipIdentificare" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Numar" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Declaratie" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="Fisier" type="reges:Fisier" minOccurs="0" maxOccurs="unbounded"/>                    
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="Batch">
         <xs:sequence>
