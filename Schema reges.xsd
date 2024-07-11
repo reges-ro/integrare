@@ -60,6 +60,7 @@
             <xs:element maxOccurs="1" minOccurs="1" name="Version" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Operation" type="reges:MessageType"/>
             <xs:element maxOccurs="1" minOccurs="1" name="AuthorId" type="reges:GUID"/>
+            <xs:element maxOccurs="1" minOccurs="1" name="SessionId" type="reges:GUID"/>
             <xs:element maxOccurs="1" minOccurs="1" name="User" type="xs:string"/>
             <xs:element maxOccurs="1" minOccurs="1" name="Timestamp" type="xs:dateTime"/>
         </xs:all>
