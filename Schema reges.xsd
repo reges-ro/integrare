@@ -511,7 +511,6 @@
             <xs:extension base="reges:Info">
                 <xs:sequence>
                     <xs:choice>
-                        <xs:element name="Salariat" type="reges:DetaliiSalariat"></xs:element>
                         <xs:element name="ReferintaSalariat" type="reges:Referinta"></xs:element>
                     </xs:choice>
                     <xs:element minOccurs="1" name="Cor" type="reges:Cor"/>
