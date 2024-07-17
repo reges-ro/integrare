@@ -963,7 +963,7 @@
             <xs:element name="Identificare" type="reges:TipIdentificare" minOccurs="1" maxOccurs="1"/>
             <xs:element name="Numar" type="xs:string" minOccurs="1" maxOccurs="1"/>
             <xs:element name="Delegat" type="reges:TipDelegat" minOccurs="1" maxOccurs="1"/>
-            <xs:element name="NumarImputernicit" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="NumarDelegat" type="xs:string" minOccurs="1" maxOccurs="1"/>
             <xs:element name="Declaratie" type="xs:string" minOccurs="1" maxOccurs="1"/>
             <xs:element name="Mentiuni" type="xs:string" minOccurs="1" maxOccurs="1"/>
           </xs:sequence>
