@@ -948,6 +948,29 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:simpleType name="TipDelegat">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Prestator"/>
+        <xs:enumeration value="Angajat"/>
+      </xs:restriction>
+    </xs:simpleType>
+  
+    <xs:complexType name="CerereDelegareAccesRegistru">
+      <xs:complexContent>
+        <xs:extension base="reges:Message">
+          <xs:sequence>
+            <xs:element name="Calitate" type="reges:TipCalitate" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Identificare" type="reges:TipIdentificare" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Numar" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Delegat" type="reges:TipDelegat" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="NumarImputernicit" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Declaratie" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="Mentiuni" type="xs:string" minOccurs="1" maxOccurs="1"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
     <xs:complexType name="Batch">
         <xs:sequence>
             <xs:element type="reges:Message" name="Message" maxOccurs="unbounded"/>
