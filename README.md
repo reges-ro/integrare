@@ -22,6 +22,10 @@ API expune catre terti puncte de acces pentru:
 1. Transmiterea de informatii 
 2. Obtinerea raspunsurilor
 
+In diagrama de mai jos sunt prezentati cu titlu de exemplu secventa de pasi prin care informatia ajunge de la un utilizator al sistemului tert pana in baza de date REGES Online si inapoi la utilizator.
+
+![Diagrama secventa REGES Online](images/diagrama.JPG)
+
 Protocolul de acces API este HTTP iar formatarea mesajelor transmise este XML sau JSON. 
 
 Veti regasi exemple de mesaje in fisierul [POSTMAN](RevisalEvents.postman_collection.json) atat pentru formatul XML cat si JSON.
