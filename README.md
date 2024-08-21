@@ -18,7 +18,7 @@ Pentru o buna intelegere a documentatiei tehnice recomandam familiarizarea cu ap
 
 ## 2. Principii de functionare API
 
-API expune catre terti urmatoarele puncte de acces
+API expune catre terti puncte de acces pentru:
 1. Transmiterea de informatii 
 2. Obtinerea raspunsurilor
 
@@ -69,7 +69,7 @@ Urmatorul mesaj este un exemplu de modificare de contract pentru situatia in car
     <?xml version="1.0" encoding="UTF-8"?>
     <Message xsi:type="Contract" xmlns="http://www.inspectiamuncii.ro/reges2025"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd">
+    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025">
         <Header>
             <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>
             <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>
@@ -113,7 +113,7 @@ Observam faptul ca **salariatul** este transmis ca referinta, el ne fiind actual
     <?xml version="1.0" encoding="UTF-8"?>
     <Message xsi:type="Contract" xmlns="http://www.inspectiamuncii.ro/reges2025"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd">
+    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025">
         <Header>
             <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>
             <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>
@@ -145,7 +145,7 @@ Mesajul urmator inregistreaza un salariat nou in sistem.
     <?xml version="1.0" encoding="UTF-8"?>
     <Message xsi:type="Salariat" xmlns="http://www.inspectiamuncii.ro/reges2025"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd">
+    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025">
         <Header>
             <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>
             <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>
