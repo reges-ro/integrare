@@ -481,10 +481,10 @@
             <xs:extension base="reges:Message">
                 <xs:sequence>
                     <xs:element name="Actiune" type="reges:Actiune" minOccurs="0"/>
-                    <xs:choice>
-                        <xs:element name="Continut" type="reges:ContinutContract"/>
-                        <xs:element name="ReferintaContract" type="reges:Referinta"/>                
-                    </xs:choice>
+                    <xs:sequence>
+                        <xs:element name="ReferintaContract" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>                
+                        <xs:element name="Continut" type="reges:ContinutContract" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -505,7 +505,8 @@
         <xs:complexContent>
             <xs:extension base="reges:Info">
                 <xs:sequence>
-                    <xs:element name="Detalii" type="reges:Salariat"/>   
+                    <xs:element name="ReferintaSalariat" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Detalii" type="reges:Salariat"  minOccurs="0" maxOccurs="1"/>   
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>

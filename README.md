@@ -43,6 +43,15 @@ Se vor putea transmite urmatoarele informatii catre REGES-Online:
 2. Adaugari/Modificari ale contractelor
 3. Actiuni asociate contractelor existente (suspendari, detasari, etc.)
 
+### 2.2 Verificarea informatiilor transmise
+
+Toate mesajele transmise trec prin 2 tipuri de verificari, sincrone si asincrone.
+
+1. Verificarile sincrone se refera la structura mesajului (forma) si tin de respectarea schemei XSD/JSON, orice mesaj care nu respecta schema va fi respins de sistem, nu va fi transmis mai departe pentru procesare
+2. Verificarile asincrone se refera la continutul mesajului (fond) si tin de corelarea datelor din interiorul mesajului cu baza de date REGES, astfel incat in registru sa mentinem o baza de date consistenta. 
+
+Pentru o buna gestionare a mesajelor de raspuns recomandam dezvoltatorilor sa salveze ID-urile returnate de REGES Online atat pentru MessageResponse cat si MessageResult, sa asocieze in propriile baze de date aceste ID-uri pentru entitatile salariat si contract, astfel incat sa poata fi referite ulterior.
+
 ### 2.2 Obtinerea raspunsurilor
 
 Raspunsurile de la API sunt de 2 tipuri:
@@ -84,6 +93,9 @@ Urmatorul mesaj este un exemplu de modificare de contract pentru situatia in car
             <User>Ion</User>
             <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>
         </Header>
+        <ReferintaContract>
+            <Id>726ca2db-032e-4ea7-be31-f8d8489796f4</Id>
+        </ReferintaContract>
         <Continut>
             <ReferintaSalariat>
                 <Id>117f9b03-9efb-4f5e-8eaa-7ab3b0c792cf</Id>
@@ -178,3 +190,9 @@ Mesajul urmator inregistreaza un salariat nou in sistem.
 Majoritatea tipurilor de date din schema XSD contin si nomenclatoarele incluse. Nomenclatoarele COR, CAEN si sporuri vor fi expuse de API in format JSON si XML.
 
 Puteti consulta aici o varianta draft a acestora. [Nomenclatoare in format JSON](nomenclatoare/nomenclatoare.json)
+
+## 5 Migrarea datelor
+
+Baza de date actuala a sistemului REGES 2011 va fi migrata in noul sistem REGES Online integral, angajatorii putand accesa datele din registru folosind aplicatia Angajator indiferent daca vor lucra prin API sau exclusiv prin aplicatia Angajator.
+
+Dezvoltatorii de programe vor avea optiunea de a exporta lista contractelor cu ID-uri specifice REGES Online astfel incat sa poata asocia in softurile proprii aceste ID-uri in vederea transmiterii de modificari ulterioare pe aceste documente (pentru a completa ReferintaSalariat si ReferintaContract). 
