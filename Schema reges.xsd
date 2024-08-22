@@ -129,25 +129,39 @@
         </xs:all>
     </xs:complexType>
     <xs:element name="Notification" type="reges:Notification"/>
+
+    <xs:complexType name="InfoAngajator">
+        <xs:complexContent>
+          <xs:extension base="reges:Info">
+            <xs:sequence>
+              <xs:element minOccurs="1" name="Adresa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Contact" nillable="true" type="reges:Contact"/>
+              <xs:element minOccurs="1" name="Detalii" type="reges:DetaliiAngajator"/>
+              <xs:element minOccurs="1" name="Localitate" type="reges:Localitate"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    <xs:element name="InfoAngajator" type="reges:InfoAngajator"/>
+  
     <xs:complexType name="Angajator">
         <xs:complexContent>
             <xs:extension base="reges:Message">
                 <xs:sequence>
-                    <xs:element minOccurs="1" name="Adresa">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element minOccurs="0" name="Contact" nillable="true" type="reges:Contact"/>
-                    <xs:element minOccurs="1" name="Detalii" type="reges:DetaliiAngajator"/>
-                    <xs:element minOccurs="1" name="Localitate" type="reges:Localitate"/>
+                  <xs:element name="ReferintaAngajator" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
+                  <xs:element name="Info" type="reges:InfoAngajator"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
     <xs:element name="Angajator" type="reges:Angajator"></xs:element>
+  
     <xs:complexType name="Contact">
         <xs:sequence>
             <xs:element minOccurs="0" name="Email" nillable="true">
@@ -386,65 +400,79 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
+    <xs:complexType name="InfoSalariat">
+      <xs:complexContent>
+        <xs:extension base="reges:Info">
+          <xs:sequence>
+            <xs:element minOccurs="1" name="Adresa">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="256"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="Apatrid" nillable="true" type="reges:Apatrid"/>
+            <xs:element minOccurs="1" name="Cnp">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="256"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="CnpVechi" nillable="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="256"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="DetaliiSalariatStrain" nillable="true"
+                type="reges:DetaliiSalariatStrain"/>
+            <xs:element minOccurs="0" name="Localitate" nillable="true" type="reges:Localitate"/>
+            <xs:element minOccurs="0" name="Mentiuni" nillable="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="256"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="Nationalitate" nillable="true"
+                type="reges:Nationalitate"/>
+            <xs:element minOccurs="1" name="Nume">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="256"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="1" name="Prenume">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="256"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="1" name="TaraDomiciliu" type="reges:Nationalitate"/>
+            <xs:element minOccurs="1" name="TipActIdentitate" type="reges:TipActIdentitate"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="InfoSalariat" type="reges:InfoSalariat"/>
+  
     <xs:complexType name="Salariat">
         <xs:complexContent>
             <xs:extension base="reges:Message">
                 <xs:sequence>
-                    <xs:element minOccurs="1" name="Adresa">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element minOccurs="0" name="Apatrid" nillable="true" type="reges:Apatrid"/>
-                    <xs:element minOccurs="1" name="Cnp">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element minOccurs="0" name="CnpVechi" nillable="true">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element minOccurs="0" name="DetaliiSalariatStrain" nillable="true"
-                        type="reges:DetaliiSalariatStrain"/>
-                    <xs:element minOccurs="0" name="Localitate" nillable="true" type="reges:Localitate"/>
-                    <xs:element minOccurs="0" name="Mentiuni" nillable="true">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element minOccurs="0" name="Nationalitate" nillable="true"
-                        type="reges:Nationalitate"/>
-                    <xs:element minOccurs="1" name="Nume">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element minOccurs="1" name="Prenume">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:element>
-                    <xs:element minOccurs="1" name="TaraDomiciliu" type="reges:Nationalitate"/>
-                    <xs:element minOccurs="1" name="TipActIdentitate" type="reges:TipActIdentitate"/>
+                  <xs:element name="ReferintaSalariat" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
+                  <xs:element name="Info" type="reges:InfoSalariat"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
     <xs:element name="Salariat" type="reges:Salariat"></xs:element>
+  
     <xs:simpleType name="Apatrid">
         <xs:restriction base="xs:string">
             <xs:enumeration value="FaraDreptDeSedereInUe"/>
@@ -501,24 +529,11 @@
         </xs:complexContent>
     </xs:complexType>
     
-    <xs:complexType name="DetaliiSalariat">
-        <xs:complexContent>
-            <xs:extension base="reges:Info">
-                <xs:sequence>
-                    <xs:element name="ReferintaSalariat" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="Detalii" type="reges:Salariat"  minOccurs="0" maxOccurs="1"/>   
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-    
     <xs:complexType name="ContinutContract">
         <xs:complexContent>
             <xs:extension base="reges:Info">
                 <xs:sequence>
-                    <xs:choice>
-                        <xs:element name="ReferintaSalariat" type="reges:Referinta"></xs:element>
-                    </xs:choice>
+                    <xs:element name="ReferintaSalariat" type="reges:Referinta"/>
                     <xs:element minOccurs="1" name="Cor" type="reges:Cor"/>
                     <xs:element minOccurs="1" name="DataConsemnare" type="xs:dateTime"/>
                     <xs:element minOccurs="1" name="DataContract" type="xs:dateTime"/>
