@@ -161,7 +161,7 @@ Mesajul urmator inregistreaza un salariat nou in sistem.
     <?xml version="1.0" encoding="UTF-8"?>
     <Message xsi:type="Salariat" xmlns="http://www.inspectiamuncii.ro/reges2025"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025">
+    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd">
         <Header>
             <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>
             <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>
@@ -172,6 +172,7 @@ Mesajul urmator inregistreaza un salariat nou in sistem.
             <User>Ion</User>
             <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>
         </Header>
+        <Info>
             <Adresa>STR. SALARIATULUI, NR. 1</Adresa>
             <Cnp>1800612015459</Cnp>
             <Nume>POPESCU</Nume>
@@ -183,6 +184,7 @@ Mesajul urmator inregistreaza un salariat nou in sistem.
                 <Nume>ROMÂNIA</Nume>
             </TaraDomiciliu>
             <TipActIdentitate>CarteIdentitate</TipActIdentitate>
+        </Info>
     </Message>
 
 ## 5 Nomenclatoare
