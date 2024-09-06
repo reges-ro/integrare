@@ -453,6 +453,7 @@
                 </xs:restriction>
               </xs:simpleType>
             </xs:element>
+            <xs:element minOccurs="0" name="DataNastere" nillable="true" type="xs:dateTime"/>
             <xs:element minOccurs="1" name="TaraDomiciliu" type="reges:Nationalitate"/>
             <xs:element minOccurs="1" name="TipActIdentitate" type="reges:TipActIdentitate"/>
           </xs:sequence>
