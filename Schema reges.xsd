@@ -781,6 +781,7 @@
     </xs:complexType>
     <xs:complexType name="Spor">
         <xs:sequence>
+            <xs:element name="ReferintaSpor" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
             <xs:element minOccurs="0" name="IsProcent" type="xs:boolean"/>
             <xs:element minOccurs="1" name="Tip" type="reges:TipSpor"/>
             <xs:element minOccurs="1" name="Valoare" type="xs:double"/>
