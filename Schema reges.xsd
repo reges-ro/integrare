@@ -28,11 +28,13 @@
             <xs:enumeration value="CorectieSuspendareContract"/>
             <xs:enumeration value="ModificareSuspendareContract"/>
             <xs:enumeration value="IncetareSuspendareContract"/>
+            <xs:enumeration value="CorectieIncetareSuspendareContract"/>
             <xs:enumeration value="AnulareSuspendareContract"/>
             <xs:enumeration value="DetasareContract"/>
             <xs:enumeration value="CorectieDetasareContract"/>
             <xs:enumeration value="AnulareDetasareContract"/>
             <xs:enumeration value="IncetareDetasareContract"/>
+            <xs:enumeration value="CorectieIncetareDetasareContract"/>
             <xs:enumeration value="TransferContract"/>
             <xs:enumeration value="AnulareTransferContract"/>
             <xs:enumeration value="SchimbareLocMuncaContract"/>
