@@ -1,0 +1,792 @@
+{
+	"info": {
+		"_postman_id": "7a674dc2-1864-46b9-b5d9-fedfc760e29e",
+		"name": "RevisalEvents",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10925861"
+	},
+	"item": [
+		{
+			"name": "JSON",
+			"item": [
+				{
+					"name": "Contract",
+					"item": [
+						{
+							"name": "Adaugare",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjEwNTI1NDcsImlhdCI6MTcyMTA1MjI0NywianRpIjoiMmM5ZDc1NmQtNjc2Yi00Yjk2LWIyNTctMjNiNWJiNjJmZWRkIiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6ImM3MzI1MjM2LWE2ZDEtNDJiOC1hY2EzLWRkOWNhMDYzNzg1NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.HhJVDCzR-wcZrvtKFS0bWIYTozKluQYzyYhHW4UlGkI_j5RO5PqBpy7RWCdpqvZG0PVVuWxmvQjJLYTJVjnSucDeESCBHLTWPPRaHRRNrav_BO4ezHrL85wbTkU18Lc8AzvA-nhfup727Gn7skR2cnBCYcHC17022f10h-ecZfudGCIHVT8GyywKVK2ze0_Hb0tCDRRNrstBzpxLrJMuAG5QnIua3rbciHZmmCEZGBLKY6l5XmIo9qeJxl31PQcU567o0J3-Ud3AgdHIZb1FQodNFl5gYvgn-OzPnZUKQwSX-ixJN9mgpRC7KnIP5Adkp0pHvWWQZEnvMHeeQ2NRsg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AdaugareContract\",\r\n    \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"contractInfo\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"salariatInfo\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":12345,\r\n        \"versiune\":5\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-06-18T14:19:58.917Z\",\r\n    \"numarContract\":\"12345\",\r\n    \"radiat\":false,\r\n    \"salariu\":1000,\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"repartizare\":\"OreDeZi\"\r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificare",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjEwNTI1NDcsImlhdCI6MTcyMTA1MjI0NywianRpIjoiMmM5ZDc1NmQtNjc2Yi00Yjk2LWIyNTctMjNiNWJiNjJmZWRkIiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6ImM3MzI1MjM2LWE2ZDEtNDJiOC1hY2EzLWRkOWNhMDYzNzg1NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.HhJVDCzR-wcZrvtKFS0bWIYTozKluQYzyYhHW4UlGkI_j5RO5PqBpy7RWCdpqvZG0PVVuWxmvQjJLYTJVjnSucDeESCBHLTWPPRaHRRNrav_BO4ezHrL85wbTkU18Lc8AzvA-nhfup727Gn7skR2cnBCYcHC17022f10h-ecZfudGCIHVT8GyywKVK2ze0_Hb0tCDRRNrstBzpxLrJMuAG5QnIua3rbciHZmmCEZGBLKY6l5XmIo9qeJxl31PQcU567o0J3-Ud3AgdHIZb1FQodNFl5gYvgn-OzPnZUKQwSX-ixJN9mgpRC7KnIP5Adkp0pHvWWQZEnvMHeeQ2NRsg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareContract\",\r\n    \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"contractInfo\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"salariatInfo\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":12345,\r\n        \"versiune\":5\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-06-18T14:19:58.917Z\",\r\n    \"numarContract\":\"12345\",\r\n    \"radiat\":false,\r\n    \"salariu\":1000,\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"repartizare\":\"OreDeZi\"\r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModificareCuActiune",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjEwNTI1NDcsImlhdCI6MTcyMTA1MjI0NywianRpIjoiMmM5ZDc1NmQtNjc2Yi00Yjk2LWIyNTctMjNiNWJiNjJmZWRkIiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6ImM3MzI1MjM2LWE2ZDEtNDJiOC1hY2EzLWRkOWNhMDYzNzg1NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.HhJVDCzR-wcZrvtKFS0bWIYTozKluQYzyYhHW4UlGkI_j5RO5PqBpy7RWCdpqvZG0PVVuWxmvQjJLYTJVjnSucDeESCBHLTWPPRaHRRNrav_BO4ezHrL85wbTkU18Lc8AzvA-nhfup727Gn7skR2cnBCYcHC17022f10h-ecZfudGCIHVT8GyywKVK2ze0_Hb0tCDRRNrstBzpxLrJMuAG5QnIua3rbciHZmmCEZGBLKY6l5XmIo9qeJxl31PQcU567o0J3-Ud3AgdHIZb1FQodNFl5gYvgn-OzPnZUKQwSX-ixJN9mgpRC7KnIP5Adkp0pHvWWQZEnvMHeeQ2NRsg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareContract\",\r\n    \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"contractInfo\":\r\n  {\r\n    \"$type\": \"referinta\",\r\n    \"id\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneIncetare\",\r\n        \"dataIncetare\": \"2024-06-25T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"Indisciplina\",\r\n        \"temeiLegal\": \"Art55LitB\",\r\n        \"dataIncetareDetasareSpecified\": false,\r\n        \"dataIncetareSuspendareSpecified\": false\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ContractBatch",
+					"item": [
+						{
+							"name": "ContractBatchAdaugare",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjEwNTI1NDcsImlhdCI6MTcyMTA1MjI0NywianRpIjoiMmM5ZDc1NmQtNjc2Yi00Yjk2LWIyNTctMjNiNWJiNjJmZWRkIiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6ImM3MzI1MjM2LWE2ZDEtNDJiOC1hY2EzLWRkOWNhMDYzNzg1NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.HhJVDCzR-wcZrvtKFS0bWIYTozKluQYzyYhHW4UlGkI_j5RO5PqBpy7RWCdpqvZG0PVVuWxmvQjJLYTJVjnSucDeESCBHLTWPPRaHRRNrav_BO4ezHrL85wbTkU18Lc8AzvA-nhfup727Gn7skR2cnBCYcHC17022f10h-ecZfudGCIHVT8GyywKVK2ze0_Hb0tCDRRNrstBzpxLrJMuAG5QnIua3rbciHZmmCEZGBLKY6l5XmIo9qeJxl31PQcU567o0J3-Ud3AgdHIZb1FQodNFl5gYvgn-OzPnZUKQwSX-ixJN9mgpRC7KnIP5Adkp0pHvWWQZEnvMHeeQ2NRsg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Message\": [\r\n        {\r\n            \"$type\" : \"contract\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n                \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"AdaugareContract\",\r\n                \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"contractInfo\":\r\n            {\r\n                \"$type\": \"continutContract\",\r\n                \"salariatInfo\": {\r\n                    \"$type\" : \"referinta\",\r\n                    \"id\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\"\r\n                },\r\n                \"cor\":\r\n                {\r\n                    \"cod\":12345,\r\n                    \"versiune\":5\r\n                },\r\n                \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n                \"dataContract\":\"2024-06-18T14:19:58.917Z\",\r\n                \"dataInceputContract\":\"2024-06-18T14:19:58.917Z\",\r\n                \"numarContract\":\"12345\",\r\n                \"radiat\":false,\r\n                \"salariu\":1000,\r\n                \"stareCurenta\":{},\r\n                \"timpMunca\":{\r\n                    \"norma\":\"NormaIntreaga840\",\r\n                    \"repartizare\":\"OreDeZi\"\r\n                },\r\n                \"tipContract\":\"ContractIndividualMunca\",\r\n                \"tipDurata\":\"Nedeterminata\",\r\n                \"tipNorma\":\"NormaIntreaga\"\r\n            }\r\n        },\r\n        {\r\n            \"$type\" : \"contract\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9eeb-4f5a-8ebb-7ab3b0c792af\",\r\n                \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"AdaugareContract\",\r\n                \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"contractInfo\":\r\n            {\r\n                \"$type\": \"continutContract\",\r\n                \"salariatInfo\": {\r\n                    \"$type\" : \"referinta\",\r\n                    \"id\": \"117f9b03-9efb-4f5a-8eaa-7ab3b0c792af\"\r\n                },\r\n                \"cor\":\r\n                {\r\n                    \"cod\":12345,\r\n                    \"versiune\":5\r\n                },\r\n                \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n                \"dataContract\":\"2024-06-18T14:19:58.917Z\",\r\n                \"dataInceputContract\":\"2024-06-18T14:19:58.917Z\",\r\n                \"numarContract\":\"12346\",\r\n                \"radiat\":false,\r\n                \"salariu\":1200,\r\n                \"stareCurenta\":{},\r\n                \"timpMunca\":{\r\n                    \"norma\":\"NormaIntreaga840\",\r\n                    \"repartizare\":\"OreDeZi\"\r\n                },\r\n                \"tipContract\":\"ContractIndividualMunca\",\r\n                \"tipDurata\":\"Nedeterminata\",\r\n                \"tipNorma\":\"NormaIntreaga\"\r\n            }\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract/Batch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract",
+										"Batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ContractBatchModificare",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjEwNTI1NDcsImlhdCI6MTcyMTA1MjI0NywianRpIjoiMmM5ZDc1NmQtNjc2Yi00Yjk2LWIyNTctMjNiNWJiNjJmZWRkIiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6ImM3MzI1MjM2LWE2ZDEtNDJiOC1hY2EzLWRkOWNhMDYzNzg1NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.HhJVDCzR-wcZrvtKFS0bWIYTozKluQYzyYhHW4UlGkI_j5RO5PqBpy7RWCdpqvZG0PVVuWxmvQjJLYTJVjnSucDeESCBHLTWPPRaHRRNrav_BO4ezHrL85wbTkU18Lc8AzvA-nhfup727Gn7skR2cnBCYcHC17022f10h-ecZfudGCIHVT8GyywKVK2ze0_Hb0tCDRRNrstBzpxLrJMuAG5QnIua3rbciHZmmCEZGBLKY6l5XmIo9qeJxl31PQcU567o0J3-Ud3AgdHIZb1FQodNFl5gYvgn-OzPnZUKQwSX-ixJN9mgpRC7KnIP5Adkp0pHvWWQZEnvMHeeQ2NRsg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Message\": [\r\n        {\r\n            \"$type\" : \"contract\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n                \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"ModificareContract\",\r\n                \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"contractInfo\":\r\n            {\r\n                \"$type\": \"continutContract\",\r\n                \"salariatInfo\": {\r\n                    \"$type\" : \"referinta\",\r\n                    \"id\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\"\r\n                },\r\n                \"cor\":\r\n                {\r\n                    \"cod\":12345,\r\n                    \"versiune\":5\r\n                },\r\n                \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n                \"dataContract\":\"2024-06-18T14:19:58.917Z\",\r\n                \"dataInceputContract\":\"2024-06-18T14:19:58.917Z\",\r\n                \"numarContract\":\"12345\",\r\n                \"radiat\":false,\r\n                \"salariu\":1000,\r\n                \"stareCurenta\":{},\r\n                \"timpMunca\":{\r\n                    \"norma\":\"NormaIntreaga840\",\r\n                    \"repartizare\":\"OreDeZi\"\r\n                },\r\n                \"tipContract\":\"ContractIndividualMunca\",\r\n                \"tipDurata\":\"Nedeterminata\",\r\n                \"tipNorma\":\"NormaIntreaga\"\r\n            }\r\n        },\r\n        {\r\n            \"$type\" : \"contract\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5c-8ebb-7ab3b0c792af\",\r\n                \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"ModificareContract\",\r\n                \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"contractInfo\":\r\n            {\r\n                \"$type\": \"referinta\",\r\n                \"id\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\"\r\n            },\r\n            \"actiune\": \r\n            {\r\n                    \"$type\":\"actiuneIncetare\",\r\n                    \"dataIncetare\": \"2024-06-25T13:06:22.7010678+00:00\",\r\n                    \"explicatie\": \"Indisciplina\",\r\n                    \"temeiLegal\": \"Art55LitB\",\r\n                    \"dataIncetareDetasareSpecified\": false,\r\n                    \"dataIncetareSuspendareSpecified\": false\r\n            }\r\n        },\r\n        {\r\n            \"$type\" : \"contract\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5b-8ebb-7ab3b0c792af\",\r\n                \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"ModificareContract\",\r\n                \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"contractInfo\":\r\n            {\r\n                \"$type\": \"continutContract\",\r\n                \"salariatInfo\": {\r\n                    \"$type\" : \"referinta\",\r\n                    \"id\": \"117f9b03-9efb-4f5a-8ecc-7ab3b0c792af\"\r\n                },\r\n                \"cor\":\r\n                {\r\n                    \"cod\":12345,\r\n                    \"versiune\":5\r\n                },\r\n                \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n                \"dataContract\":\"2024-06-18T14:19:58.917Z\",\r\n                \"dataInceputContract\":\"2024-06-18T14:19:58.917Z\",\r\n                \"numarContract\":\"12345\",\r\n                \"radiat\":false,\r\n                \"salariu\":1000,\r\n                \"stareCurenta\":{},\r\n                \"timpMunca\":{\r\n                    \"norma\":\"NormaIntreaga840\",\r\n                    \"repartizare\":\"OreDeZi\"\r\n                },\r\n                \"tipContract\":\"ContractIndividualMunca\",\r\n                \"tipDurata\":\"Nedeterminata\",\r\n                \"tipNorma\":\"NormaIntreaga\"\r\n            }\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract/Batch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract",
+										"Batch"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Angajator",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"$type\" : \"angajator\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"InregistrareAngajator\",\r\n    \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n    \"adresa\": \"STR. ANGAJATORULUI, NR. 1\",\r\n    \"detalii\": {\"nume\":\"GIGI IMPEX S.R.L.\"},\r\n    \"localitate\": {\"codSiruta\":179141}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/Angajator",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"Angajator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AngajatorBatch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Message\": [\r\n        {\r\n            \"$type\" : \"angajator\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n                \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"InregistrareAngajator\",\r\n                \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n                \"adresa\": \"STR. ANGAJATORULUI, NR. 1\",\r\n                \"detalii\": {\"nume\":\"GIGI IMPEX S.R.L.\"},\r\n                \"localitate\": {\"codSiruta\":179141}\r\n            }\r\n        , \r\n                {\r\n            \"$type\" : \"angajator\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3c0c792af\",\r\n                \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"InregistrareAngajator\",\r\n                \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n                \"adresa\": \"STR. ANGAJATORULUI, NR. 2\",\r\n                \"detalii\": {\"nume\":\"COSTEL IMPEX S.R.L.\"},\r\n                \"localitate\": {\"codSiruta\":179141}\r\n            }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/Angajator/Batch",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"Angajator",
+								"Batch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salariat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"$type\" : \"salariat\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"InregistrareSalariat\",\r\n    \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n    \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n    \"cnp\":\"1800612015459\",\r\n    \"nume\": \"POPESCU\",\r\n    \"prenume\": \"ION\",\r\n    \"nationalitate\": {\"nume\":\"ROMANA\"},\r\n    \"taraDomiciliu\": {\"nume\":\"ROMANIA\"},\r\n    \"tipActIdentitate\": \"Pasaport\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/Salariat",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"Salariat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalariatBatch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Message\": [{\r\n            \"$type\" : \"salariat\",\r\n            \"Header\": {\r\n                \"MessageId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792af\",\r\n                \"ClientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n                \"Version\": \"5\",\r\n                \"Operation\": 21,\r\n                \"AuthorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"User\": \"Ion\",\r\n                \"Timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n                \"Adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n                \"Cnp\": \"1800612015459\",\r\n                \"Nationalitate\": {\r\n                    \"Nume\": \"ROMÂNIA\"\r\n                },\r\n                \"Nume\": \"POPESCU\",\r\n                \"Prenume\": \"ION\",\r\n                \"TaraDomiciliu\": {\r\n                    \"Nume\": \"ROMÂNIA\"\r\n                },\r\n                \"TipActIdentitate\": 0\r\n\r\n        }, {\r\n            \"$type\" : \"salariat\",\r\n            \"Header\": {\r\n                \"MessageId\": \"117f9b03-9efb-4f5e-8ebb-7bb3b0c792af\",\r\n                \"ClientApplication\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf\",\r\n                \"Version\": \"5\",\r\n                \"Operation\": 21,\r\n                \"AuthorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"User\": \"Ion\",\r\n                \"Timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n                \"Adresa\": \"STR. SALARIATULUI, NR. 2\",\r\n                \"Cnp\": \"1800612018921\",\r\n                \"Nationalitate\": {\r\n                    \"Nume\": \"ROMÂNIA\"\r\n                },\r\n                \"Nume\": \"IONESCU\",\r\n                \"Prenume\": \"VASILE\",\r\n                \"TaraDomiciliu\": {\r\n                    \"Nume\": \"ROMÂNIA\"\r\n                },\r\n                \"TipActIdentitate\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/Salariat/Batch",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"Salariat",
+								"Batch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "XML",
+			"item": [
+				{
+					"name": "Contract",
+					"item": [
+						{
+							"name": "Adaugare",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjEwNTI1NDcsImlhdCI6MTcyMTA1MjI0NywianRpIjoiMmM5ZDc1NmQtNjc2Yi00Yjk2LWIyNTctMjNiNWJiNjJmZWRkIiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6ImM3MzI1MjM2LWE2ZDEtNDJiOC1hY2EzLWRkOWNhMDYzNzg1NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.HhJVDCzR-wcZrvtKFS0bWIYTozKluQYzyYhHW4UlGkI_j5RO5PqBpy7RWCdpqvZG0PVVuWxmvQjJLYTJVjnSucDeESCBHLTWPPRaHRRNrav_BO4ezHrL85wbTkU18Lc8AzvA-nhfup727Gn7skR2cnBCYcHC17022f10h-ecZfudGCIHVT8GyywKVK2ze0_Hb0tCDRRNrstBzpxLrJMuAG5QnIua3rbciHZmmCEZGBLKY6l5XmIo9qeJxl31PQcU567o0J3-Ud3AgdHIZb1FQodNFl5gYvgn-OzPnZUKQwSX-ixJN9mgpRC7KnIP5Adkp0pHvWWQZEnvMHeeQ2NRsg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AdaugareContract</Operation>\r\n        <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>117f9b03-9efb-4f5e-8eaa-7ab3b0c792cf</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>12345</Cod>\r\n            <Versiune>2</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n        </TimpMunca>\r\n        <TipContract>ContractIndividualMunca</TipContract>\r\n        <TipDurata>Nedeterminata</TipDurata>\r\n        <TipNorma>NormaIntreaga</TipNorma>\r\n    </Continut>\r\n</Message>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificare",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareContract</Operation>\r\n        <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>117f9b03-9efb-4f5e-8eaa-7ab3b0c792cf</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>12345</Cod>\r\n            <Versiune>2</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1200</Salariu>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n        </TimpMunca>\r\n        <TipContract>ContractIndividualMunca</TipContract>\r\n        <TipDurata>Nedeterminata</TipDurata>\r\n        <TipNorma>NormaIntreaga</TipNorma>\r\n    </Continut>\r\n</Message>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModificareCuActiune",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjEwNTI1NDcsImlhdCI6MTcyMTA1MjI0NywianRpIjoiMmM5ZDc1NmQtNjc2Yi00Yjk2LWIyNTctMjNiNWJiNjJmZWRkIiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6ImM3MzI1MjM2LWE2ZDEtNDJiOC1hY2EzLWRkOWNhMDYzNzg1NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.HhJVDCzR-wcZrvtKFS0bWIYTozKluQYzyYhHW4UlGkI_j5RO5PqBpy7RWCdpqvZG0PVVuWxmvQjJLYTJVjnSucDeESCBHLTWPPRaHRRNrav_BO4ezHrL85wbTkU18Lc8AzvA-nhfup727Gn7skR2cnBCYcHC17022f10h-ecZfudGCIHVT8GyywKVK2ze0_Hb0tCDRRNrstBzpxLrJMuAG5QnIua3rbciHZmmCEZGBLKY6l5XmIo9qeJxl31PQcU567o0J3-Ud3AgdHIZb1FQodNFl5gYvgn-OzPnZUKQwSX-ixJN9mgpRC7KnIP5Adkp0pHvWWQZEnvMHeeQ2NRsg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareContract</Operation>\r\n        <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>726ca2db-032e-4ea7-be31-f8d8489796f4</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneIncetare\">\r\n        <DataIncetare>2024-06-25T12:43:04.326Z</DataIncetare>\r\n        <Explicatie>Indisciplina</Explicatie>\r\n        <TemeiLegal>Art55LitB</TemeiLegal>\r\n    </Actiune>\r\n</Message>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ContractBatch",
+					"item": [
+						{
+							"name": "ContractBatchAdaugare",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjEwNTI1NDcsImlhdCI6MTcyMTA1MjI0NywianRpIjoiMmM5ZDc1NmQtNjc2Yi00Yjk2LWIyNTctMjNiNWJiNjJmZWRkIiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6ImM3MzI1MjM2LWE2ZDEtNDJiOC1hY2EzLWRkOWNhMDYzNzg1NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.HhJVDCzR-wcZrvtKFS0bWIYTozKluQYzyYhHW4UlGkI_j5RO5PqBpy7RWCdpqvZG0PVVuWxmvQjJLYTJVjnSucDeESCBHLTWPPRaHRRNrav_BO4ezHrL85wbTkU18Lc8AzvA-nhfup727Gn7skR2cnBCYcHC17022f10h-ecZfudGCIHVT8GyywKVK2ze0_Hb0tCDRRNrstBzpxLrJMuAG5QnIua3rbciHZmmCEZGBLKY6l5XmIo9qeJxl31PQcU567o0J3-Ud3AgdHIZb1FQodNFl5gYvgn-OzPnZUKQwSX-ixJN9mgpRC7KnIP5Adkp0pHvWWQZEnvMHeeQ2NRsg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<Batch xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd\">\r\n    <Message xsi:type=\"Contract\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n            <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>AdaugareContract</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <Continut>\r\n            <ReferintaSalariat>\r\n                <Id>117f9b03-9efb-4f5e-8eaa-7ab3b0c792cf</Id>\r\n            </ReferintaSalariat>\r\n            <Cor>\r\n                <Cod>12345</Cod>\r\n                <Versiune>2</Versiune>\r\n            </Cor>\r\n            <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n            <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n            <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n            <NumarContract>12345</NumarContract>\r\n            <Radiat>false</Radiat>\r\n            <Salariu>1000</Salariu>\r\n            <StareCurenta>\r\n            </StareCurenta>\r\n            <TimpMunca>\r\n                <Norma>NormaIntreaga840</Norma>\r\n                <Repartizare>OreDeZi</Repartizare>\r\n            </TimpMunca>\r\n            <TipContract>ContractIndividualMunca</TipContract>\r\n            <TipDurata>Nedeterminata</TipDurata>\r\n            <TipNorma>NormaIntreaga</TipNorma>\r\n        </Continut>\r\n    </Message>\r\n        <Message xsi:type=\"Contract\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5e-8bab-7ab3b0c792af</MessageId>\r\n            <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>AdaugareContract</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <Continut>\r\n            <ReferintaSalariat>\r\n                <Id>117f9b03-9efb-4f5e-8ecc-7ab3b0c792cf</Id>\r\n            </ReferintaSalariat>\r\n            <Cor>\r\n                <Cod>12345</Cod>\r\n                <Versiune>2</Versiune>\r\n            </Cor>\r\n            <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n            <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n            <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n            <NumarContract>12346</NumarContract>\r\n            <Radiat>false</Radiat>\r\n            <Salariu>1200</Salariu>\r\n            <StareCurenta>\r\n            </StareCurenta>\r\n            <TimpMunca>\r\n                <Norma>NormaIntreaga840</Norma>\r\n                <Repartizare>OreDeZi</Repartizare>\r\n            </TimpMunca>\r\n            <TipContract>ContractIndividualMunca</TipContract>\r\n            <TipDurata>Nedeterminata</TipDurata>\r\n            <TipNorma>NormaIntreaga</TipNorma>\r\n        </Continut>\r\n    </Message>\r\n</Batch>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract/Batch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract",
+										"Batch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ContractBatchModificare",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjEwNTI1NDcsImlhdCI6MTcyMTA1MjI0NywianRpIjoiMmM5ZDc1NmQtNjc2Yi00Yjk2LWIyNTctMjNiNWJiNjJmZWRkIiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6ImM3MzI1MjM2LWE2ZDEtNDJiOC1hY2EzLWRkOWNhMDYzNzg1NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.HhJVDCzR-wcZrvtKFS0bWIYTozKluQYzyYhHW4UlGkI_j5RO5PqBpy7RWCdpqvZG0PVVuWxmvQjJLYTJVjnSucDeESCBHLTWPPRaHRRNrav_BO4ezHrL85wbTkU18Lc8AzvA-nhfup727Gn7skR2cnBCYcHC17022f10h-ecZfudGCIHVT8GyywKVK2ze0_Hb0tCDRRNrstBzpxLrJMuAG5QnIua3rbciHZmmCEZGBLKY6l5XmIo9qeJxl31PQcU567o0J3-Ud3AgdHIZb1FQodNFl5gYvgn-OzPnZUKQwSX-ixJN9mgpRC7KnIP5Adkp0pHvWWQZEnvMHeeQ2NRsg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<Batch xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd\">\r\n    <Message xsi:type=\"Contract\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n            <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>ModificareContract</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <Continut>\r\n            <ReferintaSalariat>\r\n                <Id>117f9b03-9efb-4f5e-8eaa-7ab3b0c792cf</Id>\r\n            </ReferintaSalariat>\r\n            <Cor>\r\n                <Cod>12345</Cod>\r\n                <Versiune>2</Versiune>\r\n            </Cor>\r\n            <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n            <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n            <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n            <NumarContract>12345</NumarContract>\r\n            <Radiat>false</Radiat>\r\n            <Salariu>1200</Salariu>\r\n            <StareCurenta>\r\n            </StareCurenta>\r\n            <TimpMunca>\r\n                <Norma>NormaIntreaga840</Norma>\r\n                <Repartizare>OreDeZi</Repartizare>\r\n            </TimpMunca>\r\n            <TipContract>ContractIndividualMunca</TipContract>\r\n            <TipDurata>Nedeterminata</TipDurata>\r\n            <TipNorma>NormaIntreaga</TipNorma>\r\n        </Continut>\r\n    </Message>\r\n    <Message xsi:type=\"Contract\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n            <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>ModificareContract</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <ReferintaContract>\r\n            <Id>726ca2db-032e-4ea7-be31-f8d8489796f4</Id>\r\n        </ReferintaContract>\r\n        <Actiune xsi:type=\"ActiuneIncetare\">\r\n            <DataIncetare>2024-06-25T12:43:04.326Z</DataIncetare>\r\n            <Explicatie>Indisciplina</Explicatie>\r\n            <TemeiLegal>Art55LitB</TemeiLegal>\r\n        </Actiune>\r\n    </Message>\r\n    <Message xsi:type=\"Contract\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n            <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>ModificareContract</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <Continut>\r\n            <ReferintaSalariat>\r\n                <Id>117f9b03-9efb-4f5e-8ecc-7ab3b0c792cf</Id>\r\n            </ReferintaSalariat>\r\n            <Cor>\r\n                <Cod>12345</Cod>\r\n                <Versiune>2</Versiune>\r\n            </Cor>\r\n            <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n            <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n            <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n            <NumarContract>12346</NumarContract>\r\n            <Radiat>false</Radiat>\r\n            <Salariu>1200</Salariu>\r\n            <StareCurenta>\r\n            </StareCurenta>\r\n            <TimpMunca>\r\n                <Norma>NormaIntreaga840</Norma>\r\n                <Repartizare>OreDeZi</Repartizare>\r\n            </TimpMunca>\r\n            <TipContract>ContractIndividualMunca</TipContract>\r\n            <TipDurata>Nedeterminata</TipDurata>\r\n            <TipNorma>NormaIntreaga</TipNorma>\r\n        </Continut>\r\n    </Message>\r\n</Batch>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Contract/Batch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Contract",
+										"Batch"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Angajator",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Angajator\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5a-8ebb-7ab3b0c792af</MessageId>\r\n        <ClientApplication>117f9b03-9afb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>InregistrareAngajator</Operation>\r\n        <AuthorId>117f9b03-9efb-4f5e-8abb-7ab3b0c792cf</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n        <Adresa>STR. ANGAJATORULUI, NR. 1</Adresa>\r\n        <Detalii>\r\n            <Nume>GIGI IMPEX S.R.L.</Nume>\r\n        </Detalii>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n</Message>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/Angajator",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"Angajator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AngajatorBatch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<Batch xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd\">\r\n    <Message xsi:type=\"Angajator\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5a-8ebb-7ab3b0c792af</MessageId>\r\n            <ClientApplication>117f9b03-9afb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>InregistrareAngajator</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8abb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <Adresa>STR. ANGAJATORULUI, NR. 1</Adresa>\r\n        <Detalii>\r\n            <Nume>GIGI IMPEX S.R.L.</Nume>\r\n        </Detalii>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>        \r\n    </Message>\r\n    <Message xsi:type=\"Angajator\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5a-8ebb-7ab3c0c792af</MessageId>\r\n            <ClientApplication>117f9b03-9afb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>InregistrareAngajator</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8abb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <Adresa>STR. ANGAJATORULUI, NR. 2</Adresa>\r\n        <Detalii>\r\n            <Nume>COSTEL IMPEX S.R.L.</Nume>\r\n        </Detalii>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>        \r\n    </Message>\r\n</Batch>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/Angajator/Batch",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"Angajator",
+								"Batch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salariat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Salariat\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>\r\n        <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>InregistrareSalariat</Operation>\r\n        <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n        <Adresa>STR. SALARIATULUI, NR. 1</Adresa>\r\n        <Cnp>1800612015459</Cnp>\r\n        <Nume>POPESCU</Nume>\r\n        <Prenume>ION</Prenume>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <TaraDomiciliu>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </TaraDomiciliu>\r\n        <TipActIdentitate>CarteIdentitate</TipActIdentitate>\r\n</Message>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/Salariat",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"Salariat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalariatBatch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<Batch xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd\">\r\n        <Message xsi:type=\"Salariat\">\r\n            <Header>\r\n                <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>\r\n                <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n                <Version>5</Version>\r\n                <Operation>InregistrareSalariat</Operation>\r\n                <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n                <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n                <User>Ion</User>\r\n                <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n            </Header>\r\n                <Adresa>STR. SALARIATULUI, NR. 1</Adresa>\r\n                <Cnp>1800612015459</Cnp>\r\n                <Nume>POPESCU</Nume>\r\n                <Prenume>ION</Prenume>\r\n                <Nationalitate>\r\n                    <Nume>ROMÂNIA</Nume>\r\n                </Nationalitate>\r\n                <TaraDomiciliu>\r\n                    <Nume>ROMÂNIA</Nume>\r\n                </TaraDomiciliu>\r\n                <TipActIdentitate>CarteIdentitate</TipActIdentitate>\r\n        </Message>\r\n        <Message xsi:type=\"Salariat\">\r\n            <Header>\r\n                <MessageId>117f9b03-9efb-4f5e-8ebb-7bb3b0c792af</MessageId>\r\n                <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>\r\n                <Version>5</Version>\r\n                <Operation>InregistrareSalariat</Operation>\r\n                <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n                <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n                <User>Ion</User>\r\n                <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n            </Header>\r\n                <Adresa>STR. SALARIATULUI, NR. 2</Adresa>\r\n                <Cnp>1800612018921</Cnp>\r\n                <Nume>IONESCU</Nume>\r\n                <Prenume>VASILE</Prenume>\r\n                <Nationalitate>\r\n                    <Nume>ROMÂNIA</Nume>\r\n                </Nationalitate>\r\n                <TaraDomiciliu>\r\n                    <Nume>ROMÂNIA</Nume>\r\n                </TaraDomiciliu>\r\n                <TipActIdentitate>CarteIdentitate</TipActIdentitate>\r\n        </Message>\r\n</Batch>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/Salariat/Batch",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"Salariat",
+								"Batch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MessageResults",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI2TFRnYmZBc1BnNUhKQko2cU55Yk1XRnIzNkRST1diVlpoSVduTFBxcmhJIn0.eyJleHAiOjE3MjA3MDU1MjcsImlhdCI6MTcyMDcwNTIyNywianRpIjoiNDM0MTQwNzMtN2IxNi00Y2Q3LWJiZWYtZGY0MjYwYmUyOGQ0IiwiaXNzIjoiaHR0cHM6Ly9zc28uZGV2Lmluc3BlY3RpYW11bmNpaS5vcmcvcmVhbG1zL1JFR0VTIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAyNDM1ZDcwLTRhYTgtNDE2MS05NjliLTE3YmE3YjM5ODUxZiIsInR5cCI6IkJlYXJlciIsImF6cCI6IndlYmFwcCIsInNpZCI6Ijc3NGFkMzQ1LTQzZDQtNDc1Ni04YTNhLTRmZTkzYWU5NGRjYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiZGVmYXVsdC1yb2xlcy1yZWdlcyIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJ0ZXN0RiB0ZXN0TCIsInByZWZlcnJlZF91c2VybmFtZSI6InRlc3QiLCJnaXZlbl9uYW1lIjoidGVzdEYiLCJmYW1pbHlfbmFtZSI6InRlc3RMIiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIn0.lDomgeHAJs1feyFjJ1S-zmBAQO0paMuSwckU6NG85-43rh9LK2-bF9DtBSsZPJiDgdPNaabB4CZInZNLVpMcZa-zgwfV2eYBVwxB8Hz1WhThO8M3DUu129XpGdTsauvISc_VZB0vk77fwq0Kz9SiMeS08l0dtRYzj8k4bvJ0yCOF2vjpiOY4FVij09AklbKyqZG1hMbM-46ROEiVI8pjuSCoH-Or9TGxNpuEHugX6FXqiyY-PFle-jdUbtaIub2mgIzG_K1hswePKI7X2tpu4zEFXa2VnwTDr0ujW0HOVbcVsF3YXNnAfGeLzQS6voZkroPImXTnVO5Lu6fCD6oRPw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/Status/MessageResults",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"Status",
+						"MessageResults"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
