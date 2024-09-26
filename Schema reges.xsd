@@ -57,6 +57,7 @@
             <xs:enumeration value="CerereDelegareAccesRegistru"/>
             <xs:enumeration value="CerereExtrasRegistru"/>
             <xs:enumeration value="CerereAdeverintaVechime"/>
+            <xs:enumeration value="CerereAccesSistemRegistru"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="Header">
