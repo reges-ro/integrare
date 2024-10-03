@@ -433,6 +433,13 @@
             <xs:element minOccurs="0" name="DetaliiSalariatStrain" nillable="true"
                 type="reges:DetaliiSalariatStrain"/>
             <xs:element minOccurs="0" name="Localitate" nillable="true" type="reges:Localitate"/>
+            <xs:element minOccurs="0" name="LocalitateSalariatStrain" nillable="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="256"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
             <xs:element minOccurs="0" name="Mentiuni" nillable="true">
               <xs:simpleType>
                 <xs:restriction base="xs:string">
