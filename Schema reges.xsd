@@ -980,6 +980,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+  <xs:element name="CerereAccesRegistru" type="reges:CerereAccesRegistru"></xs:element>
 
     <xs:simpleType name="TipDelegat">
       <xs:restriction base="xs:string">
@@ -1003,6 +1004,7 @@
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>
+  <xs:element name="CerereDelegareAccesRegistru" type="reges:CerereDelegareAccesRegistru"></xs:element>
 
   <xs:simpleType name="TipCerere">
     <xs:restriction base="xs:string">
@@ -1025,9 +1027,10 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>  
+  </xs:complexType>
+  <xs:element name="CerereExtras" type="reges:CerereExtras"></xs:element>
 
-    <xs:complexType name="Batch">
+  <xs:complexType name="Batch">
         <xs:sequence>
             <xs:element type="reges:Message" name="Message" maxOccurs="unbounded"/>
         </xs:sequence>
