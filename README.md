@@ -24,7 +24,8 @@ API expune catre terti puncte de acces pentru:
 
 In diagrama de mai jos sunt prezentati cu titlu de exemplu secventa de pasi prin care informatia ajunge de la un utilizator al sistemului tert pana in baza de date REGES Online si inapoi la utilizator.
 
-![Diagrama secventa REGES Online](images/diagrama.JPG)
+![image](https://github.com/user-attachments/assets/12b86643-be20-47b5-a28d-df945b07ecbe)
+
 
 Protocolul de acces API este HTTP iar formatarea mesajelor transmise este XML sau JSON. 
 
