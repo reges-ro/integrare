@@ -1,0 +1,8 @@
+props:
+  in-salariat-folder-name: "IN-SALARIAT"
+  in-contract-folder-name: "IN-CONTRACT"
+  out-folder-name: "OUT"
+  receive-folder-name: "receive"
+
+
+

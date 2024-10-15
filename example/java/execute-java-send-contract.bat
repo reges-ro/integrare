@@ -1,0 +1,1 @@
+java -Duser=d674ebea-a672-4b62-96c6-0ad8abbfe0de -Dpassword=0bVvzow4a06T8eacXUw_ -Dtype=send-contract  -DloginDomain=https://sso.dev.inspectiamuncii.org -DapiDomain=https://api.dev.inspectiamuncii.org -jar reges-1.jar
