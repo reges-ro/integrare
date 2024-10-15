@@ -846,251 +846,6 @@
 					]
 				},
 				{
-					"name": "Angajator",
-					"item": [
-						{
-							"name": "Modificare",
-							"item": [
-								{
-									"name": "Angajator",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{AuthToken}}",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"angajator\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareAngajator\",\r\n    \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaAngajator\": {\r\n        \"id\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\"\r\n    },\r\n  \"info\":{\r\n    \"adresa\": \"RAMURI TEI, NR. 3\",\r\n    \"detalii\": \r\n    {\r\n        \"$type\" : \"detaliiAngajatorPersoanaJuridica\",\r\n        \"cui\": \"13373052\",\r\n        \"nume\":\"INFO WORLD SRL\",\r\n        \"domeniuActivitate\":\r\n        {\r\n            \"cod\": \"6201\",\r\n            \"versiune\": 2\r\n        },\r\n        \"formaJuridicaPJ\": \"SocietateComerciala\",\r\n        \"formaOrganizarePJ\": \"SocietateCuRaspundereLimitata\",\r\n        \"nivelInfiintare\": \"SediuSocial\",\r\n        \"formaProprietate\": \"Privata\"\r\n    },\r\n    \"contact\":\r\n    {\r\n        \"reprezentantLegal\": \"POPESCU ION\",\r\n        \"telefon\": \"0722111333\",\r\n        \"fax\": \"0372111333\",\r\n        \"email\": \"ion@infoworld.ro\"\r\n    },\r\n    \"localitate\": {\"codSiruta\":179141}\r\n  }\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/api/Angajator",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"api",
-												"Angajator"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "AngajatorBatch",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{AuthToken}}",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n    \"Message\": [\r\n        {\r\n            \"$type\" : \"angajator\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n                \"clientApplication\": \"SAP\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"ModificareAngajator\",\r\n                \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"referintaAngajator\": {\r\n                    \"id\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\"\r\n                },\r\n            \"info\":{\r\n                \"adresa\": \"RAMURI TEI, NR. 3\",\r\n                \"detalii\": \r\n                {\r\n                    \"$type\" : \"detaliiAngajatorPersoanaJuridica\",\r\n                    \"cui\": \"13373052\",\r\n                    \"nume\":\"INFO WORLD SRL\",\r\n                    \"domeniuActivitate\":\r\n                    {\r\n                        \"cod\": \"6201\",\r\n                        \"versiune\": 2\r\n                    },\r\n                    \"formaJuridicaPJ\": \"SocietateComerciala\",\r\n                    \"formaOrganizarePJ\": \"SocietateCuRaspundereLimitata\",\r\n                    \"nivelInfiintare\": \"SediuSocial\",\r\n                    \"formaProprietate\": \"Privata\"\r\n                },\r\n                \"contact\":\r\n                {\r\n                    \"reprezentantLegal\": \"POPESCU GEORGE\",\r\n                    \"telefon\": \"0722111333\",\r\n                    \"fax\": \"0372111333\",\r\n                    \"email\": \"ion@infoworld.ro\"\r\n                },\r\n                \"localitate\": {\"codSiruta\":179141}\r\n                }\r\n            }\r\n        , \r\n                {\r\n            \"$type\" : \"angajator\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3c0c792af\",\r\n                \"clientApplication\": \"SAP\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"ModificareAngajator\",\r\n                \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"referintaAngajator\": {\r\n                    \"id\": \"227f9b03-9efb-4f5a-8ebb-7ab3b0c792ab\"\r\n                },\r\n            \"info\":{\r\n                    \"adresa\": \"ANGAJATORULUI, NR. 3\",\r\n                    \"detalii\": \r\n                    {\r\n                        \"$type\" : \"detaliiAngajatorPersoanaJuridica\",\r\n                        \"cui\": \"13373051\",\r\n                        \"nume\":\"GIGI IMPEX SRL\",\r\n                        \"domeniuActivitate\":\r\n                        {\r\n                            \"cod\": \"6201\",\r\n                            \"versiune\": 2\r\n                        },\r\n                        \"formaJuridicaPJ\": \"SocietateComerciala\",\r\n                        \"formaOrganizarePJ\": \"SocietateCuRaspundereLimitata\",\r\n                        \"nivelInfiintare\": \"SediuSocial\",\r\n                        \"formaProprietate\": \"Privata\"\r\n                    },\r\n                    \"contact\":\r\n                    {\r\n                        \"reprezentantLegal\": \"POPESCU ION\",\r\n                        \"telefon\": \"0722111334\",\r\n                        \"fax\": \"0372111335\",\r\n                        \"email\": \"ion@gigiimpex.ro\"\r\n                    },\r\n                    \"localitate\": {\"codSiruta\":179141}\r\n                    }\r\n            }\r\n    ]\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/api/Angajator/Batch",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"api",
-												"Angajator",
-												"Batch"
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
-							"name": "Inregistrare Angajator",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"$type\" : \"angajator\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"InregistrareAngajator\",\r\n    \"authorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"info\":{\r\n    \"adresa\": \"RAMURI TEI, NR. 3\",\r\n    \"detalii\": \r\n    {\r\n        \"$type\" : \"detaliiAngajatorPersoanaJuridica\",\r\n        \"cui\": \"13373052\",\r\n        \"nume\":\"INFO WORLD SRL\",\r\n        \"domeniuActivitate\":\r\n        {\r\n            \"cod\": \"6201\",\r\n            \"versiune\": 2\r\n        },\r\n        \"formaJuridicaPJ\": \"SocietateComerciala\",\r\n        \"formaOrganizarePJ\": \"SocietateCuRaspundereLimitata\",\r\n        \"nivelInfiintare\": \"SediuSocial\",\r\n        \"formaProprietate\": \"Privata\"\r\n    },\r\n    \"contact\":\r\n    {\r\n        \"reprezentantLegal\": \"POPESCU ION\",\r\n        \"telefon\": \"0722111333\",\r\n        \"fax\": \"0372111333\",\r\n        \"email\": \"ion@infoworld.ro\"\r\n    },\r\n    \"localitate\": {\"codSiruta\":179141}\r\n  }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Angajator",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Angajator"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Angajator",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Angajator/CAEE860A-DAEA-480E-A945-BDD3579477EF",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Angajator",
-										"CAEE860A-DAEA-480E-A945-BDD3579477EF"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CautareSalariati",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"AngajatorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n  \"NumeSalariat\": \"SAMPATH\",\r\n  \"PrenumeSalariat\": null,\r\n  \"CnpSalariat\": null,\r\n  \"DataNastereSalariat\": null\r\n} ",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Angajator/CautareSalariati",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Angajator",
-										"CautareSalariati"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CautareContracte",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"AngajatorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n  \"NumeSalariat\": null,\r\n  \"PrenumeSalariat\": null,\r\n  \"CnpSalariat\": null,\r\n  \"DataNastereSalariat\": null,\r\n  \"NumarContract\": \"12345\"\r\n} ",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Angajator/CautareContracte",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Angajator",
-										"CautareContracte"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "Salariat",
 					"item": [
 						{
@@ -1586,6 +1341,49 @@
 										"body": {
 											"mode": "raw",
 											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AdaugareContract</Operation>\r\n        <AuthorId>d674ebea-a672-4b62-96c6-0ad8abbfe0d</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreagaLegiSpeciale</Norma>\r\n            <Repartizare>OreDeNoapte</Repartizare>\r\n            <IntervalTimp>OrePeSaptamana</IntervalTimp>\r\n            <Durata>30</Durata>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>1000</Valoare>\r\n                <Tip xsi:type=\"TipSporAngajator\">\r\n                    <Nume>Salariu de merit angajator</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </Continut>\r\n</Message>",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Adaugare Copy",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AdaugareContract</Operation>\r\n        <AuthorId>f8805c2d-0e40-4a72-8cb6-d54d9b77206a</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>1b72a0c6-53a4-4553-9b29-3ba0bb1a211c</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <NumarContract>b912345687</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreagaLegiSpeciale</Norma>\r\n            <Repartizare>OreDeNoapte</Repartizare>\r\n            <IntervalTimp>OrePeSaptamana</IntervalTimp>\r\n            <Durata>30</Durata>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>1000</Valoare>\r\n                <Tip xsi:type=\"TipSporAngajator\">\r\n                    <Nume>Salariu de merit angajator</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </Continut>\r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -2358,281 +2156,6 @@
 										"api",
 										"Contract",
 										"0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Angajator",
-					"item": [
-						{
-							"name": "Modificare",
-							"item": [
-								{
-									"name": "Angajator",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "text/xml",
-												"type": "text"
-											},
-											{
-												"key": "Accept",
-												"value": "text/xml",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{AuthToken}}",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Angajator\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5a-8ebb-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareAngajator</Operation>\r\n        <AuthorId>117f9b03-9efb-4f5e-8abb-7ab3b0c792cf</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaAngajator>\r\n        <Id>117f9b03-9efb-4f5a-8ebb-7ab3b0c792af</Id>\r\n    </ReferintaAngajator>\r\n    <Info>\r\n        <Adresa>STR. ANGAJATORULUI, NR. 1</Adresa>\r\n        <Detalii xsi:type=\"DetaliiAngajatorPersoanaJuridica\">\r\n            <Cui>14633045</Cui>\r\n            <Nume>GIGI IMPEX S.R.L.</Nume>\r\n            <DomeniuActivitate>\r\n                <Cod>0144</Cod>\r\n                <Versiune>2</Versiune>\r\n            </DomeniuActivitate>\r\n            <FormaJuridicaPJ>SocietateComerciala</FormaJuridicaPJ>\r\n            <FormaOrganizarePJ>SocietateCuRaspundereLimitata</FormaOrganizarePJ>\r\n            <NivelInfiintare>SediuSocial</NivelInfiintare>\r\n            <FormaProprietate>Privata</FormaProprietate>\r\n        </Detalii>\r\n        <Contact>\r\n            <ReprezentantLegal>POPESCU ION</ReprezentantLegal>\r\n            <Telefon>0722111333</Telefon>\r\n            <Fax>0372111333</Fax>\r\n            <Email>ion@gigiimpex.ro</Email>\r\n        </Contact>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n    </Info>\r\n</Message>",
-											"options": {
-												"raw": {
-													"language": "xml"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/api/Angajator",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"api",
-												"Angajator"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "AngajatorBatch",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "text/xml",
-												"type": "text"
-											},
-											{
-												"key": "Accept",
-												"value": "text/xml",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{AuthToken}}",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<Batch xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Message xsi:type=\"Angajator\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5a-8ebb-7ab3b0c792af</MessageId>\r\n            <ClientApplication>SAP</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>ModificareAngajator</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8abb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <ReferintaAngajator>\r\n            <Id>117f9b03-9efb-4f5a-8ebb-7ab3b0c792af</Id>\r\n        </ReferintaAngajator>\r\n        <Info>\r\n            <Adresa>STR. ANGAJATORULUI, NR. 1</Adresa>\r\n            <Detalii xsi:type=\"DetaliiAngajatorPersoanaJuridica\">\r\n                <Cui>14633045</Cui>\r\n                <Nume>GIGI IMPEX S.R.L.</Nume>\r\n                <DomeniuActivitate>\r\n                    <Cod>0144</Cod>\r\n                    <Versiune>2</Versiune>\r\n                </DomeniuActivitate>\r\n                <FormaJuridicaPJ>SocietateComerciala</FormaJuridicaPJ>\r\n                <FormaOrganizarePJ>SocietateCuRaspundereLimitata</FormaOrganizarePJ>\r\n                <NivelInfiintare>SediuSocial</NivelInfiintare>\r\n                <FormaProprietate>Privata</FormaProprietate>\r\n            </Detalii>\r\n            <Contact>\r\n                <ReprezentantLegal>POPESCU ION</ReprezentantLegal>\r\n                <Telefon>0722111333</Telefon>\r\n                <Fax>0372111333</Fax>\r\n                <Email>ion@gigiimpex.ro</Email>\r\n            </Contact>\r\n            <Localitate>\r\n                <CodSiruta>179141</CodSiruta>\r\n            </Localitate>\r\n        </Info>\r\n    </Message>\r\n    <Message xsi:type=\"Angajator\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5a-8ebb-7ab3b0c792ab</MessageId>\r\n            <ClientApplication>SAP</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>ModificareAngajator</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8abb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <ReferintaAngajator>\r\n            <Id>117f9b03-9efb-4f5a-8ebb-7ab3b0c792ad</Id>\r\n        </ReferintaAngajator>\r\n        <Info>\r\n            <Adresa>STR. ANGAJATORULUI, NR. 2</Adresa>\r\n            <Detalii xsi:type=\"DetaliiAngajatorPersoanaJuridica\">\r\n                <Cui>14633045</Cui>\r\n                <Nume>COSTEL IMPEX S.R.L.</Nume>\r\n                <DomeniuActivitate>\r\n                    <Cod>0144</Cod>\r\n                    <Versiune>2</Versiune>\r\n                </DomeniuActivitate>\r\n                <FormaJuridicaPJ>SocietateComerciala</FormaJuridicaPJ>\r\n                <FormaOrganizarePJ>SocietateCuRaspundereLimitata</FormaOrganizarePJ>\r\n                <NivelInfiintare>SediuSocial</NivelInfiintare>\r\n                <FormaProprietate>Privata</FormaProprietate>\r\n            </Detalii>\r\n            <Contact>\r\n                <ReprezentantLegal>GEORGESCU ION</ReprezentantLegal>\r\n                <Telefon>0722111334</Telefon>\r\n                <Fax>0372111334</Fax>\r\n                <Email>ion@colstelimpex.ro</Email>\r\n            </Contact>\r\n            <Localitate>\r\n                <CodSiruta>179141</CodSiruta>\r\n            </Localitate>\r\n        </Info>\r\n    </Message>\r\n</Batch>",
-											"options": {
-												"raw": {
-													"language": "xml"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/api/Angajator/Batch",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"api",
-												"Angajator",
-												"Batch"
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
-							"name": "Inregistrare Angajator",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "text/xml",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "text/xml",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Angajator\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5a-8ebb-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>InregistrareAngajator</Operation>\r\n        <AuthorId>117f9b03-9efb-4f5e-8abb-7ab3b0c792cf</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Info>\r\n        <Adresa>STR. ANGAJATORULUI, NR. 1</Adresa>\r\n        <Detalii xsi:type=\"DetaliiAngajatorPersoanaJuridica\">\r\n            <Cui>14633045</Cui>\r\n            <Nume>GIGI IMPEX S.R.L.</Nume>\r\n            <DomeniuActivitate>\r\n                <Cod>0144</Cod>\r\n                <Versiune>2</Versiune>\r\n            </DomeniuActivitate>\r\n            <FormaJuridicaPJ>SocietateComerciala</FormaJuridicaPJ>\r\n            <FormaOrganizarePJ>SocietateCuRaspundereLimitata</FormaOrganizarePJ>\r\n            <NivelInfiintare>SediuSocial</NivelInfiintare>\r\n            <FormaProprietate>Privata</FormaProprietate>\r\n        </Detalii>\r\n        <Contact>\r\n            <ReprezentantLegal>POPESCU ION</ReprezentantLegal>\r\n            <Telefon>0722111333</Telefon>\r\n            <Fax>0372111333</Fax>\r\n            <Email>ion@gigiimpex.ro</Email>\r\n        </Contact>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n    </Info>\r\n</Message>",
-									"options": {
-										"raw": {
-											"language": "xml"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Angajator",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Angajator"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Angajator",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "text/xml",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Angajator/CAEE860A-DAEA-480E-A945-BDD3579477EF",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Angajator",
-										"CAEE860A-DAEA-480E-A945-BDD3579477EF"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CautareSalariati",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "text/xml",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"AngajatorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n  \"NumeSalariat\": \"SAMPATH\",\r\n  \"PrenumeSalariat\": null,\r\n  \"CnpSalariat\": null,\r\n  \"DataNastereSalariat\": null\r\n} ",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Angajator/CautareSalariati",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Angajator",
-										"CautareSalariati"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CautareContracte",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "text/xml",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"AngajatorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n  \"NumeSalariat\": null,\r\n  \"PrenumeSalariat\": null,\r\n  \"CnpSalariat\": null,\r\n  \"DataNastereSalariat\": null,\r\n  \"NumarContract\": \"12345\"\r\n} ",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Angajator/CautareContracte",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Angajator",
-										"CautareContracte"
 									]
 								}
 							},
