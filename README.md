@@ -194,8 +194,68 @@ Majoritatea tipurilor de date din schema XSD contin si nomenclatoarele incluse. 
 
 Puteti consulta aici o varianta draft a acestora. [Nomenclatoare in format JSON](nomenclatoare/nomenclatoare.json)
 
-## 5 Migrarea datelor
+## 6 Migrarea datelor
 
 Baza de date actuala a sistemului REGES 2011 va fi migrata in noul sistem REGES Online integral, angajatorii putand accesa datele din registru folosind aplicatia Angajator indiferent daca vor lucra prin API sau exclusiv prin aplicatia Angajator.
 
 Dezvoltatorii de programe vor avea optiunea de a exporta lista contractelor cu ID-uri specifice REGES Online astfel incat sa poata asocia in softurile proprii aceste ID-uri in vederea transmiterii de modificari ulterioare pe aceste documente (pentru a completa ReferintaSalariat si ReferintaContract). 
+
+## 7 Mediul de test
+
+Disponibil la adresa *.test.inspectiamuncii.org astfel
+
+- Portal web https://reges.test.inspectiamuncii.org	
+- API https://api.test.inspectiamuncii.org	
+- Aplicatia Angajator https://reges.test.inspectiamuncii.org/app/index.html
+- SWAGGER https://api.test.inspectiamuncii.org/swagger/
+
+NOTA: multe componente sunt early-alpha, este posibil sa mai intampinati erori, semnalati pe GitHub si vom remedia. Chiar si API mai poate suferi schimbari.
+
+Gasiti aici https://github.com/reges-ro/integrare/issues/19 prezentarea PPT si inregistrarea sedintei online in care am prezentat cum se acceseaza mediul de test prin POSTMAN
+
+### 7.1 Pasi pentru a obtine un API Key
+
+- Inregistrare ca cetatean
+- Cerere access registru (se aproba automat)
+- Selectare registru unde sunt autorizat
+- Generare API key
+
+Aplicatia "Angajator" din mediul de test va faciliteaza obtinerea unei chei astfel:
+
+- Accesarea oricarui registru se face in baza unei cereri
+- Pe mediul de test cererile sunt aprobate automat
+- Alegem meniu “Registru” -> “Operatii” -> “Cerere access registru”
+- Completam astfel:
+    * Calitate subsemnat: Reprezentant legal
+    * Tip societate: CIF
+    * Numar identificare societati: un CUI valid ales de dvs, al unei firme active
+    * Bifa “Declar pe proprie raspundere”
+    * NU atasam fisiere.
+- Apasam buton albastru “Inainte”
+- Observam si verificam corectitudine informatiilor
+- Apasam buton albastru “Transmite”
+
+Odata aprobata cererea puteti alege registrul din meniul "Registru" -> "Operatii" -> "Registre angajator" (atentie in viitor acest meniu e posibil sa capete alta denumire)
+
+Dupa selectarea registrului curent, in meniul "Setari" -> "Acces" -> "Chei API" veti obtine user si parola de acces.
+
+Folositi aceste chei pentru a initia un client OpenID din aplicatiile dvs.
+
+- Client_id: reges-api
+- Client_secret: FjtrYvDTGZKiyHGdSWymOvxhqifTJ7Em
+- Username: XXXX - ce ati primit
+- Password: XXXX - ce ati primit
+
+### 7.2 Metode de transmitere mesaje si de citire raspuns
+
+- POST /api/Contract - transmite un contract sau operatii pe contract
+- POST /api/Salariat - transmite un salariat sau o actualizare
+- GET /api/Profile - solicita informatii despre profilul angajatorului
+- POST /api/Status/PollMessage - citeste urmatorul mesaj necitit din coada angajatorului si trece la urmatorul
+- POST /api/Status/ReadMessage - citeste urmatorul mesaj necitit din coada angajatorului
+- POST /api/Status/CommitRead - trece la urmatorul mesaj din coada angajatorului
+
+Mai multe detalii gasiti in swagger: http://api.test.inspectiamuncii.org/swagger
+
+
+
