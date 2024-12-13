@@ -16,7 +16,7 @@
 							"name": "Inregistrare",
 							"item": [
 								{
-									"name": "Adaugare",
+									"name": "AdaugareContract",
 									"request": {
 										"method": "POST",
 										"header": [
@@ -33,7 +33,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792ae\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AdaugareContract\",\r\n    \"authorId\": \"f8805c2d-0e40-4a72-8cb6-d54d9b77206a\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"continut\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"abc29c38-2e14-42a4-8ef7-6ddceffc312f\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":251204,\r\n        \"versiune\":10\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"numarContract\":\"9022\",\r\n    \"radiat\":false,\r\n    \"salariu\":4000,\r\n    \"salariuValuta\":800,\r\n    \"moneda\": \"EUR\",\r\n    \"sporuriSalariu\":\r\n    [\r\n        {\r\n            \"isProcent\": true,\r\n            \"valoare\": 2000,\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"spor\",\r\n                \"nume\" : \"Salariu de merit\"\r\n            }\r\n        },\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 1000,\r\n            \"moneda\":\"EUR\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"sporAngajator\",\r\n                \"nume\" : \"Salariu de merit angajator\"\r\n            }\r\n        }\r\n    ],\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"repartizare\":\"OreDeZi\",\r\n        \"repartizareMunca\":\"Zilnic\",\r\n        \"zileSaptamana\":[\"Luni\",\"Miercuri\",\"Vineri\"],\r\n        \"inceputInterval\":\"2024-01-01T10:30:00.000\",\r\n        \"sfarsitInterval\":\"2024-01-01T18:30:00.000\"\r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792ae\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AdaugareContract\",\r\n    \"authorId\": \"f8805c2d-0e40-4a72-8cb6-d54d9b77206a\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"continut\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"abc29c38-2e14-42a4-8ef7-6ddceffc312f\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":251204,\r\n        \"versiune\":10\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"exceptieDataSfarsit\": \"Art83LitH\",\r\n    \"numarContract\":\"9022\",\r\n    \"radiat\":false,\r\n    \"salariu\":4000,\r\n    \"salariuValuta\":800,\r\n    \"moneda\": \"EUR\",\r\n    \"nivelStudii\":\"MG\",\r\n    \"sporuriSalariu\":\r\n    [\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 2000,\r\n            \"valoareValuta\": 400,\r\n            \"moneda\":\"EUR\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"spor\",\r\n                \"nume\" : \"Salariu de merit\"\r\n            }\r\n        },\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 1000,\r\n            \"valoareValuta\":225,\r\n            \"moneda\": \"USD\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"sporAngajator\",\r\n                \"nume\" : \"Salariu de merit angajator\"\r\n            }\r\n        }\r\n    ],\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"durata\": 40,\r\n        \"intervalTimp\":\"OrePeZi\",\r\n        \"repartizare\":\"OreDeZi\",\r\n        \"repartizareMunca\":\"Zilnic\",\r\n        \"inceputInterval\":\"2024-01-01T10:30:00.000\",\r\n        \"sfarsitInterval\":\"2024-01-01T18:30:00.000\",\r\n        \"notaRepartizareMunca\": \"Miercuri vine de la 12:00\",\r\n        \"tipTura\": \"Alta\",\r\n        \"observatiiTipTuraAlta\": \"Program flexibil\"        \r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\",\r\n    \"tipLocMunca\": \"Mobil\",\r\n    \"judetLocMunca\": \"ARGES\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -83,7 +83,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareContract\",\r\n    \"authorId\": \"f8805c2d-0e40-4a72-8cb6-d54d9b77206a\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"d6637f86-2c6f-4f21-8e3f-3b28befd617c\"\r\n  },\r\n  \"continut\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":251204,\r\n        \"versiune\":10\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-06-18T14:19:58.917Z\",\r\n    \"numarContract\":\"12345\",\r\n    \"radiat\":false,\r\n    \"salariu\":4000,\r\n    \"salariuValuta\":800,\r\n    \"moneda\": \"RON\",\r\n    \"sporuriSalariu\":\r\n    [\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 2000,\r\n            \"valoareValuta\": 400,\r\n            \"moneda\":\"EUR\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"spor\",\r\n                \"nume\" : \"Salariu de merit\"\r\n            }\r\n        },\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 1000,\r\n            \"valoareValuta\":225,\r\n            \"moneda\": \"USD\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"sporAngajator\",\r\n                \"nume\" : \"Salariu de merit angajator\"\r\n            }\r\n        }\r\n    ],\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"repartizare\":\"OreDeZi\"\r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareContract\",\r\n    \"authorId\": \"f8805c2d-0e40-4a72-8cb6-d54d9b77206a\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"d6637f86-2c6f-4f21-8e3f-3b28befd617c\"\r\n  },\r\n  \"continut\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":251204,\r\n        \"versiune\":10\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"exceptieDataSfarsit\": \"Art83LitH\",\r\n    \"numarContract\":\"9022\",\r\n    \"radiat\":false,\r\n    \"salariu\":4000,\r\n    \"salariuValuta\":800,\r\n    \"moneda\": \"EUR\",\r\n    \"nivelStudii\":\"MG\",\r\n    \"sporuriSalariu\":\r\n    [\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 2000,\r\n            \"valoareValuta\": 400,\r\n            \"moneda\":\"EUR\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"spor\",\r\n                \"nume\" : \"Salariu de merit\"\r\n            }\r\n        },\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 1000,\r\n            \"valoareValuta\":225,\r\n            \"moneda\": \"USD\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"sporAngajator\",\r\n                \"nume\" : \"Salariu de merit angajator\"\r\n            }\r\n        }\r\n    ],\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"durata\": 40,\r\n        \"intervalTimp\":\"OrePeZi\",\r\n        \"repartizare\":\"OreDeZi\",\r\n        \"repartizareMunca\":\"Zilnic\",\r\n        \"inceputInterval\":\"2024-01-01T10:30:00.000\",\r\n        \"sfarsitInterval\":\"2024-01-01T18:30:00.000\",\r\n        \"notaRepartizareMunca\": \"Miercuri vine de la 12:00\",\r\n        \"tipTura\": \"Alta\",\r\n        \"observatiiTipTuraAlta\": \"Program flexibil\"\r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\",\r\n    \"tipLocMunca\": \"Mobil\",\r\n    \"judetLocMunca\": \"ARGES\"\r\n  },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -128,7 +128,52 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC\"\r\n  },\r\n  \"continut\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"abc29c38-2e14-42a4-8ef7-6ddceffc312f\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":251204,\r\n        \"versiune\":10\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-06-18T14:19:58.917Z\",\r\n    \"numarContract\":\"12345\",\r\n    \"radiat\":false,\r\n    \"salariu\":4000,\r\n    \"sporuriSalariu\":\r\n    [\r\n        {\r\n            \"referintaSpor\": {\r\n                    \"id\": \"be97ca46-0aaf-483c-9025-e314d8cb7343\"\r\n                },\r\n            \"isProcent\": false,\r\n            \"valoare\": 2000,\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"spor\",\r\n                \"nume\" : \"Salariu de merit\"\r\n            }\r\n        }\r\n    ],\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"repartizare\":\"OreDeZi\"\r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieContract\",\r\n    \"authorId\": \"f8805c2d-0e40-4a72-8cb6-d54d9b77206a\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"d6637f86-2c6f-4f21-8e3f-3b28befd617c\"\r\n  },\r\n  \"continut\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":251204,\r\n        \"versiune\":10\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"exceptieDataSfarsit\": \"Art83LitH\",\r\n    \"numarContract\":\"9022\",\r\n    \"radiat\":false,\r\n    \"salariu\":4000,\r\n    \"salariuValuta\":800,\r\n    \"moneda\": \"EUR\",\r\n    \"nivelStudii\":\"MG\",\r\n    \"sporuriSalariu\":\r\n    [\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 2000,\r\n            \"valoareValuta\": 400,\r\n            \"moneda\":\"EUR\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"spor\",\r\n                \"nume\" : \"Salariu de merit\"\r\n            }\r\n        },\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 1000,\r\n            \"valoareValuta\":225,\r\n            \"moneda\": \"USD\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"sporAngajator\",\r\n                \"nume\" : \"Salariu de merit angajator\"\r\n            }\r\n        }\r\n    ],\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"durata\": 40,\r\n        \"intervalTimp\":\"OrePeZi\",\r\n        \"repartizare\":\"OreDeZi\",\r\n        \"repartizareMunca\":\"Zilnic\",\r\n        \"inceputInterval\":\"2024-01-01T10:30:00.000\",\r\n        \"sfarsitInterval\":\"2024-01-01T18:30:00.000\",\r\n        \"notaRepartizareMunca\": \"Miercuri vine de la 12:00\",\r\n        \"tipTura\": \"Alta\",\r\n        \"observatiiTipTuraAlta\": \"Program flexibil\"\r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\",\r\n    \"tipLocMunca\": \"Mobil\",\r\n    \"judetLocMunca\": \"ARGES\"\r\n  },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CorectieIstoricContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieIstoricContract\",\r\n    \"authorId\": \"f8805c2d-0e40-4a72-8cb6-d54d9b77206a\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"d6637f86-2c6f-4f21-8e3f-3b28befd617c\"\r\n  },\r\n  \"continut\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":251204,\r\n        \"versiune\":10\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"exceptieDataSfarsit\": \"Art83LitH\",\r\n    \"numarContract\":\"9022\",\r\n    \"radiat\":false,\r\n    \"salariu\":4000,\r\n    \"salariuValuta\":800,\r\n    \"moneda\": \"EUR\",\r\n    \"nivelStudii\":\"MG\",\r\n    \"sporuriSalariu\":\r\n    [\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 2000,\r\n            \"valoareValuta\": 400,\r\n            \"moneda\":\"EUR\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"spor\",\r\n                \"nume\" : \"Salariu de merit\"\r\n            }\r\n        },\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 1000,\r\n            \"valoareValuta\":225,\r\n            \"moneda\": \"USD\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"sporAngajator\",\r\n                \"nume\" : \"Salariu de merit angajator\"\r\n            }\r\n        }\r\n    ],\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"durata\": 40,\r\n        \"intervalTimp\":\"OrePeZi\",\r\n        \"repartizare\":\"OreDeZi\",\r\n        \"repartizareMunca\":\"Zilnic\",\r\n        \"inceputInterval\":\"2024-01-01T10:30:00.000\",\r\n        \"sfarsitInterval\":\"2024-01-01T18:30:00.000\",\r\n        \"notaRepartizareMunca\": \"Miercuri vine de la 12:00\",\r\n        \"tipTura\": \"Alta\",\r\n        \"observatiiTipTuraAlta\": \"Program flexibil\"\r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\",\r\n    \"tipLocMunca\": \"Mobil\",\r\n    \"judetLocMunca\": \"ARGES\"\r\n  },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -178,7 +223,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"SuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n        \"temeiLegal\": \"Art54\"\r\n    }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"SuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n        \"temeiLegal\": \"Art54\"\r\n  },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -223,7 +268,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n        \"temeiLegal\": \"Art54\"\r\n    }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n        \"temeiLegal\": \"Art54\"\r\n    },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -268,7 +313,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n        \"temeiLegal\": \"Art54\"\r\n    }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n        \"temeiLegal\": \"Art54\"\r\n    },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -313,7 +358,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AnulareSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AnulareSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -358,7 +403,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"IncetareSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataIncetareSuspendare\": \"2024-09-25T13:06:22.7010678+00:00\"\r\n    }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"IncetareSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataIncetareSuspendare\": \"2024-09-25T13:06:22.7010678+00:00\"\r\n    },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -403,7 +448,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieIncetareSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataIncetareSuspendare\": \"2024-09-24T13:06:22.7010678+00:00\"\r\n    }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieIncetareSuspendareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneSuspendare\",\r\n        \"dataIncetareSuspendare\": \"2024-09-24T13:06:22.7010678+00:00\"\r\n    },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -453,7 +498,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"IncetareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneIncetare\",\r\n        \"dataIncetare\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"Indisciplina\",\r\n        \"temeiLegal\": \"Art55LitB\"\r\n    }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"IncetareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneIncetare\",\r\n        \"dataIncetare\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"Indisciplina\",\r\n        \"temeiLegal\": \"Art55LitB\"\r\n    },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -498,7 +543,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieIncetareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneIncetare\",\r\n        \"dataIncetare\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"Indisciplina la locul de munca\",\r\n        \"temeiLegal\": \"Art61LitA\"\r\n    }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieIncetareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneIncetare\",\r\n        \"dataIncetare\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"Indisciplina la locul de munca\",\r\n        \"temeiLegal\": \"Art61LitA\"\r\n    },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -543,7 +588,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AnulareIncetareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AnulareIncetareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -588,7 +633,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ReactivareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneReactivare\",\r\n        \"dataReactivare\": \"2024-09-21T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"Hotarare judecatoreasca\",\r\n        \"temeiLegal\": \"Reintegrare\"\r\n    }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ReactivareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneReactivare\",\r\n        \"dataReactivare\": \"2024-09-21T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"Hotarare judecatoreasca\",\r\n        \"temeiLegal\": \"Reintegrare\"\r\n    },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -633,7 +678,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieReactivareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneReactivare\",\r\n        \"dataReactivare\": \"2024-09-22T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"Hotarare judecatoreasca definitiva\",\r\n        \"temeiLegal\": \"Reintegrare\"\r\n    }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieReactivareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneReactivare\",\r\n        \"dataReactivare\": \"2024-09-22T13:06:22.7010678+00:00\",\r\n        \"explicatie\": \"Hotarare judecatoreasca definitiva\",\r\n        \"temeiLegal\": \"Reintegrare\"\r\n    },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -678,7 +723,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AnulareReactivareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AnulareReactivareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"documentJustificativ\":{\r\n    \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n    \"numarDocumentJustificativ\" : \"HJ12345\",\r\n    \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -758,6 +803,281 @@
 							]
 						},
 						{
+							"name": "Detasare",
+							"item": [
+								{
+									"name": "DetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"DetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"1579AEE4-3CDF-4687-94AC-0AAC3B40E670\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneDetasare\",\r\n        \"temeiDetasare\":\"Transnationala\",\r\n        \"angajatorNume\": \"SAP AG\",\r\n        \"angajatorCui\": \"12345\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n        \"nationalitate\": {\"nume\": \"Germania\"},\r\n        \"cor\":\r\n        {\r\n            \"cod\":251204,\r\n            \"versiune\":10\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CorectieDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieDetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"1579AEE4-3CDF-4687-94AC-0AAC3B40E670\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneDetasare\",\r\n        \"temeiDetasare\":\"Transnationala\",\r\n        \"angajatorNume\": \"SAP AG\",\r\n        \"angajatorCui\": \"12345\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-10-27T13:06:22.7010678+00:00\",\r\n        \"nationalitate\": {\"nume\": \"Spania\"},\r\n        \"cor\":\r\n        {\r\n            \"cod\":251204,\r\n            \"versiune\":10\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PrelungireDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"PrelungireDetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"1579AEE4-3CDF-4687-94AC-0AAC3B40E670\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneDetasare\",\r\n        \"temeiDetasare\":\"Transnationala\",\r\n        \"angajatorNume\": \"SAP AG\",\r\n        \"angajatorCui\": \"12345\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-10-25T13:06:22.7010678+00:00\",\r\n        \"nationalitate\": {\"nume\": \"Spania\"},\r\n        \"cor\":\r\n        {\r\n            \"cod\":251204,\r\n            \"versiune\":10\r\n        }\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "AnulareDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AnulareDetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"1579AEE4-3CDF-4687-94AC-0AAC3B40E670\"\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IncetareDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"IncetareDetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"1579AEE4-3CDF-4687-94AC-0AAC3B40E670\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneDetasare\",\r\n        \"temeiDetasare\":\"Transnationala\",\r\n        \"angajatorNume\": \"SAP AG\",\r\n        \"angajatorCui\": \"12345\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n        \"nationalitate\": {\"nume\": \"Spania\"},\r\n        \"cor\":\r\n        {\r\n            \"cod\":251204,\r\n            \"versiune\":10\r\n        },\r\n        \"dataIncetareDetasare\":\"2024-09-25T13:06:22.7010678+00:00\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CorectieIncetareDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"CorectieIncetareDetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"1579AEE4-3CDF-4687-94AC-0AAC3B40E670\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneDetasare\",\r\n        \"temeiDetasare\":\"Transnationala\",\r\n        \"angajatorNume\": \"SAP AG\",\r\n        \"angajatorCui\": \"12345\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-10-25T13:06:22.7010678+00:00\",\r\n        \"nationalitate\": {\"nume\": \"Spania\"},\r\n        \"cor\":\r\n        {\r\n            \"cod\":251204,\r\n            \"versiune\":10\r\n        },\r\n        \"dataIncetareDetasare\":\"2024-09-22T13:06:22.7010678+00:00\"\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											],
+											"query": [
+												{
+													"key": "",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "Batch",
 							"item": [
 								{
@@ -778,7 +1098,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"Message\": [\r\n        {\r\n        \"$type\" : \"contract\",\r\n        \"header\": {\r\n            \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n            \"clientApplication\": \"SAP\",\r\n            \"version\": \"5\",\r\n            \"operation\": \"SuspendareContract\",\r\n            \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n            \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n            \"user\": \"ion\",\r\n            \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n        },\r\n        \"referintaContract\": {\r\n                \"$type\" : \"referinta\",\r\n                \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n        },\r\n        \"actiune\": \r\n        {\r\n                \"$type\":\"actiuneSuspendare\",\r\n                \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n                \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n                \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n                \"temeiLegal\": \"Art54\"\r\n            }\r\n        },\r\n        {\r\n        \"$type\" : \"contract\",\r\n        \"header\": {\r\n            \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n            \"clientApplication\": \"SAP\",\r\n            \"version\": \"5\",\r\n            \"operation\": \"SuspendareContract\",\r\n            \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n            \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n            \"user\": \"ion\",\r\n            \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n        },\r\n        \"referintaContract\": {\r\n                \"$type\" : \"referinta\",\r\n                \"id\": \"4F8CB938-EA29-498D-A897-377A9794B205\"\r\n        },\r\n        \"actiune\": \r\n        {\r\n                \"$type\":\"actiuneSuspendare\",\r\n                \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n                \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n                \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n                \"temeiLegal\": \"Art54\"\r\n            }\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"Message\": [\r\n        {\r\n            \"$type\" : \"contract\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n                \"clientApplication\": \"SAP\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"SuspendareContract\",\r\n                \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"referintaContract\": {\r\n                    \"$type\" : \"referinta\",\r\n                    \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n            },\r\n            \"actiune\": \r\n            {\r\n                    \"$type\":\"actiuneSuspendare\",\r\n                    \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n                    \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n                    \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n                    \"temeiLegal\": \"Art54\"\r\n            },\r\n            \"documentJustificativ\":\r\n            {\r\n                \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n                \"numarDocumentJustificativ\" : \"HJ12345\",\r\n                \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n            }\r\n        },\r\n        {\r\n            \"$type\" : \"contract\",\r\n            \"header\": {\r\n                \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n                \"clientApplication\": \"SAP\",\r\n                \"version\": \"5\",\r\n                \"operation\": \"SuspendareContract\",\r\n                \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"user\": \"ion\",\r\n                \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"referintaContract\": {\r\n                    \"$type\" : \"referinta\",\r\n                    \"id\": \"4F8CB938-EA29-498D-A897-377A9794B205\"\r\n            },\r\n            \"actiune\": \r\n            {\r\n                    \"$type\":\"actiuneSuspendare\",\r\n                    \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n                    \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n                    \"explicatie\": \"SUSPENDARE CONFORM Art54\",\r\n                    \"temeiLegal\": \"Art54\"\r\n            },\r\n            \"documentJustificativ\":\r\n            {\r\n                \"tipDocumentJustificativ\" : \"HotarareJudecatoreasca\",\r\n                \"numarDocumentJustificativ\" : \"HJ12345\",\r\n                \"dataDocumentJustificativ\" : \"2024-11-27T12:00:00\"\r\n            }\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -800,48 +1120,6 @@
 									"response": []
 								}
 							]
-						},
-						{
-							"name": "Contract",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Contract/0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Contract",
-										"0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC"
-									]
-								}
-							},
-							"response": []
 						}
 					]
 				},
@@ -852,7 +1130,7 @@
 							"name": "Modificare",
 							"item": [
 								{
-									"name": "Salariat",
+									"name": "ModificareSalariat",
 									"request": {
 										"method": "POST",
 										"header": [
@@ -869,7 +1147,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"salariat\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareSalariat\",\r\n    \"authorId\": \"f8805c2d-0e40-4a72-8cb6-d54d9b77206a\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaSalariat\":{\r\n                    \"id\":\"ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F\"\r\n    },\r\n  \"info\":\r\n  {\r\n    \"localitate\": {\"codSiruta\":179141},\r\n    \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n    \"cnp\":\"123987456\",\r\n    \"nume\": \"SAMPATH\",\r\n    \"prenume\": \"SUMEDHA\",\r\n    \"dataNastere\": \"1990-06-15T00:00:00\",\r\n    \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n    \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n    \"tipActIdentitate\": \"Pasaport\",\r\n    \"apatrid\": \"CuDreptDeSedereInUe\",\r\n    \"detaliiSalariatStrain\" :\r\n    {\r\n        \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n        \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n        \"tipAutorizatie\": \"LucratorInaltCalificat\"\r\n    },\r\n    \"mentiuni\": \"Mentiuni salariat\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"salariat\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareSalariat\",\r\n    \"authorId\": \"D674EBEA-A672-4B62-96C6-0AD8ABBFE0DE\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"CM\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"info\":\r\n  {\r\n    \"localitate\": {\"codSiruta\":179141},\r\n    \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n    \"cnp\":\"123897456\",\r\n    \"nume\": \"SAMPATH\",\r\n    \"prenume\": \"SUMEDHA\",\r\n    \"dataNastere\": \"1990-06-15T00:00:00\",\r\n    \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n    \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n    \"tipActIdentitate\": \"Pasaport\",\r\n    \"apatrid\": \"CuDreptDeSedereInUe\",\r\n    \"detaliiSalariatStrain\" :\r\n    {\r\n            \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"tipAutorizatie\": \"Exceptie\",\r\n            \"tipAutorizatieExceptie\": \"Art32LiteraK\",\r\n            \"numarAutorizatie\": \"1234K\"\r\n    },\r\n    \"mentiuni\": \"Mentiuni salariat\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -907,7 +1185,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"Message\": [{\r\n            \"$type\" : \"salariat\",\r\n            \"Header\": {\r\n                \"MessageId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792af\",\r\n                \"ClientApplication\": \"SAP\",\r\n                \"Version\": \"5\",\r\n                \"Operation\": \"ModificareSalariat\",\r\n                \"AuthorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"User\": \"Ion\",\r\n                \"Timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"referintaSalariat\":{\r\n                    \"id\":\"ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F\"\r\n            },\r\n            \"info\":\r\n            {\r\n                \"localitate\": {\"codSiruta\":179141},\r\n                \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n                \"cnp\":\"123987456\",\r\n                \"nume\": \"SAMPATH\",\r\n                \"prenume\": \"SUMEDHA\",\r\n                \"dataNastere\": \"1990-06-15T00:00:00\",\r\n                \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n                \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n                \"tipActIdentitate\": \"Pasaport\",\r\n                \"apatrid\": \"CuDreptDeSedereInUe\",\r\n                \"detaliiSalariatStrain\" :\r\n                {\r\n                    \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n                    \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n                    \"tipAutorizatie\": \"LucratorInaltCalificat\"\r\n                },\r\n                \"mentiuni\": \"Mentiuni salariat\"\r\n            }\r\n        }, {\r\n            \"$type\" : \"salariat\",\r\n            \"Header\": {\r\n                \"MessageId\": \"117f9b03-9efb-4f5e-8ebb-7bb3b0c792af\",\r\n                \"ClientApplication\": \"SAP\",\r\n                \"Version\": \"5\",\r\n                \"Operation\": \"ModificareSalariat\",\r\n                \"AuthorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"User\": \"Ion\",\r\n                \"Timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"referintaSalariat\":{\r\n                    \"id\":\"ABC29C38-2E14-42A4-8EF7-6DDCEFFC313F\"\r\n            },\r\n            \"info\":{\r\n                \"localitate\": {\"codSiruta\":179141},\r\n                \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n                \"cnp\":\"123987457\",\r\n                \"nume\": \"OMAL\",\r\n                \"prenume\": \"SUMEDHA\",\r\n                \"dataNastere\": \"1990-06-15T00:00:00\",\r\n                \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n                \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n                \"tipActIdentitate\": \"Pasaport\",\r\n                \"apatrid\": \"CuDreptDeSedereInUe\",\r\n                \"detaliiSalariatStrain\" :\r\n                {\r\n                    \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n                    \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n                    \"tipAutorizatie\": \"LucratorInaltCalificat\"\r\n                },\r\n                \"mentiuni\": \"Mentiuni salariat\"\r\n            }\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"Message\": [{\r\n            \"$type\" : \"salariat\",\r\n            \"Header\": {\r\n                \"MessageId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792af\",\r\n                \"ClientApplication\": \"SAP\",\r\n                \"Version\": \"5\",\r\n                \"Operation\": \"ModificareSalariat\",\r\n                \"AuthorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"User\": \"Ion\",\r\n                \"Timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"referintaSalariat\":{\r\n                    \"id\":\"ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F\"\r\n            },\r\n            \"info\":\r\n            {\r\n                \"localitate\": {\"codSiruta\":179141},\r\n                \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n                \"cnp\":\"123987456\",\r\n                \"nume\": \"SAMPATH\",\r\n                \"prenume\": \"SUMEDHA\",\r\n                \"dataNastere\": \"1990-06-15T00:00:00\",\r\n                \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n                \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n                \"tipActIdentitate\": \"Pasaport\",\r\n                \"apatrid\": \"CuDreptDeSedereInUe\",\r\n                \"detaliiSalariatStrain\" :\r\n                {\r\n                    \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n                    \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n                    \"tipAutorizatie\": \"Exceptie\",\r\n                    \"tipAutorizatieExceptie\": \"Art32LiteraK\",\r\n                    \"numarAutorizatie\": \"1234K\"\r\n                },\r\n                \"mentiuni\": \"Mentiuni salariat\"\r\n            }\r\n        }, {\r\n            \"$type\" : \"salariat\",\r\n            \"Header\": {\r\n                \"MessageId\": \"117f9b03-9efb-4f5e-8ebb-7bb3b0c792af\",\r\n                \"ClientApplication\": \"SAP\",\r\n                \"Version\": \"5\",\r\n                \"Operation\": \"ModificareSalariat\",\r\n                \"AuthorId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n                \"User\": \"Ion\",\r\n                \"Timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n            },\r\n            \"referintaSalariat\":{\r\n                    \"id\":\"ABC29C38-2E14-42A4-8EF7-6DDCEFFC313F\"\r\n            },\r\n            \"info\":{\r\n                \"localitate\": {\"codSiruta\":179141},\r\n                \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n                \"cnp\":\"123987457\",\r\n                \"nume\": \"OMAL\",\r\n                \"prenume\": \"SUMEDHA\",\r\n                \"dataNastere\": \"1990-06-15T00:00:00\",\r\n                \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n                \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n                \"tipActIdentitate\": \"Pasaport\",\r\n                \"apatrid\": \"CuDreptDeSedereInUe\",\r\n                \"detaliiSalariatStrain\" :\r\n                {\r\n                    \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n                    \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n                    \"tipAutorizatie\": \"Exceptie\",\r\n                    \"tipAutorizatieExceptie\": \"Art32LiteraK\",\r\n                    \"numarAutorizatie\": \"1234K\"\r\n                },\r\n                \"mentiuni\": \"Mentiuni salariat\"\r\n            }\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -931,7 +1209,7 @@
 							]
 						},
 						{
-							"name": "Inregistrare Salariat",
+							"name": "InregistrareSalariat",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -969,12 +1247,9 @@
 							"response": []
 						},
 						{
-							"name": "Salariat",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
+							"name": "RadiereSalariat",
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Content-Type",
@@ -989,7 +1264,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "",
+									"raw": "{\r\n    \"$type\": \"salariat\",\r\n    \"header\": {\r\n        \"messageId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792af\",\r\n        \"clientApplication\": \"SAP\",\r\n        \"version\": \"5\",\r\n        \"operation\": \"RadiereSalariat\",\r\n        \"authorId\": \"D674EBEA-A672-4B62-96C6-0AD8ABBFE0DE\",\r\n        \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n        \"user\": \"ion\",\r\n        \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n    },\r\n    \"referintaSalariat\":{\r\n        \"id\":\"32BFD957-1EE2-42AC-BF0C-DD477707239E\"\r\n    },\r\n    \"info\": {\r\n        \"localitate\": {\r\n            \"codSiruta\": 179141\r\n        },\r\n        \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n        \"cnp\": \"1991001015302\",\r\n        \"nume\": \"VASILESCU\",\r\n        \"prenume\": \"VASILE\",\r\n        \"dataNastere\": \"1990-06-15T00:00:00\",\r\n        \"nationalitate\": {\r\n            \"nume\": \"SRI LANKA\"\r\n        },\r\n        \"taraDomiciliu\": {\r\n            \"nume\": \"SRI LANKA\"\r\n        },\r\n        \"tipActIdentitate\": \"Pasaport\",\r\n        \"apatrid\": \"CuDreptDeSedereInUe\",\r\n        \"detaliiSalariatStrain\": {\r\n            \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"tipAutorizatie\": \"LucratorInaltCalificat\"\r\n        },\r\n        \"mentiuni\": \"Mentiuni salariat\",\r\n        \"motivRadiere\": \"Adaugat din greseala\"\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -997,14 +1272,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{URL}}/api/Salariat/CB83FC73-08F8-4312-8C45-D44FE8B61881",
+									"raw": "{{URL}}/api/Salariat",
 									"host": [
 										"{{URL}}"
 									],
 									"path": [
 										"api",
-										"Salariat",
-										"CB83FC73-08F8-4312-8C45-D44FE8B61881"
+										"Salariat"
 									]
 								}
 							},
@@ -1243,6 +1517,149 @@
 					]
 				},
 				{
+					"name": "Detasare",
+					"item": [
+						{
+							"name": "PropunereDetasareContract",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$type\" : \"propuneredetasarecontract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"PropunereDetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"temeiDetasare\":\"Transnationala\",\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"C9E1932B-CBB2-4C1C-8C8B-CDB1739D05BE\"\r\n    },  \r\n  \"cuiAngajatorDestinatie\": \"29451076112\",\r\n  \"numeAngajatorDestinatie\": \"SAP AG\",\r\n  \"nationalitateAngajatorDestinatie\" : {\"nume\": \"GERMANIA\"},  \r\n  \"cuiAngajatorSursa\": \"13373052\",\r\n  \"dataPropunere\": \"2024-12-01T00:00:00.000\",\r\n  \"dataInceput\": \"2025-01-01T00:00:00.000\",\r\n  \"dataSfarsit\": \"2025-12-31T00:00:00.000\",\r\n  \"noteSursa\": \"Detasat cu 2h\",\r\n  \"continutContract\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"abc29c38-2e14-42a4-8ef7-6ddceffc312f\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":251204,\r\n        \"versiune\":10\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"exceptieDataSfarsit\": \"Art83LitH\",\r\n    \"numarContract\":\"9022\",\r\n    \"radiat\":false,\r\n    \"salariu\":4000,\r\n    \"salariuValuta\":800,\r\n    \"moneda\": \"EUR\",\r\n    \"nivelStudii\":\"MG\",\r\n    \"sporuriSalariu\":\r\n    [\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 2000,\r\n            \"valoareValuta\": 400,\r\n            \"moneda\":\"EUR\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"spor\",\r\n                \"nume\" : \"Salariu de merit\"\r\n            }\r\n        },\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 1000,\r\n            \"valoareValuta\":225,\r\n            \"moneda\": \"USD\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"sporAngajator\",\r\n                \"nume\" : \"Salariu de merit angajator\"\r\n            }\r\n        }\r\n    ],\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"durata\": 40,\r\n        \"intervalTimp\":\"OrePeZi\",\r\n        \"repartizare\":\"OreDeZi\",\r\n        \"repartizareMunca\":\"Zilnic\",\r\n        \"inceputInterval\":\"2024-01-01T10:30:00.000\",\r\n        \"sfarsitInterval\":\"2024-01-01T18:30:00.000\",\r\n        \"notaRepartizareMunca\": \"Miercuri vine de la 12:00\",\r\n        \"tipTura\": \"Alta\",\r\n        \"observatiiTipTuraAlta\": \"Program flexibil\"        \r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\",\r\n    \"tipLocMunca\": \"Mobil\",\r\n    \"judetLocMunca\": \"ARGES\"\r\n  },\r\n  \"infoSalariat\": \r\n  {\r\n    \"localitate\": {\"codSiruta\":179141},\r\n    \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n    \"cnp\":\"123897456\",\r\n    \"nume\": \"SAMPATH\",\r\n    \"prenume\": \"SUMEDHA\",\r\n    \"dataNastere\": \"1990-06-15T00:00:00\",\r\n    \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n    \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n    \"tipActIdentitate\": \"Pasaport\",\r\n    \"apatrid\": \"CuDreptDeSedereInUe\",\r\n    \"detaliiSalariatStrain\" :\r\n    {\r\n            \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"tipAutorizatie\": \"Exceptie\",\r\n            \"tipAutorizatieExceptie\": \"Art32LiteraK\",\r\n            \"numarAutorizatie\": \"1234K\"\r\n    },\r\n    \"mentiuni\": \"Mentiuni salariat\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Detasare/Propunere",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Detasare",
+										"Propunere"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AcceptarePropunereDetasareContract",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$type\" : \"propuneredetasarecontract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"AcceptarePropunereDetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referinta\": {\"id\": \"05FAFCB0-8D51-4293-8732-2724CC330290\"},\r\n  \"referintaContract\": {\"id\": \"05FAFCB0-8D51-4293-8732-2724CC330290\"},\r\n  \"noteDestinatie\": \"Receptionat! Va fi inregistrat cu 2h.\",\r\n  \"continutContract\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"abc29c38-2e14-42a4-8ef7-6ddceffc312f\"\r\n    },\r\n    \"cor\":\r\n    {\r\n        \"cod\":251204,\r\n        \"versiune\":10\r\n    },\r\n    \"dataConsemnare\":\"2024-06-18T14:19:58.917Z\",\r\n    \"dataContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"dataInceputContract\":\"2024-10-30T14:19:58.917Z\",\r\n    \"exceptieDataSfarsit\": \"Art83LitH\",\r\n    \"numarContract\":\"9022\",\r\n    \"radiat\":false,\r\n    \"salariu\":4000,\r\n    \"salariuValuta\":800,\r\n    \"moneda\": \"EUR\",\r\n    \"nivelStudii\":\"MG\",\r\n    \"sporuriSalariu\":\r\n    [\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 2000,\r\n            \"valoareValuta\": 400,\r\n            \"moneda\":\"EUR\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"spor\",\r\n                \"nume\" : \"Salariu de merit\"\r\n            }\r\n        },\r\n        {\r\n            \"isProcent\": false,\r\n            \"valoare\": 1000,\r\n            \"valoareValuta\":225,\r\n            \"moneda\": \"USD\",\r\n            \"tip\":\r\n            {\r\n                \"$type\" : \"sporAngajator\",\r\n                \"nume\" : \"Salariu de merit angajator\"\r\n            }\r\n        }\r\n    ],\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{\r\n        \"norma\":\"NormaIntreaga840\",\r\n        \"durata\": 40,\r\n        \"intervalTimp\":\"OrePeZi\",\r\n        \"repartizare\":\"OreDeZi\",\r\n        \"repartizareMunca\":\"Zilnic\",\r\n        \"inceputInterval\":\"2024-01-01T10:30:00.000\",\r\n        \"sfarsitInterval\":\"2024-01-01T18:30:00.000\",\r\n        \"notaRepartizareMunca\": \"Miercuri vine de la 12:00\",\r\n        \"tipTura\": \"Alta\",\r\n        \"observatiiTipTuraAlta\": \"Program flexibil\"        \r\n    },\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"tipDurata\":\"Nedeterminata\",\r\n    \"tipNorma\":\"NormaIntreaga\",\r\n    \"tipLocMunca\": \"Mobil\",\r\n    \"judetLocMunca\": \"ARGES\"\r\n  },\r\n  \"infoSalariat\": \r\n  {\r\n    \"localitate\": {\"codSiruta\":179141},\r\n    \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n    \"cnp\":\"123897456\",\r\n    \"nume\": \"SAMPATH\",\r\n    \"prenume\": \"SUMEDHA\",\r\n    \"dataNastere\": \"1990-06-15T00:00:00\",\r\n    \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n    \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n    \"tipActIdentitate\": \"Pasaport\",\r\n    \"apatrid\": \"CuDreptDeSedereInUe\",\r\n    \"detaliiSalariatStrain\" :\r\n    {\r\n            \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"tipAutorizatie\": \"Exceptie\",\r\n            \"tipAutorizatieExceptie\": \"Art32LiteraK\",\r\n            \"numarAutorizatie\": \"1234K\"\r\n    },\r\n    \"mentiuni\": \"Mentiuni salariat\"\r\n  }  \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Detasare/Propunere",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Detasare",
+										"Propunere"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RespingerePropunereDetasareContract",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"$type\" : \"propuneredetasarecontract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"RespingerePropunereDetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referinta\": {\"id\": \"C772019C-6E54-4D4D-BC04-A5FDF90C8CF3\"},\r\n  \"noteDestinatie\": \"Multumim, nu primim!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Detasare/Propunere",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Detasare",
+										"Propunere"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Nomenclator",
 					"request": {
 						"method": "GET",
@@ -1318,7 +1735,7 @@
 							"name": "Inregistrare",
 							"item": [
 								{
-									"name": "Adaugare",
+									"name": "AdaugareContract",
 									"request": {
 										"method": "POST",
 										"header": [
@@ -1340,7 +1757,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AdaugareContract</Operation>\r\n        <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <SalariuValuta>800</SalariuValuta>\r\n        <Moneda>EUR</Moneda>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n            <RepartizareMunca>Zilnic</RepartizareMunca>\r\n            <ZileSaptamana>Luni</ZileSaptamana>\r\n            <ZileSaptamana>Joi</ZileSaptamana>            \r\n            <ZileSaptamana>Sambata</ZileSaptamana>            \r\n            <Durata>24</Durata>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <ValoareValuta>400</ValoareValuta>\r\n                <Moneda>EUR</Moneda>\r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>1000</Valoare>\r\n                <ValoareValuta>225</ValoareValuta>\r\n                <Moneda>USD</Moneda>\r\n                <Tip xsi:type=\"TipSporAngajator\">\r\n                    <Nume>Salariu de merit angajator</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </Continut>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AdaugareContract</Operation>\r\n        <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <ExceptieDataSfarsit>Art83LitH</ExceptieDataSfarsit>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <SalariuValuta>800</SalariuValuta>\r\n        <Moneda>EUR</Moneda>\r\n        <NivelStudii>MG</NivelStudii>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Durata>40</Durata>\r\n            <IntervalTimp>OrePeZi</IntervalTimp>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n            <RepartizareMunca>Zilnic</RepartizareMunca>          \r\n            <InceputInterval>2024-01-01T10:30:00.000</InceputInterval>\r\n            <SfarsitInterval>2024-01-01T18:30:00.000</SfarsitInterval>\r\n            <NotaRepartizareMunca>Miercuri vine de la 12:00</NotaRepartizareMunca>\r\n            <TipTura>Alta</TipTura>\r\n            <ObservatiiTipTuraAlta>Program flexibil</ObservatiiTipTuraAlta>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <TipLocMunca>Mobil</TipLocMunca>\r\n        <JudetLocMunca>ARGES</JudetLocMunca>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <ValoareValuta>400</ValoareValuta>\r\n                <Moneda>EUR</Moneda>\r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>1000</Valoare>\r\n                <ValoareValuta>225</ValoareValuta>\r\n                <Moneda>USD</Moneda>\r\n                <Tip xsi:type=\"TipSporAngajator\">\r\n                    <Nume>Salariu de merit angajator</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </Continut>\r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1388,7 +1805,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareContract</Operation>\r\n        <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <SalariuValuta>800</SalariuValuta>\r\n        <Moneda>EUR</Moneda>        \r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n            <RepartizareMunca>Zilnic</RepartizareMunca>\r\n            <ZileSaptamana>Luni</ZileSaptamana>\r\n            <ZileSaptamana>Joi</ZileSaptamana>            \r\n            <ZileSaptamana>Sambata</ZileSaptamana>            \r\n            <Durata>24</Durata>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <ReferintaSpor>\r\n                    <Id>be97ca46-0aaf-483c-9025-e314d8cb7343</Id>\r\n                </ReferintaSpor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <ValoareValuta>400</ValoareValuta>\r\n                <Moneda>EUR</Moneda>                \r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </Continut>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareContract</Operation>\r\n        <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <ExceptieDataSfarsit>Art83LitH</ExceptieDataSfarsit>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <SalariuValuta>800</SalariuValuta>\r\n        <Moneda>EUR</Moneda>\r\n        <NivelStudii>MG</NivelStudii>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Durata>40</Durata>\r\n            <IntervalTimp>OrePeZi</IntervalTimp>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n            <RepartizareMunca>Zilnic</RepartizareMunca>          \r\n            <InceputInterval>2024-01-01T10:30:00.000</InceputInterval>\r\n            <SfarsitInterval>2024-01-01T18:30:00.000</SfarsitInterval>\r\n            <NotaRepartizareMunca>Miercuri vine de la 12:00</NotaRepartizareMunca>\r\n            <TipTura>Alta</TipTura>\r\n            <ObservatiiTipTuraAlta>Program flexibil</ObservatiiTipTuraAlta>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <TipLocMunca>Mobil</TipLocMunca>\r\n        <JudetLocMunca>ARGES</JudetLocMunca>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <ReferintaSpor>\r\n                    <Id>be97ca46-0aaf-483c-9025-e314d8cb7343</Id>\r\n                </ReferintaSpor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <ValoareValuta>400</ValoareValuta>\r\n                <Moneda>EUR</Moneda>                \r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </Continut>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>\r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1431,7 +1848,50 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreagaLegiSpeciale</Norma>\r\n            <Repartizare>OreDeNoapte</Repartizare>\r\n            <IntervalTimp>OrePeSaptamana</IntervalTimp>\r\n            <Durata>30</Durata>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <ReferintaSpor>\r\n                    <Id>be97ca46-0aaf-483c-9025-e314d8cb7343</Id>\r\n                </ReferintaSpor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </Continut>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieContract</Operation>\r\n        <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <ExceptieDataSfarsit>Art83LitH</ExceptieDataSfarsit>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <SalariuValuta>800</SalariuValuta>\r\n        <Moneda>EUR</Moneda>\r\n        <NivelStudii>MG</NivelStudii>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Durata>40</Durata>\r\n            <IntervalTimp>OrePeZi</IntervalTimp>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n            <RepartizareMunca>Zilnic</RepartizareMunca>          \r\n            <InceputInterval>2024-01-01T10:30:00.000</InceputInterval>\r\n            <SfarsitInterval>2024-01-01T18:30:00.000</SfarsitInterval>\r\n            <NotaRepartizareMunca>Miercuri vine de la 12:00</NotaRepartizareMunca>\r\n            <TipTura>Alta</TipTura>\r\n            <ObservatiiTipTuraAlta>Program flexibil</ObservatiiTipTuraAlta>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <TipLocMunca>Mobil</TipLocMunca>\r\n        <JudetLocMunca>ARGES</JudetLocMunca>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <ReferintaSpor>\r\n                    <Id>be97ca46-0aaf-483c-9025-e314d8cb7343</Id>\r\n                </ReferintaSpor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <ValoareValuta>400</ValoareValuta>\r\n                <Moneda>EUR</Moneda>                \r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </Continut>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>    \r\n</Message>",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CorectieIstoricContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieIstoricContract</Operation>\r\n        <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <ExceptieDataSfarsit>Art83LitH</ExceptieDataSfarsit>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <SalariuValuta>800</SalariuValuta>\r\n        <Moneda>EUR</Moneda>\r\n        <NivelStudii>MG</NivelStudii>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Durata>40</Durata>\r\n            <IntervalTimp>OrePeZi</IntervalTimp>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n            <RepartizareMunca>Zilnic</RepartizareMunca>          \r\n            <InceputInterval>2024-01-01T10:30:00.000</InceputInterval>\r\n            <SfarsitInterval>2024-01-01T18:30:00.000</SfarsitInterval>\r\n            <NotaRepartizareMunca>Miercuri vine de la 12:00</NotaRepartizareMunca>\r\n            <TipTura>Alta</TipTura>\r\n            <ObservatiiTipTuraAlta>Program flexibil</ObservatiiTipTuraAlta>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <TipLocMunca>Mobil</TipLocMunca>\r\n        <JudetLocMunca>ARGES</JudetLocMunca>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <ReferintaSpor>\r\n                    <Id>be97ca46-0aaf-483c-9025-e314d8cb7343</Id>\r\n                </ReferintaSpor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <ValoareValuta>400</ValoareValuta>\r\n                <Moneda>EUR</Moneda>                \r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </Continut>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>    \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1479,7 +1939,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>SuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Explicatie>SUSPENDARE CONFORM Art54</Explicatie>\r\n        <TemeiLegal>Art54</TemeiLegal>\r\n    </Actiune>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>SuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Explicatie>SUSPENDARE CONFORM Art54</Explicatie>\r\n        <TemeiLegal>Art54</TemeiLegal>\r\n    </Actiune>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>      \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1522,7 +1982,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Explicatie>SUSPENDARE CONFORM Art54</Explicatie>\r\n        <TemeiLegal>Art54</TemeiLegal>\r\n    </Actiune>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Explicatie>SUSPENDARE CONFORM Art54</Explicatie>\r\n        <TemeiLegal>Art54</TemeiLegal>\r\n    </Actiune>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>      \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1565,7 +2025,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Explicatie>SUSPENDARE CONFORM Art54</Explicatie>\r\n        <TemeiLegal>Art54</TemeiLegal>\r\n    </Actiune>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Explicatie>SUSPENDARE CONFORM Art54</Explicatie>\r\n        <TemeiLegal>Art54</TemeiLegal>\r\n    </Actiune>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>      \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1608,7 +2068,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AnulareSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AnulareSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>      \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1651,7 +2111,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>IncetareSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataIncetareSuspendare>2024-09-25T13:06:22.7010678+00:00</DataIncetareSuspendare>\r\n    </Actiune>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>IncetareSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataIncetareSuspendare>2024-09-25T13:06:22.7010678+00:00</DataIncetareSuspendare>\r\n    </Actiune>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>      \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1694,7 +2154,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieIncetareSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataIncetareSuspendare>2024-09-24T13:06:22.7010678+00:00</DataIncetareSuspendare>\r\n    </Actiune>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieIncetareSuspendareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneSuspendare\">\r\n        <DataIncetareSuspendare>2024-09-24T13:06:22.7010678+00:00</DataIncetareSuspendare>\r\n    </Actiune>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>      \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1742,7 +2202,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>IncetareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneIncetare\">\r\n        <DataIncetare>2024-09-20T13:06:22.7010678+00:00</DataIncetare>\r\n        <Explicatie>Indisciplina</Explicatie>\r\n        <TemeiLegal>Art55LitB</TemeiLegal>\r\n    </Actiune>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>IncetareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneIncetare\">\r\n        <DataIncetare>2024-09-20T13:06:22.7010678+00:00</DataIncetare>\r\n        <Explicatie>Indisciplina</Explicatie>\r\n        <TemeiLegal>Art55LitB</TemeiLegal>\r\n    </Actiune>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>     \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1785,7 +2245,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieIncetareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneIncetare\">\r\n        <DataIncetare>2024-09-20T13:06:22.7010678+00:00</DataIncetare>\r\n        <Explicatie>Indisciplina la locul de munca</Explicatie>\r\n        <TemeiLegal>Art61LitA</TemeiLegal>\r\n    </Actiune>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieIncetareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneIncetare\">\r\n        <DataIncetare>2024-09-20T13:06:22.7010678+00:00</DataIncetare>\r\n        <Explicatie>Indisciplina la locul de munca</Explicatie>\r\n        <TemeiLegal>Art61LitA</TemeiLegal>\r\n    </Actiune>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>     \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1828,7 +2288,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AnulareIncetareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AnulareIncetareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>     \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1871,7 +2331,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ReactivareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneReactivare\">\r\n        <DataReactivare>2024-09-21T13:06:22.7010678+00:00</DataReactivare>\r\n        <Explicatie>Hotarare judecatoreasca</Explicatie>\r\n        <TemeiLegal>Reintegrare</TemeiLegal>\r\n    </Actiune>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ReactivareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneReactivare\">\r\n        <DataReactivare>2024-09-21T13:06:22.7010678+00:00</DataReactivare>\r\n        <Explicatie>Hotarare judecatoreasca</Explicatie>\r\n        <TemeiLegal>Reintegrare</TemeiLegal>\r\n    </Actiune>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>     \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1914,7 +2374,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieReactivareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneReactivare\">\r\n        <DataReactivare>2024-09-22T13:06:22.7010678+00:00</DataReactivare>\r\n        <Explicatie>Hotarare judecatoreasca definitiva</Explicatie>\r\n        <TemeiLegal>Reintegrare</TemeiLegal>\r\n    </Actiune>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieReactivareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneReactivare\">\r\n        <DataReactivare>2024-09-22T13:06:22.7010678+00:00</DataReactivare>\r\n        <Explicatie>Hotarare judecatoreasca definitiva</Explicatie>\r\n        <TemeiLegal>Reintegrare</TemeiLegal>\r\n    </Actiune>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>     \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -1957,7 +2417,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AnulareReactivareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AnulareReactivareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <DocumentJustificativ>\r\n        <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n        <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n        <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n    </DocumentJustificativ>     \r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -2028,6 +2488,269 @@
 							]
 						},
 						{
+							"name": "Detasare",
+							"item": [
+								{
+									"name": "DetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>DetasareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>1579AEE4-3CDF-4687-94AC-0AAC3B40E670</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneDetasare\">\r\n        <TemeiDetasare>Transnationala</TemeiDetasare>\r\n        <AngajatorNume>SAP AG</AngajatorNume>\r\n        <AngajatorCui>12345</AngajatorCui>\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n    </Actiune>\r\n</Message>",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CorectieDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieDetasareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>1579AEE4-3CDF-4687-94AC-0AAC3B40E670</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneDetasare\">\r\n        <TemeiDetasare>Transnationala</TemeiDetasare>\r\n        <AngajatorNume>SAP AG</AngajatorNume>\r\n        <AngajatorCui>12345</AngajatorCui>\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n    </Actiune>\r\n</Message>",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PrelungireDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>PrelungireDetasareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>1579AEE4-3CDF-4687-94AC-0AAC3B40E670</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneDetasare\">\r\n        <TemeiDetasare>Transnationala</TemeiDetasare>\r\n        <AngajatorNume>SAP AG</AngajatorNume>\r\n        <AngajatorCui>12345</AngajatorCui>\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n    </Actiune>\r\n</Message>",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "AnulareDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AnulareDetasareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>1579AEE4-3CDF-4687-94AC-0AAC3B40E670</Id>\r\n    </ReferintaContract>\r\n</Message>",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "IncetareDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>IncetareDetasareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>1579AEE4-3CDF-4687-94AC-0AAC3B40E670</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneDetasare\">\r\n        <TemeiDetasare>Transnationala</TemeiDetasare>\r\n        <AngajatorNume>SAP AG</AngajatorNume>\r\n        <AngajatorCui>12345</AngajatorCui>\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataIncetareDetasare>2024-09-25T13:06:22.7010678+00:00</DataIncetareDetasare>\r\n    </Actiune>\r\n</Message>",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CorectieIncetareDetasareContract",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>CorectieIncetareDetasareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>1579AEE4-3CDF-4687-94AC-0AAC3B40E670</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneDetasare\">\r\n        <TemeiDetasare>Transnationala</TemeiDetasare>\r\n        <AngajatorNume>SAP AG</AngajatorNume>\r\n        <AngajatorCui>12345</AngajatorCui>\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataIncetareDetasare>2024-09-22T13:06:22.7010678+00:00</DataIncetareDetasare>\r\n    </Actiune>\r\n</Message>",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Contract",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Contract"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "Batch",
 							"item": [
 								{
@@ -2053,7 +2776,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<Batch xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Message xsi:type=\"Contract\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n            <ClientApplication>SAP</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>SuspendareContract</Operation>\r\n            <AuthorId>d674ebea-a672-4b62-96c6-0ad8abbfe0de</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <ReferintaContract>\r\n            <Id>4F8CB938-EA29-498D-A897-377A9794B204</Id>\r\n        </ReferintaContract>\r\n        <Actiune xsi:type=\"ActiuneSuspendare\">\r\n            <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n            <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n            <Explicatie>SUSPENDARE CONFORM Art54</Explicatie>\r\n            <TemeiLegal>Art54</TemeiLegal>\r\n        </Actiune>\r\n    </Message>\r\n    <Message xsi:type=\"Contract\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792ae</MessageId>\r\n            <ClientApplication>SAP</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>IncetareContract</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <ReferintaContract>\r\n            <Id>4F8CB938-EA29-498D-A897-377A9794B203</Id>\r\n        </ReferintaContract>\r\n        <Actiune xsi:type=\"ActiuneIncetare\">\r\n            <DataIncetare>2024-09-20T13:06:22.7010678+00:00</DataIncetare>\r\n            <Explicatie>Indisciplina</Explicatie>\r\n            <TemeiLegal>Art55LitB</TemeiLegal>\r\n        </Actiune>\r\n    </Message>\r\n</Batch>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<Batch xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Message xsi:type=\"Contract\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n            <ClientApplication>SAP</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>SuspendareContract</Operation>\r\n            <AuthorId>d674ebea-a672-4b62-96c6-0ad8abbfe0de</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <ReferintaContract>\r\n            <Id>4F8CB938-EA29-498D-A897-377A9794B204</Id>\r\n        </ReferintaContract>\r\n        <Actiune xsi:type=\"ActiuneSuspendare\">\r\n            <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n            <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n            <Explicatie>SUSPENDARE CONFORM Art54</Explicatie>\r\n            <TemeiLegal>Art54</TemeiLegal>\r\n        </Actiune>\r\n        <DocumentJustificativ>\r\n            <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n            <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n            <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n        </DocumentJustificativ>\r\n    </Message>\r\n    <Message xsi:type=\"Contract\">\r\n        <Header>\r\n            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792ae</MessageId>\r\n            <ClientApplication>SAP</ClientApplication>\r\n            <Version>5</Version>\r\n            <Operation>IncetareContract</Operation>\r\n            <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n            <User>Ion</User>\r\n            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n        </Header>\r\n        <ReferintaContract>\r\n            <Id>4F8CB938-EA29-498D-A897-377A9794B203</Id>\r\n        </ReferintaContract>\r\n        <Actiune xsi:type=\"ActiuneIncetare\">\r\n            <DataIncetare>2024-09-20T13:06:22.7010678+00:00</DataIncetare>\r\n            <Explicatie>Indisciplina</Explicatie>\r\n            <TemeiLegal>Art55LitB</TemeiLegal>\r\n        </Actiune>\r\n        <DocumentJustificativ>\r\n            <TipDocumentJustificativ>HotarareJudecatoreasca</TipDocumentJustificativ>\r\n            <NumarDocumentJustificativ>HJ12345</NumarDocumentJustificativ>\r\n            <DataDocumentJustificativ>2024-11-27T12:00:00.000</DataDocumentJustificativ>\r\n        </DocumentJustificativ>        \r\n    </Message>\r\n</Batch>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -2075,48 +2798,6 @@
 									"response": []
 								}
 							]
-						},
-						{
-							"name": "Contract",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "text/xml",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Contract/0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Contract",
-										"0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC"
-									]
-								}
-							},
-							"response": []
 						}
 					]
 				},
@@ -2127,7 +2808,7 @@
 							"name": "Modificare",
 							"item": [
 								{
-									"name": "Salariat",
+									"name": "ModificareSalariat",
 									"request": {
 										"method": "POST",
 										"header": [
@@ -2149,7 +2830,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Salariat\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareSalariat</Operation>\r\n        <AuthorId>d674ebea-a672-4b62-96c6-0ad8abbfe0de</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaSalariat>\r\n        <Id>ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F</Id>\r\n    </ReferintaSalariat>\r\n    <Info>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n        <Adresa>STR. SALARIATULUI, NR. 1</Adresa>\r\n        <Cnp>123987456</Cnp>\r\n        <Nume>SAMPATH</Nume>\r\n        <Prenume>SUMEDHA</Prenume>\r\n        <DataNastere>1990-06-15T00:00:00</DataNastere>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <TaraDomiciliu>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </TaraDomiciliu>\r\n        <TipActIdentitate>Pasaport</TipActIdentitate>\r\n        <Apatrid>CuDreptDeSedereInUe</Apatrid>\r\n        <DetaliiSalariatStrain>\r\n            <DataInceputAutorizatie>2024-01-01T00:00:00</DataInceputAutorizatie>\r\n            <DataSfarsitAutorizatie>2024-09-01T00:00:00</DataSfarsitAutorizatie>\r\n            <TipAutorizatie>LucratorInaltCalificat</TipAutorizatie>\r\n        </DetaliiSalariatStrain>\r\n        <Mentiuni>Mentiuni salariat</Mentiuni>\r\n    </Info>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Salariat\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareSalariat</Operation>\r\n        <AuthorId>d674ebea-a672-4b62-96c6-0ad8abbfe0de</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaSalariat>\r\n        <Id>ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F</Id>\r\n    </ReferintaSalariat>\r\n    <Info>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n        <Adresa>STR. SALARIATULUI, NR. 1</Adresa>\r\n        <Cnp>123987456</Cnp>\r\n        <Nume>SAMPATH</Nume>\r\n        <Prenume>SUMEDHA</Prenume>\r\n        <DataNastere>1990-06-15T00:00:00</DataNastere>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <TaraDomiciliu>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </TaraDomiciliu>\r\n        <TipActIdentitate>Pasaport</TipActIdentitate>\r\n        <Apatrid>CuDreptDeSedereInUe</Apatrid>\r\n        <DetaliiSalariatStrain>\r\n            <DataInceputAutorizatie>2024-01-01T00:00:00</DataInceputAutorizatie>\r\n            <DataSfarsitAutorizatie>2024-09-01T00:00:00</DataSfarsitAutorizatie>\r\n            <TipAutorizatie>Exceptie</TipAutorizatie>\r\n            <TipAutorizatieExceptie>Art32LiteraK</TipAutorizatieExceptie>\r\n            <NumarAutorizatie>1234K</NumarAutorizatie>\r\n        </DetaliiSalariatStrain>\r\n        <Mentiuni>Mentiuni salariat</Mentiuni>\r\n    </Info>\r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -2216,54 +2897,7 @@
 							]
 						},
 						{
-							"name": "Salariat",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer {{AuthToken}}",
-										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "text/xml",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/api/Salariat/CB83FC73-08F8-4312-8C45-D44FE8B61881",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"api",
-										"Salariat",
-										"CB83FC73-08F8-4312-8C45-D44FE8B61881"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Inregistrare Salariat",
+							"name": "InregistrareSalariat",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -2285,7 +2919,50 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Salariat\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>InregistrareSalariat</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Info>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n        <Adresa>STR. SALARIATULUI, NR. 1</Adresa>\r\n        <Cnp>123987456</Cnp>\r\n        <Nume>SAMPATH</Nume>\r\n        <Prenume>SUMEDHA</Prenume>\r\n        <DataNastere>1990-06-15T00:00:00</DataNastere>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <TaraDomiciliu>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </TaraDomiciliu>\r\n        <TipActIdentitate>Pasaport</TipActIdentitate>\r\n        <Apatrid>CuDreptDeSedereInUe</Apatrid>\r\n        <DetaliiSalariatStrain>\r\n            <DataInceputAutorizatie>2024-01-01T00:00:00</DataInceputAutorizatie>\r\n            <DataSfarsitAutorizatie>2024-09-01T00:00:00</DataSfarsitAutorizatie>\r\n            <TipAutorizatie>LucratorInaltCalificat</TipAutorizatie>\r\n        </DetaliiSalariatStrain>\r\n        <Mentiuni>Mentiuni salariat</Mentiuni>\r\n    </Info>\r\n</Message>",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Salariat\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>InregistrareSalariat</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Info>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n        <Adresa>STR. SALARIATULUI, NR. 1</Adresa>\r\n        <Cnp>123987456</Cnp>\r\n        <Nume>SAMPATH</Nume>\r\n        <Prenume>SUMEDHA</Prenume>\r\n        <DataNastere>1990-06-15T00:00:00</DataNastere>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <TaraDomiciliu>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </TaraDomiciliu>\r\n        <TipActIdentitate>Pasaport</TipActIdentitate>\r\n        <Apatrid>CuDreptDeSedereInUe</Apatrid>\r\n        <DetaliiSalariatStrain>\r\n            <DataInceputAutorizatie>2024-01-01T00:00:00</DataInceputAutorizatie>\r\n            <DataSfarsitAutorizatie>2024-09-01T00:00:00</DataSfarsitAutorizatie>\r\n            <TipAutorizatie>Exceptie</TipAutorizatie>\r\n            <TipAutorizatieExceptie>Art32LiteraK</TipAutorizatieExceptie>\r\n            <NumarAutorizatie>1234K</NumarAutorizatie>\r\n        </DetaliiSalariatStrain>\r\n        <Mentiuni>Mentiuni salariat</Mentiuni>\r\n    </Info>\r\n</Message>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Salariat",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Salariat"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RadiereSalariat",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Salariat\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>ModificareSalariat</Operation>\r\n        <AuthorId>d674ebea-a672-4b62-96c6-0ad8abbfe0de</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaSalariat>\r\n        <Id>ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F</Id>\r\n    </ReferintaSalariat>\r\n    <Info>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n        <Adresa>STR. SALARIATULUI, NR. 1</Adresa>\r\n        <Cnp>123987456</Cnp>\r\n        <Nume>SAMPATH</Nume>\r\n        <Prenume>SUMEDHA</Prenume>\r\n        <DataNastere>1990-06-15T00:00:00</DataNastere>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <TaraDomiciliu>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </TaraDomiciliu>\r\n        <TipActIdentitate>Pasaport</TipActIdentitate>\r\n        <Apatrid>CuDreptDeSedereInUe</Apatrid>\r\n        <DetaliiSalariatStrain>\r\n            <DataInceputAutorizatie>2024-01-01T00:00:00</DataInceputAutorizatie>\r\n            <DataSfarsitAutorizatie>2024-09-01T00:00:00</DataSfarsitAutorizatie>\r\n            <TipAutorizatie>LucratorInaltCalificat</TipAutorizatie>\r\n        </DetaliiSalariatStrain>\r\n        <Mentiuni>Mentiuni salariat</Mentiuni>\r\n        <MotivRadiere>Adaugat din greseala</MotivRadiere>\r\n    </Info>\r\n</Message>",
 									"options": {
 										"raw": {
 											"language": "xml"
@@ -2543,6 +3220,143 @@
 					]
 				},
 				{
+					"name": "Detasare",
+					"item": [
+						{
+							"name": "PropunereDetasareContract",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"PropunereDetasareContract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>PropunereDetasareContract</Operation>\r\n        <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <TemeiDetasare>Transnationala</TemeiDetasare>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <CUIAngajatorDestinatie>29451076112</CUIAngajatorDestinatie>\r\n    <NumeAngajatorDestinatie>SAP AG</NumeAngajatorDestinatie>\r\n    <NationalitateAngajatorDestinatie>\r\n        <Nume>GERMANIA</Nume>\r\n    </NationalitateAngajatorDestinatie>\r\n    <CUIAngajatorSursa>13373052</CUIAngajatorSursa>\r\n    <DataPropunere>2024-12-01T00:00:00.000</DataPropunere>\r\n    <DataInceput>2025-01-01T00:00:00.000</DataInceput>\r\n    <DataSfarsit>2025-12-31T00:00:00.000</DataSfarsit>\r\n    <NoteSursa>Detasat cu 2h</NoteSursa>\r\n    <ContinutContract>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <ExceptieDataSfarsit>Art83LitH</ExceptieDataSfarsit>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <SalariuValuta>800</SalariuValuta>\r\n        <Moneda>EUR</Moneda>\r\n        <NivelStudii>MG</NivelStudii>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Durata>40</Durata>\r\n            <IntervalTimp>OrePeZi</IntervalTimp>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n            <RepartizareMunca>Zilnic</RepartizareMunca>          \r\n            <InceputInterval>2024-01-01T10:30:00.000</InceputInterval>\r\n            <SfarsitInterval>2024-01-01T18:30:00.000</SfarsitInterval>\r\n            <NotaRepartizareMunca>Miercuri vine de la 12:00</NotaRepartizareMunca>\r\n            <TipTura>Alta</TipTura>\r\n            <ObservatiiTipTuraAlta>Program flexibil</ObservatiiTipTuraAlta>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <TipLocMunca>Mobil</TipLocMunca>\r\n        <JudetLocMunca>ARGES</JudetLocMunca>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <ValoareValuta>400</ValoareValuta>\r\n                <Moneda>EUR</Moneda>\r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>1000</Valoare>\r\n                <ValoareValuta>225</ValoareValuta>\r\n                <Moneda>USD</Moneda>\r\n                <Tip xsi:type=\"TipSporAngajator\">\r\n                    <Nume>Salariu de merit angajator</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </ContinutContract>\r\n    <InfoSalariat>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n        <Adresa>STR. SALARIATULUI, NR. 1</Adresa>\r\n        <Cnp>123987456</Cnp>\r\n        <Nume>SAMPATH</Nume>\r\n        <Prenume>SUMEDHA</Prenume>\r\n        <DataNastere>1990-06-15T00:00:00</DataNastere>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <TaraDomiciliu>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </TaraDomiciliu>\r\n        <TipActIdentitate>Pasaport</TipActIdentitate>\r\n        <Apatrid>CuDreptDeSedereInUe</Apatrid>\r\n        <DetaliiSalariatStrain>\r\n            <DataInceputAutorizatie>2024-01-01T00:00:00</DataInceputAutorizatie>\r\n            <DataSfarsitAutorizatie>2024-09-01T00:00:00</DataSfarsitAutorizatie>\r\n            <TipAutorizatie>Exceptie</TipAutorizatie>\r\n            <TipAutorizatieExceptie>Art32LiteraK</TipAutorizatieExceptie>\r\n            <NumarAutorizatie>1234K</NumarAutorizatie>\r\n        </DetaliiSalariatStrain>\r\n        <Mentiuni>Mentiuni salariat</Mentiuni>\r\n    </InfoSalariat>    \r\n</Message>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Detasare/Propunere",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Detasare",
+										"Propunere"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AcceptarePropunereDetasareContract",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"PropunereDetasareContract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>AcceptarePropunereDetasareContract</Operation>\r\n        <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Referinta>\r\n        <Id>05FAFCB0-8D51-4293-8732-2724CC330290</Id>\r\n    </Referinta>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <NoteDestinatie>Receptionat! Va fi inregistrat cu 2h.</NoteDestinatie>\r\n    <ContinutContract>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n        <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>\r\n        <DataContract>2024-06-18T14:19:58.917Z</DataContract>\r\n        <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>\r\n        <ExceptieDataSfarsit>Art83LitH</ExceptieDataSfarsit>\r\n        <NumarContract>12345</NumarContract>\r\n        <Radiat>false</Radiat>\r\n        <Salariu>1000</Salariu>\r\n        <SalariuValuta>800</SalariuValuta>\r\n        <Moneda>EUR</Moneda>\r\n        <NivelStudii>MG</NivelStudii>\r\n        <StareCurenta>\r\n        </StareCurenta>\r\n        <TimpMunca>\r\n            <Norma>NormaIntreaga840</Norma>\r\n            <Durata>40</Durata>\r\n            <IntervalTimp>OrePeZi</IntervalTimp>\r\n            <Repartizare>OreDeZi</Repartizare>\r\n            <RepartizareMunca>Zilnic</RepartizareMunca>          \r\n            <InceputInterval>2024-01-01T10:30:00.000</InceputInterval>\r\n            <SfarsitInterval>2024-01-01T18:30:00.000</SfarsitInterval>\r\n            <NotaRepartizareMunca>Miercuri vine de la 12:00</NotaRepartizareMunca>\r\n            <TipTura>Alta</TipTura>\r\n            <ObservatiiTipTuraAlta>Program flexibil</ObservatiiTipTuraAlta>\r\n        </TimpMunca>\r\n        <TipContract>ContractMuncaTemporara</TipContract>\r\n        <TipDurata>Determinata</TipDurata>\r\n        <TipNorma>NormaOUG132</TipNorma>\r\n        <TipLocMunca>Mobil</TipLocMunca>\r\n        <JudetLocMunca>ARGES</JudetLocMunca>\r\n        <SporuriSalariu>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>2000</Valoare>\r\n                <ValoareValuta>400</ValoareValuta>\r\n                <Moneda>EUR</Moneda>\r\n                <Tip xsi:type=\"TipSpor\">\r\n                    <Nume>Salariu de merit</Nume>\r\n                </Tip>\r\n            </Spor>\r\n            <Spor>\r\n                <IsProcent>false</IsProcent>\r\n                <Valoare>1000</Valoare>\r\n                <ValoareValuta>225</ValoareValuta>\r\n                <Moneda>USD</Moneda>\r\n                <Tip xsi:type=\"TipSporAngajator\">\r\n                    <Nume>Salariu de merit angajator</Nume>\r\n                </Tip>\r\n            </Spor>\r\n        </SporuriSalariu>\r\n    </ContinutContract>\r\n    <InfoSalariat>\r\n        <Localitate>\r\n            <CodSiruta>179141</CodSiruta>\r\n        </Localitate>\r\n        <Adresa>STR. SALARIATULUI, NR. 1</Adresa>\r\n        <Cnp>123987456</Cnp>\r\n        <Nume>SAMPATH</Nume>\r\n        <Prenume>SUMEDHA</Prenume>\r\n        <DataNastere>1990-06-15T00:00:00</DataNastere>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <TaraDomiciliu>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </TaraDomiciliu>\r\n        <TipActIdentitate>Pasaport</TipActIdentitate>\r\n        <Apatrid>CuDreptDeSedereInUe</Apatrid>\r\n        <DetaliiSalariatStrain>\r\n            <DataInceputAutorizatie>2024-01-01T00:00:00</DataInceputAutorizatie>\r\n            <DataSfarsitAutorizatie>2024-09-01T00:00:00</DataSfarsitAutorizatie>\r\n            <TipAutorizatie>Exceptie</TipAutorizatie>\r\n            <TipAutorizatieExceptie>Art32LiteraK</TipAutorizatieExceptie>\r\n            <NumarAutorizatie>1234K</NumarAutorizatie>\r\n        </DetaliiSalariatStrain>\r\n        <Mentiuni>Mentiuni salariat</Mentiuni>\r\n    </InfoSalariat>    \r\n</Message>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Detasare/Propunere",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Detasare",
+										"Propunere"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RespingerePropunereDetasareContract",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"PropunereDetasareContract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>RespingerePropunereDetasareContract</Operation>\r\n        <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <Referinta>\r\n        <Id>05FAFCB0-8D51-4293-8732-2724CC330290</Id>\r\n    </Referinta>\r\n    <NoteDestinatie>Multumim, nu primim!</NoteDestinatie>   \r\n</Message>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Detasare/Propunere",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Detasare",
+										"Propunere"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Nomenclator",
 					"request": {
 						"method": "GET",
@@ -2641,12 +3455,12 @@
 						},
 						{
 							"key": "username",
-							"value": "",
+							"value": "f40f8cd5-b3e5-4610-b3d4-d9b8ed2432f9",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "",
+							"value": "kg$TcBm37f02_CWihH(N",
 							"type": "text"
 						},
 						{
