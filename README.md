@@ -257,5 +257,19 @@ Folositi aceste chei pentru a initia un client OpenID din aplicatiile dvs.
 
 Mai multe detalii gasiti in swagger: http://api.test.inspectiamuncii.org/swagger
 
+Recomandam sa folositi xchema XSD pentru a genera cod specific platformelor astfel:
+- pentru C# https://learn.microsoft.com/en-us/dotnet/standard/serialization/xml-schema-def-tool-gen
+- pentru Java https://www.jetbrains.com/help/idea/generating-java-code-from-xml-schema.html
 
+
+## 8. Formatul valorilor
+
+|Tip camp|Format|Exemplu|Observatii|
+|:---|:---|:------|:------|
+|date|YYYY-MM-DD|2022-03-14| |
+|datetime|ISO-8601|2022-03-14T05:51:28+0000||
+|decimal|numar cu zecimale|123.456, +1234.456, -1234.456, -.456, or -456.|Numar cu separator de zecimale . si fara separator la mii sau spatii|
+|boolean|sir de caractere|true, false|cu litere mici, fara spatii|
+|string|sir de carcatere|Strada Morii, Calea Floreasca, |Fara spatii la inceput sau la sfarsit|
+|uuid/guid|xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx|123e4567-e89b-12d3-a456-426614174000|In its canonical textual representation, the 16 octets of a UUID are represented as 32 hexadecimal (base-16) digits, displayed in five groups separated by hyphens, in the form 8-4-4-4-12 for a total of 36 characters (32 hexadecimal characters and 4 hyphens). |
 
