@@ -33,11 +33,15 @@
             <xs:enumeration value="PropunereDetasareContract"/>
             <xs:enumeration value="AcceptarePropunereDetasareContract"/>
             <xs:enumeration value="RespingerePropunereDetasareContract"/>
+            <xs:enumeration value="PropunereMutareContract"/>
+            <xs:enumeration value="AcceptarePropunereMutareContract"/>
+            <xs:enumeration value="RespingerePropunereMutareContract"/>
             <xs:enumeration value="DetasareContract"/>
             <xs:enumeration value="CorectieDetasareContract"/>
             <xs:enumeration value="PrelungireDetasareContract"/>
             <xs:enumeration value="AnulareDetasareContract"/>
             <xs:enumeration value="IncetareDetasareContract"/>
+            <xs:enumeration value="AnulareIncetareDetasareContract"/>
             <xs:enumeration value="CorectieIncetareDetasareContract"/>
             <xs:enumeration value="TransferContract"/>
             <xs:enumeration value="AnulareTransferContract"/>
@@ -65,6 +69,9 @@
             <xs:enumeration value="CerereAccesSistemRegistru"/>
             <xs:enumeration value="CorectieIstoricContract"/>
             <xs:enumeration value="IncetareAccesRegistru"/>
+            <xs:enumeration value="RadiereIstoricContract"/>
+            <xs:enumeration value="Export"/>
+            <xs:enumeration value="PreluareRegistru"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="Header">
@@ -154,6 +161,7 @@
               <xs:element minOccurs="0" name="Contact" nillable="true" type="reges:Contact"/>
               <xs:element minOccurs="1" name="Detalii" type="reges:DetaliiAngajator"/>
               <xs:element minOccurs="1" name="Localitate" type="reges:Localitate"/>
+              <xs:element minOccurs="0" name="ConformL153" nillable="true" type="xs:boolean"/>
             </xs:sequence>
           </xs:extension>
         </xs:complexContent>
@@ -656,9 +664,28 @@
                     <xs:element minOccurs="0" maxOccurs="1" name="JudetLocMunca" type="xs:string" />
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="LocalitateLocMunca" type="reges:Localitate"/>
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="NivelStudii" type="reges:NivelStudii"/>
+                    <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="DetaliiL153" type="reges:DetaliiL153"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DetaliiL153">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="AnexaL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="CapitolL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="LiteraL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="ClasificareSuplimentaraL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="FunctieL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="SpecialitateFunctieL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="StructuraAprobataL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="SpecialitateStructuraAprobataL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="GradProfesionalL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="GradatieL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="DenumireAltaFunctieL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="ExplicatieFunctieL153" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="AltGradProfesionalL153" type="xs:string"/>
+      </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="DocumentJustificativ">
@@ -704,6 +731,34 @@
       </xs:complexContent>
     </xs:complexType>
     <xs:element name="PropunereDetasareContract" type="reges:PropunereDetasareContract"></xs:element>
+
+    <xs:complexType name="PropunereMutareContract">
+      <xs:complexContent>
+        <xs:extension base="reges:Message">
+          <xs:sequence>
+            <xs:sequence>
+              <xs:element name="Referinta" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="ReferintaContract" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="TipMutare" type="reges:TipMutare" minOccurs="0" nillable="true" maxOccurs="1"/>
+              <xs:element name="CUIAngajatorDestinatie" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="NumeAngajatorDestinatie" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="NationalitateAngajatorDestinatie" type="reges:Nationalitate" minOccurs="0" maxOccurs="1" />
+              <xs:element name="CUIAngajatorSursa" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="NumeAngajatorSursa" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="ContinutContract" type="reges:ContinutContract" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="InfoSalariat" type="reges:InfoSalariat" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="DataPropunere" type="xs:dateTime" nillable="true" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="NoteSursa" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="NoteDestinatie" type="xs:string" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="DataInceput" type="xs:dateTime" nillable="true" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="DataSfarsit" type="xs:dateTime" nillable="true" minOccurs="0" maxOccurs="1"/>
+              <xs:element name="DataIncetare" type="xs:dateTime" nillable="true" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="PropunereMutareContract" type="reges:PropunereMutareContract"></xs:element>  
   
     <xs:complexType name="Cor">
         <xs:sequence>
@@ -1164,6 +1219,8 @@
                     <xs:element name="Declaratie" type="xs:string" minOccurs="1" maxOccurs="1"/>
                     <xs:element name="Fisier" type="reges:Fisier" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="InfoAngajator" minOccurs="0" type="reges:InfoAngajator"/>
+                    <xs:element name="Utilizator" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Parola" type="xs:string" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1249,6 +1306,7 @@
       <xs:enumeration value="RaportCentralizator"/>
       <xs:enumeration value="RaportIncetari"/>
       <xs:enumeration value="RaportContracteSalariat"/>
+      <xs:enumeration value="RaportConformitate"/>      
     </xs:restriction>
   </xs:simpleType>
 
@@ -1284,10 +1342,37 @@
   </xs:complexType>
   <xs:element name="CerereExtras" type="reges:CerereExtras"></xs:element>
 
+  <xs:simpleType name="Entitate">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Salariat"/>
+      <xs:enumeration value="Contract"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="FormatExport">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="JSON"/>
+      <xs:enumeration value="XML"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="ExportDate">
+    <xs:complexContent>
+      <xs:extension base="reges:Message">
+        <xs:sequence>
+          <xs:element name="Entitate" type="reges:Entitate" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="FormatExport" type="reges:FormatExport" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExportDate" type="reges:ExportDate"></xs:element>
+  
   <xs:complexType name="Batch">
         <xs:sequence>
             <xs:element type="reges:Message" name="Message" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:element name="Batch" type="reges:Batch"/>
+  
 </xs:schema>
