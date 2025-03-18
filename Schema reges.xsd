@@ -70,7 +70,8 @@
             <xs:enumeration value="CorectieIstoricContract"/>
             <xs:enumeration value="IncetareAccesRegistru"/>
             <xs:enumeration value="RadiereIstoricContract"/>
-            <xs:enumeration value="Export"/>
+            <xs:enumeration value="ExportSalariati"/>
+			<xs:enumeration value="ExportContracte"/>
             <xs:enumeration value="PreluareRegistru"/>
         </xs:restriction>
     </xs:simpleType>
@@ -110,12 +111,110 @@
             <xs:enumeration value="FAIL"></xs:enumeration>
         </xs:restriction>
     </xs:simpleType>
+
+    <xs:simpleType name="ResultCodeType">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="SUCCES"></xs:enumeration>
+        <xs:enumeration value="WARNING"></xs:enumeration>
+        <xs:enumeration value="ERROR"></xs:enumeration>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ResultSign">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="GrinningFace"/><!-- 😀 U+1F600 -->
+        <xs:enumeration value="BeamingFace"/><!-- 😁 U+1F601 -->
+        <xs:enumeration value="FaceWithTearsOfJoy"/><!-- 😂 U+1F602 -->
+        <xs:enumeration value="RollingOnTheFloorLaughing"/><!-- 🤣 U+1F923 -->
+        <xs:enumeration value="SmilingFaceWithOpenMouth"/><!-- 😃 U+1F603 -->
+        <xs:enumeration value="SmilingFaceWithSmilingEyes"/><!-- 😄 U+1F604 -->
+        <xs:enumeration value="SmilingFaceWithHalo"/><!-- 😇 U+1F607 -->
+        <xs:enumeration value="WinkingFace"/><!-- 😉 U+1F609 -->
+        <xs:enumeration value="SmilingFaceWithHeartEyes"/><!-- 😍 U+1F60D -->
+        <xs:enumeration value="FaceBlowingAKiss"/><!-- 😘 U+1F618 -->
+        <xs:enumeration value="KissingFace"/><!-- 😗 U+1F617 -->
+        <xs:enumeration value="ThinkingFace"/><!-- 🤔 U+1F914 -->
+        <xs:enumeration value="FaceWithRaisedEyebrow"/><!-- 🤨 U+1F928 -->
+        <xs:enumeration value="NeutralFace"/><!-- 😐 U+1F610 -->
+        <xs:enumeration value="ExpressionlessFace"/><!-- 😑 U+1F611 -->
+        <xs:enumeration value="FaceWithoutMouth"/><!-- 😶 U+1F636 -->
+        <xs:enumeration value="SmirkingFace"/><!-- 😏 U+1F60F -->
+        <xs:enumeration value="PerseveringFace"/><!-- 😣 U+1F623 -->
+        <xs:enumeration value="DisappointedFace"/><!-- 😞 U+1F61E -->
+        <xs:enumeration value="PensiveFace"/><!-- 😔 U+1F614 -->
+        <xs:enumeration value="SleepingFace"/><!-- 😴 U+1F634 -->
+        <xs:enumeration value="FaceWithSteamFromNose"/><!-- 😤 U+1F624 -->
+        <xs:enumeration value="AngryFace"/><!-- 😠 U+1F620 -->
+        <xs:enumeration value="PoutingFace"/><!-- 😡 U+1F621 -->
+        <xs:enumeration value="CryingFace"/><!-- 😢 U+1F622 -->
+        <xs:enumeration value="LoudlyCryingFace"/><!-- 😭 U+1F62D -->
+        <xs:enumeration value="FaceScreamingInFear"/><!-- 😱 U+1F631 -->
+        <xs:enumeration value="FlushedFace"/><!-- 😳 U+1F633 -->
+        <xs:enumeration value="FaceWithMedicalMask"/><!-- 😷 U+1F637 -->
+        <xs:enumeration value="FaceWithThermometer"/><!-- 🤒 U+1F912 -->
+        <xs:enumeration value="FaceWithHeadBandage"/><!-- 🤕 U+1F915 -->
+        <xs:enumeration value="NauseatedFace"/><!-- 🤢 U+1F922 -->
+        <xs:enumeration value="FaceVomiting"/><!-- 🤮 U+1F92E -->
+        <xs:enumeration value="ExplodingHead"/><!-- 🤯 U+1F92F -->
+        <xs:enumeration value="CowboyHatFace"/><!-- 🤠 U+1F920 -->
+        <xs:enumeration value="ClownFace"/><!-- 🤡 U+1F921 -->
+        <xs:enumeration value="RobotFace"/><!-- 🤖 U+1F916 -->
+        <xs:enumeration value="PileOfPoo"/><!-- 💩 U+1F4A9 -->
+        <xs:enumeration value="Ghost"/><!-- 👻 U+1F47B -->
+        <xs:enumeration value="Skull"/><!-- 💀 U+1F480 -->
+        <xs:enumeration value="SkullAndCrossbones"/><!-- ☠️ U+2620 -->
+        <xs:enumeration value="RedHeart"/><!-- ❤️ U+2764 -->
+        <xs:enumeration value="OrangeHeart"/><!-- 🧡 U+1F9E1 -->
+        <xs:enumeration value="YellowHeart"/><!-- 💛 U+1F49B -->
+        <xs:enumeration value="GreenHeart"/><!-- 💚 U+1F49A -->
+        <xs:enumeration value="BlueHeart"/><!-- 💙 U+1F499 -->
+        <xs:enumeration value="PurpleHeart"/><!-- 💜 U+1F49C -->
+        <xs:enumeration value="BlackHeart"/><!-- 🖤 U+1F5A4 -->
+        <xs:enumeration value="BrokenHeart"/><!-- 💔 U+1F494 -->
+        <xs:enumeration value="Fire"/><!-- 🔥 U+1F525 -->
+        <xs:enumeration value="HundredPoints"/><!-- 💯 U+1F4AF -->
+        <xs:enumeration value="SmilingFaceWithSunglasses"/><!-- 😎 U+1F60E -->
+        <xs:enumeration value="PartyingFace"/><!-- 🥳 U+1F973 -->
+        <xs:enumeration value="StarStruck"/><!-- 🤩 U+1F929 -->
+        <xs:enumeration value="ThumbsUp"/><!-- 👍 U+1F44D -->
+        <xs:enumeration value="ThumbsDown"/><!-- 👎 U+1F44E -->
+        <xs:enumeration value="ClappingHands"/><!-- 👏 U+1F44F -->
+        <xs:enumeration value="RaisingHands"/><!-- 🙌 U+1F64C -->
+        <xs:enumeration value="FoldedHands"/><!-- 🙏 U+1F64F -->
+        <xs:enumeration value="FlexedBiceps"/><!-- 💪 U+1F4AA -->
+        <xs:enumeration value="WavingHand"/><!-- 👋 U+1F44B -->
+        <xs:enumeration value="WritingHand"/><!-- ✍️ U+270D -->
+        <xs:enumeration value="LoveYouGesture"/><!-- 🤟 U+1F91F -->
+        <xs:enumeration value="RockOn"/><!-- 🤘 U+1F918 -->
+        <xs:enumeration value="OKHand"/><!-- 👌 U+1F44C -->
+        <xs:enumeration value="FacePalm"/><!-- 🤦 U+1F926 -->
+        <xs:enumeration value="Shrug"/><!-- 🤷 U+1F937 -->
+        <xs:enumeration value="DancingWoman"/><!-- 💃 U+1F483 -->
+        <xs:enumeration value="DancingMan"/><!-- 🕺 U+1F57A -->
+        <xs:enumeration value="PersonRunning"/><!-- 🏃 U+1F3C3 -->
+        <xs:enumeration value="PersonWalking"/><!-- 🚶 U+1F6B6 -->
+        <xs:enumeration value="Baby"/><!-- 👶 U+1F476 -->
+        <xs:enumeration value="Boy"/><!-- 👦 U+1F466 -->
+        <xs:enumeration value="Girl"/><!-- 👧 U+1F467 -->
+        <xs:enumeration value="Man"/><!-- 👨 U+1F468 -->
+        <xs:enumeration value="Woman"/><!-- 👩 U+1F469 -->
+        <xs:enumeration value="OlderMan"/><!-- 👴 U+1F474 -->
+        <xs:enumeration value="OlderWoman"/><!-- 👵 U+1F475 -->
+        <xs:enumeration value="PoliceOfficer"/><!-- 👮 U+1F46E -->
+        <xs:enumeration value="ConstructionWorker"/><!-- 👷 U+1F477 -->
+        <xs:enumeration value="Prince"/><!-- 🤴 U+1F934 -->
+        <xs:enumeration value="Princess"/><!-- 👸 U+1F478 -->
+      </xs:restriction>
+    </xs:simpleType>
+  
     <xs:complexType name="Result">
         <xs:sequence>
-            <xs:element name="Code" type="reges:ResultCode" minOccurs="1" maxOccurs="1">
-            </xs:element>
+            <xs:element name="Code" type="reges:ResultCode" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="CodeType" type="reges:ResultCodeType" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="Sign" type="reges:ResultSign" nillable="true" minOccurs="0" maxOccurs="1"></xs:element>
             <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
             <xs:element name="Ref" type="reges:GUID" minOccurs="0" maxOccurs="1"></xs:element>
+            <xs:element name="RelatedResultsExpected" type="xs:boolean" minOccurs="1" maxOccurs="1"></xs:element>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="MessageResult">
@@ -505,6 +604,11 @@
             <xs:element minOccurs="1" name="TipActIdentitate" type="reges:TipActIdentitate"/>
             <xs:element minOccurs="0" maxOccurs="1" name="Radiat" type="xs:boolean" />
             <xs:element minOccurs="0" maxOccurs="1" name="MotivRadiere" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="TipHandicap" type="reges:TipHandicap"/>
+            <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="GradHandicap" type="reges:GradHandicap"/>
+            <xs:element minOccurs="0" name="DataCertificatHandicap" nillable="true" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="NumarCertificatHandicap" type="xs:string"/>
+            <xs:element minOccurs="0" name="DataValabilitateCertificatHandicap" nillable="true" type="xs:dateTime"/>
           </xs:sequence>
         </xs:extension>
       </xs:complexContent>
@@ -664,7 +768,13 @@
                     <xs:element minOccurs="0" maxOccurs="1" name="JudetLocMunca" type="xs:string" />
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="LocalitateLocMunca" type="reges:Localitate"/>
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="NivelStudii" type="reges:NivelStudii"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="AplicaL153" type="xs:boolean"/>
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="DetaliiL153" type="reges:DetaliiL153"/>
+                    <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="TipHandicap" type="reges:TipHandicap"/>
+                    <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="GradHandicap" type="reges:GradHandicap"/>
+                    <xs:element minOccurs="0" name="DataCertificatHandicap" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" name="NumarCertificatHandicap" type="xs:string"/>
+                    <xs:element minOccurs="0" name="DataValabilitateCertificatHandicap" nillable="true" type="xs:dateTime"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -740,6 +850,7 @@
               <xs:element name="Referinta" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
               <xs:element name="ReferintaContract" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
               <xs:element name="TipMutare" type="reges:TipMutare" minOccurs="0" nillable="true" maxOccurs="1"/>
+              <xs:element name="TipTransfer" type="reges:TipTransfer" minOccurs="0" nillable="true" maxOccurs="1"/>
               <xs:element name="CUIAngajatorDestinatie" type="xs:string" minOccurs="0" maxOccurs="1"/>
               <xs:element name="NumeAngajatorDestinatie" type="xs:string" minOccurs="0" maxOccurs="1"/>
               <xs:element name="NationalitateAngajatorDestinatie" type="reges:Nationalitate" minOccurs="0" maxOccurs="1" />
@@ -772,6 +883,12 @@
             <xs:enumeration value="SchimbareLocMunca"/>
             <xs:enumeration value="SchimbareGestiuneRegistru"/>
         </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TipTransfer">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="TransferDeIntreprindere"/>
+        <xs:enumeration value="TransferIndividual"/>
+      </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="ExceptieDataSfarsit">
         <xs:restriction base="xs:string">
@@ -972,6 +1089,13 @@
             <xs:enumeration value="ContractMuncaTemporaraClauzaTelemunca"/>
             <xs:enumeration value="DecizieDetasare"/>
             <xs:enumeration value="ContractIndividualMuncaPlataCuOra"/>
+            <xs:enumeration value="RaportDeServiciu"/>
+            <xs:enumeration value="RaportDeServiciuCuStatutSpecial"/>
+            <xs:enumeration value="ContractDeManagement"/>
+            <xs:enumeration value="ContractDeMuncaPentruGarzi"/>
+            <xs:enumeration value="ContractDeActivitateSportiva"/>
+            <xs:enumeration value="ActAdministrativDemnitar"/>
+            <xs:enumeration value="ContractConsilierPersonalDemnitar"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="TipDocumentJustificativ">
@@ -993,6 +1117,30 @@
             <xs:enumeration value="NormaOUG132"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="GradHandicap">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Fara"/>
+        <xs:enumeration value="Usor"/>
+        <xs:enumeration value="Mediu"/>
+        <xs:enumeration value="Accentuat"/>
+        <xs:enumeration value="Grav"/>
+      </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TipHandicap">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Fara"/>
+        <xs:enumeration value="Fizic"/>
+        <xs:enumeration value="Vizual"/>
+        <xs:enumeration value="Auditiv"/>
+        <xs:enumeration value="Surdocecitate"/>
+        <xs:enumeration value="Somatic"/>
+        <xs:enumeration value="Mintal"/>
+        <xs:enumeration value="Psihic"/>
+        <xs:enumeration value="HIVSIDA"/>
+        <xs:enumeration value="Asociat"/>
+        <xs:enumeration value="BoliRare"/>
+      </xs:restriction>
+    </xs:simpleType>
     <xs:complexType name="ContractMutareDetalii">
         <xs:sequence>
             <xs:element minOccurs="1" name="AngajatorSursaCui">
@@ -1011,6 +1159,7 @@
             </xs:element>
             <xs:element minOccurs="1" name="DataImport" type="xs:dateTime"/>
             <xs:element minOccurs="1" name="TipMutare" type="reges:TipMutare"/>
+            <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="TipTransfer" type="reges:TipTransfer"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="ArrayOfSpor">
@@ -1062,6 +1211,7 @@
                         </xs:simpleType>
                     </xs:element>
                     <xs:element minOccurs="1" name="TipMutare" type="reges:TipMutare"/>
+                    <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="TipTransfer" type="reges:TipTransfer"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1221,6 +1371,7 @@
                     <xs:element name="InfoAngajator" minOccurs="0" type="reges:InfoAngajator"/>
                     <xs:element name="Utilizator" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="Parola" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="ParolaNoua" type="xs:string" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -1260,6 +1411,8 @@
           <xs:element name="Fisier" type="reges:Fisier" minOccurs="1" maxOccurs="unbounded"/>
           <xs:element name="Judet" type="xs:string" minOccurs="0" maxOccurs="1"/>
           <xs:element name="TipSistemExtern" minOccurs="0" maxOccurs="1" nillable="true" type="reges:TipSistemExtern"/>
+          <xs:element name="Nume" type="xs:string" minOccurs="1" maxOccurs="1" />
+          <xs:element name="Prenume" type="xs:string" minOccurs="1" maxOccurs="1" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -1270,6 +1423,9 @@
       <xs:restriction base="xs:string">
         <xs:enumeration value="Prestator"/>
         <xs:enumeration value="Angajat"/>
+        <xs:enumeration value="ReprezentantLegalPrestator"/>
+        <xs:enumeration value="AngajatPrestator"/>
+        <xs:enumeration value="DirectorHR"/>
       </xs:restriction>
     </xs:simpleType>
   
@@ -1306,7 +1462,8 @@
       <xs:enumeration value="RaportCentralizator"/>
       <xs:enumeration value="RaportIncetari"/>
       <xs:enumeration value="RaportContracteSalariat"/>
-      <xs:enumeration value="RaportConformitate"/>      
+      <xs:enumeration value="RaportConformitate"/>
+	  <xs:enumeration value="RaportContracteSalariatHg161"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -1336,6 +1493,7 @@
           <xs:element name="AreInfoSalariu" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
           <xs:element name="Declaratie" type="xs:string" minOccurs="0" maxOccurs="1"/>
           <xs:element name="FormatExtras" type="reges:FormatExtras" nillable="true" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="Sign" type="xs:boolean" nillable="true" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
