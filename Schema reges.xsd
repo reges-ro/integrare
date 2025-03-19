@@ -606,6 +606,7 @@
             <xs:element minOccurs="0" maxOccurs="1" name="MotivRadiere" type="xs:string" />
             <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="TipHandicap" type="reges:TipHandicap"/>
             <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="GradHandicap" type="reges:GradHandicap"/>
+            <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="GradInvaliditate" type="reges:GradInvaliditate"/>
             <xs:element minOccurs="0" name="DataCertificatHandicap" nillable="true" type="xs:dateTime"/>
             <xs:element minOccurs="0" name="NumarCertificatHandicap" type="xs:string"/>
             <xs:element minOccurs="0" name="DataValabilitateCertificatHandicap" nillable="true" type="xs:dateTime"/>
@@ -772,6 +773,7 @@
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="DetaliiL153" type="reges:DetaliiL153"/>
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="TipHandicap" type="reges:TipHandicap"/>
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="GradHandicap" type="reges:GradHandicap"/>
+                    <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="GradInvaliditate" type="reges:GradInvaliditate"/>
                     <xs:element minOccurs="0" name="DataCertificatHandicap" nillable="true" type="xs:dateTime"/>
                     <xs:element minOccurs="0" name="NumarCertificatHandicap" type="xs:string"/>
                     <xs:element minOccurs="0" name="DataValabilitateCertificatHandicap" nillable="true" type="xs:dateTime"/>
@@ -1126,6 +1128,14 @@
         <xs:enumeration value="Grav"/>
       </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="GradInvaliditate">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Fara"/>
+        <xs:enumeration value="Grad1"/>
+        <xs:enumeration value="Grad2"/>
+        <xs:enumeration value="Grad3"/>
+      </xs:restriction>
+    </xs:simpleType>  
     <xs:simpleType name="TipHandicap">
       <xs:restriction base="xs:string">
         <xs:enumeration value="Fara"/>
