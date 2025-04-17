@@ -253,9 +253,10 @@ Folositi aceste chei pentru a initia un client OpenID din aplicatiile dvs.
 - GET /api/Profile - solicita informatii despre profilul angajatorului
 - POST /api/Status/PollMessage - citeste urmatorul mesaj necitit din coada angajatorului si trece la urmatorul
 - POST /api/Status/ReadMessage - citeste urmatorul mesaj necitit din coada angajatorului
-- POST /api/Status/CommitRead - trece la urmatorul mesaj din coada angajatorului
-
-Mai multe detalii gasiti in swagger: http://api.test.inspectiamuncii.org/swagger
+- POST /api/Status/CommitRead - trece la urmatorul mesaj din coada angajatorului, altfel metoda ReadMessage va citi acelasi mesaj in continuu
+- POST /api/Status/PoolMessage va citeste primul mesa necitit din coada si trece la urmatorul, adica il si consuma
+- POST /api/Status/ReadBatch - citeste N mesaje urmatoare necitite din coada angajatorului
+- POST /api/Status/CommitReadBatch - trece peste urmatoarele N mesaje din coada angajatorului, altfel metoda ReadBatch va citi acelasi mesaj in continuu. Atentie, daca metoda ReadBatch returneaza P mesaje, P <> N atunci CommitReadBatch se apeleaza cu P
 
 Recomandam sa folositi xchema XSD pentru a genera cod specific platformelor astfel:
 - pentru C# https://learn.microsoft.com/en-us/dotnet/standard/serialization/xml-schema-def-tool-gen
