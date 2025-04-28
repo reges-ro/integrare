@@ -2299,42 +2299,94 @@
 				},
 				{
 					"name": "Nomenclator",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{AuthToken}}",
-								"type": "text"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{URL}}/api/Nomenclator?tip=nationalitate&angajatorId=caee860a-daea-480e-a945-bdd3579477ef",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"api",
-								"Nomenclator"
-							],
-							"query": [
+					"item": [
+						{
+							"name": "TipSporAngajator",
+							"item": [
 								{
-									"key": "tip",
-									"value": "nationalitate"
-								},
-								{
-									"key": "angajatorId",
-									"value": "caee860a-daea-480e-a945-bdd3579477ef"
+									"name": "AdaugareTipSporAngajator",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nume\":\"Tip spor angajator\",\r\n    \"angajatorId\": \"caee860a-daea-480e-a945-bdd3579477ef\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Nomenclator/tipsporangajator",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Nomenclator",
+												"tipsporangajator"
+											]
+										}
+									},
+									"response": []
 								}
 							]
+						},
+						{
+							"name": "Nomenclator",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/Nomenclator?tip=nationalitate&angajatorId=caee860a-daea-480e-a945-bdd3579477ef",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Nomenclator"
+									],
+									"query": [
+										{
+											"key": "tip",
+											"value": "nationalitate"
+										},
+										{
+											"key": "angajatorId",
+											"value": "caee860a-daea-480e-a945-bdd3579477ef"
+										}
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
 					"name": "Profile",
@@ -4617,42 +4669,99 @@
 				},
 				{
 					"name": "Nomenclator",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{AuthToken}}",
-								"type": "text"
-							},
-							{
-								"key": "Accept",
-								"value": "text/xml",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{URL}}/api/Nomenclator?tip=nationalitate&angajatorId=caee860a-daea-480e-a945-bdd3579477ef",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"api",
-								"Nomenclator"
-							],
-							"query": [
+					"item": [
+						{
+							"name": "TipSporAngajator",
+							"item": [
 								{
-									"key": "tip",
-									"value": "nationalitate"
-								},
-								{
-									"key": "angajatorId",
-									"value": "caee860a-daea-480e-a945-bdd3579477ef"
+									"name": "AdaugareTipSporAngajator",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<TipSporAngajator>\r\n    <Nume>Tip spor angajator</Nume>\r\n    <AngajatorId>caee860a-daea-480e-a945-bdd3579477ef</AngajatorId>\r\n</TipSporAngajator>\r\n",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Nomenclator/tipsporangajator",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Nomenclator",
+												"tipsporangajator"
+											]
+										}
+									},
+									"response": []
 								}
 							]
+						},
+						{
+							"name": "Nomenclator",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/Nomenclator?tip=nationalitate&angajatorId=caee860a-daea-480e-a945-bdd3579477ef",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Nomenclator"
+									],
+									"query": [
+										{
+											"key": "tip",
+											"value": "nationalitate"
+										},
+										{
+											"key": "angajatorId",
+											"value": "caee860a-daea-480e-a945-bdd3579477ef"
+										}
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
 					"name": "Profile",
