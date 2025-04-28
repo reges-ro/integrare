@@ -71,7 +71,11 @@
             <xs:enumeration value="IncetareAccesRegistru"/>
             <xs:enumeration value="RadiereIstoricContract"/>
             <xs:enumeration value="ExportSalariati"/>
-			<xs:enumeration value="ExportContracte"/>
+            <xs:enumeration value="DeblocareReges1Readonly"/>
+            <xs:enumeration value="DeblocareAPIKeyReadonly"/>
+            <xs:enumeration value="AdaugareModificareInIstoricContract"/>
+            <xs:enumeration value="AdaugareSuspendareInIstoricContract"/>
+          <xs:enumeration value="ExportContracte"/>
             <xs:enumeration value="PreluareRegistru"/>
         </xs:restriction>
     </xs:simpleType>
@@ -765,7 +769,7 @@
                     <xs:element minOccurs="1" name="TipContract" type="reges:TipContract"/>
                     <xs:element minOccurs="1" name="TipDurata" type="reges:TipDurata"/>
                     <xs:element minOccurs="1" name="TipNorma" type="reges:TipNorma"/>
-                    <xs:element minOccurs="0" maxOccurs="1" name="TipLocMunca" type="reges:TipLocMunca"/>
+                    <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="TipLocMunca" type="reges:TipLocMunca"/>
                     <xs:element minOccurs="0" maxOccurs="1" name="JudetLocMunca" type="xs:string" />
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="LocalitateLocMunca" type="reges:Localitate"/>
                     <xs:element minOccurs="0" maxOccurs="1" nillable="true" name="NivelStudii" type="reges:NivelStudii"/>
@@ -901,6 +905,7 @@
     </xs:simpleType>
     <xs:complexType name="TipSpor">
         <xs:sequence>
+            <xs:element name="Referinta" type="reges:Referinta" minOccurs="0" maxOccurs="1"/>
             <xs:element minOccurs="1" name="Nume">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
@@ -956,6 +961,7 @@
             <xs:enumeration value="Art95Alin4"/>
             <xs:enumeration value="L448Art39Alin4"/>
             <xs:enumeration value="Art80Alin3"/>
+			<xs:enumeration value="Fara"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="TemeiSuspendare">
@@ -988,6 +994,7 @@
             <xs:enumeration value="Art31Alin1"/>
             <xs:enumeration value="Art50LiteraA"/>
             <xs:enumeration value="Art50LiteraB"/>
+			<xs:enumeration value="Fara"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="TemeiReactivare">
@@ -1000,6 +1007,7 @@
             <xs:enumeration value="Transnationala"/>
             <xs:enumeration value="CodulMuncii"/>
             <xs:enumeration value="MuncaTemporara"/>
+			<xs:enumeration value="Fara"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="TimpMunca">
@@ -1038,7 +1046,11 @@
         <xs:restriction base="xs:string">
             <xs:enumeration value="OreDeZi"/>
             <xs:enumeration value="OreDeNoapte"/>
-            <xs:enumeration value="Inegal"/>
+            <xs:enumeration value="Inegal">
+              <xs:annotation>
+                <xs:documentation>Această opțiune este echivalentul OreDeziSiNoapte. Este păstrată valoarea Inegal pentru backward compatibility cu sistemul Revisal</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
             <xs:enumeration value="OreInRepaos"/>
             <xs:enumeration value="OreZiSiRepaos"/>
             <xs:enumeration value="OreNoapteSiRepaos"/>
@@ -1104,6 +1116,9 @@
       <xs:restriction base="xs:string">
         <xs:enumeration value="HotarareJudecatoreasca"/>
         <xs:enumeration value="ActAditional"/>
+        <xs:enumeration value="Decizie"/>
+        <xs:enumeration value="Ordin"/>
+        <xs:enumeration value="Nota"/>
       </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="TipDurata">
@@ -1234,7 +1249,7 @@
                     <xs:element minOccurs="0" name="Explicatie" nillable="true">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
+                                <xs:maxLength value="1024"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1260,7 +1275,7 @@
                     <xs:element minOccurs="0" name="Explicatie" nillable="true">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
+                                <xs:maxLength value="1024"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1277,7 +1292,7 @@
                     <xs:element minOccurs="0" name="Explicatie" nillable="true">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
+                                <xs:maxLength value="1024"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -1387,6 +1402,18 @@
         </xs:complexContent>
     </xs:complexType>
   <xs:element name="CerereAccesRegistru" type="reges:CerereAccesRegistru"></xs:element>
+
+
+  <xs:complexType name="DreptAccesRegistru">
+    <xs:complexContent>
+      <xs:extension base="reges:Message">
+        <xs:sequence>
+          <xs:element name="Numar" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DreptAccesRegistru" type="reges:DreptAccesRegistru"></xs:element>
 
   <xs:complexType name="IncetareAccesRegistru">
     <xs:complexContent>
@@ -1504,6 +1531,7 @@
           <xs:element name="Declaratie" type="xs:string" minOccurs="0" maxOccurs="1"/>
           <xs:element name="FormatExtras" type="reges:FormatExtras" nillable="true" minOccurs="0" maxOccurs="1"/>
           <xs:element name="Sign" type="xs:boolean" nillable="true" minOccurs="0" maxOccurs="1"/>
+	      <xs:element name="HideSalary" type="xs:boolean" nillable="true" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
