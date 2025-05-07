@@ -218,7 +218,8 @@
             <xs:element name="Sign" type="reges:ResultSign" nillable="true" minOccurs="0" maxOccurs="1"></xs:element>
             <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
             <xs:element name="Ref" type="reges:GUID" minOccurs="0" maxOccurs="1"></xs:element>
-            <xs:element name="RelatedResultsExpected" type="xs:boolean" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="SecRef" type="reges:GUID" minOccurs="0" maxOccurs="1"></xs:element>
+          <xs:element name="RelatedResultsExpected" type="xs:boolean" minOccurs="1" maxOccurs="1"></xs:element>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="MessageResult">
@@ -388,6 +389,8 @@
             <xs:enumeration value="Stat"/>
             <xs:enumeration value="Privata"/>
             <xs:enumeration value="Mixta"/>
+            <xs:enumeration value="Cooperatista"/>
+            <xs:enumeration value="Obsteasca"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="NivelInfiintare">
