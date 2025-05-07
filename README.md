@@ -278,3 +278,7 @@ Recomandam sa folositi xchema XSD pentru a genera cod specific platformelor astf
 |string|sir de carcatere|Strada Morii, Calea Floreasca, |Fara spatii la inceput sau la sfarsit|
 |uuid/guid|xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx|123e4567-e89b-12d3-a456-426614174000|In its canonical textual representation, the 16 octets of a UUID are represented as 32 hexadecimal (base-16) digits, displayed in five groups separated by hyphens, in the form 8-4-4-4-12 for a total of 36 characters (32 hexadecimal characters and 4 hyphens). |
 
+## 9. Nomenclatoare
+
+Nomenclatoarele pot fi descarcate prin API de la acest link https://api.test.inspectiamuncii.org/api/Nomenclator?tip=toate
+
