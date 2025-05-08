@@ -2324,7 +2324,91 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"nume\":\"Tip spor angajator\",\r\n    \"angajatorId\": \"caee860a-daea-480e-a945-bdd3579477ef\"\r\n}",
+											"raw": "{\r\n    \"nume\":\"Tip spor angajator\",\r\n    \"angajatorId\": \"f40f8cd5-b3e5-4610-b3d4-d9b8ed2432f9\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Nomenclator/TipSporAngajator",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Nomenclator",
+												"TipSporAngajator"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ModificareTipSporAngajator",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"AD3B3732-B56C-4124-8B9D-E76D801B1F25\",\r\n    \"nume\":\"Tip spor angajator Updated\",\r\n    \"angajatorId\": \"caee860a-daea-480e-a945-bdd3579477ef\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Nomenclator/tipsporangajator",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Nomenclator",
+												"tipsporangajator"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "StergereTipSporAngajator",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id\": \"AD3B3732-B56C-4124-8B9D-E76D801B1F25\",\r\n    \"nume\":\"Tip spor angajator modificat\",\r\n    \"angajatorId\": \"f40f8cd5-b3e5-4610-b3d4-d9b8ed2432f9\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4700,6 +4784,100 @@
 										"body": {
 											"mode": "raw",
 											"raw": "<TipSporAngajator>\r\n    <Nume>Tip spor angajator</Nume>\r\n    <AngajatorId>caee860a-daea-480e-a945-bdd3579477ef</AngajatorId>\r\n</TipSporAngajator>\r\n",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Nomenclator/tipsporangajator",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Nomenclator",
+												"tipsporangajator"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ModificareTipSporAngajator",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<TipSporAngajator>\r\n    <Id>F60B6921-FC14-46F0-B5BF-23BD70517B80</Id>\r\n    <Nume>Tip spor angajator modificat</Nume>\r\n    <AngajatorId>f40f8cd5-b3e5-4610-b3d4-d9b8ed2432f9</AngajatorId>\r\n</TipSporAngajator>\r\n",
+											"options": {
+												"raw": {
+													"language": "xml"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Nomenclator/tipsporangajator",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Nomenclator",
+												"tipsporangajator"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "StergereTipSporAngajator",
+									"protocolProfileBehavior": {
+										"disabledSystemHeaders": {}
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "<TipSporAngajator>\r\n    <Id>F60B6921-FC14-46F0-B5BF-23BD70517B80</Id>\r\n    <Nume>Tip spor angajator modificat</Nume>\r\n    <AngajatorId>f40f8cd5-b3e5-4610-b3d4-d9b8ed2432f9</AngajatorId>\r\n</TipSporAngajator>\r\n",
 											"options": {
 												"raw": {
 													"language": "xml"
