@@ -202,12 +202,12 @@ Dezvoltatorii de programe vor avea optiunea de a exporta lista contractelor cu I
 
 ## 7 Mediul de test
 
-Disponibil la adresa *.test.inspectiamuncii.org astfel
+Disponibil la adresa *.dev.inspectiamuncii.org astfel
 
-- Portal web https://reges.test.inspectiamuncii.org	
-- API https://api.test.inspectiamuncii.org	
-- Aplicatia Angajator https://reges.test.inspectiamuncii.org/app/index.html
-- SWAGGER https://api.test.inspectiamuncii.org/swagger/
+- Portal web https://reges.dev.inspectiamuncii.org	
+- API https://api.dev.inspectiamuncii.org	
+- Aplicatia Angajator https://reges.dev.inspectiamuncii.org/app/index.html
+- SWAGGER https://api.dev.inspectiamuncii.org/swagger/
 
 NOTA: multe componente sunt early-alpha, este posibil sa mai intampinati erori, semnalati pe GitHub si vom remedia. Chiar si API mai poate suferi schimbari.
 
