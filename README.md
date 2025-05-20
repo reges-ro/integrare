@@ -192,7 +192,67 @@ Mesajul urmator inregistreaza un salariat nou in sistem.
 
 Majoritatea tipurilor de date din schema XSD contin si nomenclatoarele incluse. Nomenclatoarele COR, CAEN si sporuri vor fi expuse de API in format JSON si XML.
 
-Puteti consulta aici o varianta draft a acestora. [Nomenclatoare in format JSON](nomenclatoare/nomenclatoare.json)
+Le gasiti aici
+https://api.dev.inspectiamuncii.org/api/Nomenclator?tip=toate 
+sau individual aici
+https://api.dev.inspectiamuncii.org/api/Nomenclator?tip=GradProfesionalL153
+
+- ActIdentitatePF
+- AnexaL153
+- Apatrid
+- CategorieAngajator
+- Cetatenie
+- Cor
+- DomeniuActivitate
+- ExceptieDataSfarsit
+- FormaJuridica
+- FormaOrganizare
+- FormaProprietate
+- GradatieL153
+- GradHandicap
+- GradInvaliditate
+- GradProfesionalL153
+- Judet
+- Localitate
+- Moneda
+- Nationalitate
+- NivelInfiintare
+- NivelStudii
+- NormaTimpMunca
+- RepartizareIntervalTimp
+- RepartizareMunca
+- RepartizareTimpMunca
+- SpecialitateFunctieL153
+- SpecialitateStructuraAprobataL153
+- StarePropunere
+- StareContractMunca
+- StructuraAprobataL153
+- TemeiDetasare
+- TemeiIncetare
+- TemeiReactivare
+- TemeiSuspendare
+- TipActIdentitate
+- TipAutorizatie
+- TipAvizAngajare
+- TipAutorizatieExceptie
+- TipCalitate
+- TipCerere
+- TipContractMunca
+- TipDelegat
+- TipDocumentJustificativ
+- TipDurata
+- TipHandicap
+- TipIdentificare
+- TipLocMunca
+- TipMutare
+- TipNorma
+- TipNotificare
+- TipSesizare
+- TipSporAngajator
+- TipSporPredefinit
+- TipTemeiLegal
+- TipTransfer
+- TipTura
 
 ## 6 Migrarea datelor
 
