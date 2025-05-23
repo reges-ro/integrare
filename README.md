@@ -321,6 +321,16 @@ Folositi aceste chei pentru a initia un client OpenID din aplicatiile dvs.
 #### Mai multi consumatori de mesaje in paralel
 Pentru a putea depana cazuri sau pentru momente cand doriti sa primiti din nou toate mesajele aveti posibilitatea sa folositi un **consumerID**. Toate metodele de citit mesaje pot primi un parametru optional numit **consumerId** care identifica in mod unic un nou consumator (altul decat cel implicit) cu ajutorul caruia se pot citi mesajele in aceeasi ordine de la inceputul cozii pana la final. Exemplu /api/Status/PollMessage?consumerId=12 sau /api/Status/PollMessage?consumerId=1212 fiecare va citi mesajul urmator din coada de la inceputul cozii, independent de celalalt consumator.
 
+### Shradiing - feliere - spargere  baza de date interna in mai multe baze/shrads din motive de confidentialitate date
+
+Pentru a putea raporta din doua sau mai multe aplicatii in acelasi registru al aceluiasi Angajator va recomandam sa tineti cont de urmatoarele:
+-	Se va trece la Reges Online concomitent cu ambele aplicatii
+-	Setarea aceluiasi user si parola de API in ambele aplicatii
+-	La importul de referinte se vor salva doar referintele angajatilor si contractelor aflate in baza aplicatiei
+-	Nu vor exista aceiasi angajati in ambele aplicatii
+-   Se va tine in fiecare aplicatie o baza de date cu messageResponseId primite pentru a primi doar messageResultId destinat respectivei aplicatii
+-	Consumarea raspunsurilor se va face pe id-uri de consumerId diferite pentru fiecare aplicatie in parte pentru a nu isi consuma mesajele aplicatiile intre ele. Se vor ignora mesajele ce nu sunt generate din aplicatia respective.
+
 #### Generatoare de cod
 Recomandam sa folositi xchema XSD pentru a genera cod specific platformelor astfel:
 - pentru C# https://learn.microsoft.com/en-us/dotnet/standard/serialization/xml-schema-def-tool-gen
