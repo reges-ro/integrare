@@ -350,5 +350,5 @@ Recomandam sa folositi xchema XSD pentru a genera cod specific platformelor astf
 
 ## 9. Nomenclatoare
 
-Nomenclatoarele pot fi descarcate prin API de la acest link https://api.test.inspectiamuncii.org/api/Nomenclator?tip=toate
+Nomenclatoarele pot fi descarcate prin API de la acest link https://api.dev.inspectiamuncii.org/api/Nomenclator?tip=toate
 
