@@ -2324,7 +2324,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"nume\":\"Tip spor angajator\",\r\n    \"angajatorId\": \"f40f8cd5-b3e5-4610-b3d4-d9b8ed2432f9\"\r\n}",
+											"raw": "{\r\n    \"nume\":\"Tip spor angajator\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2366,7 +2366,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"id\": \"AD3B3732-B56C-4124-8B9D-E76D801B1F25\",\r\n    \"nume\":\"Tip spor angajator Updated\",\r\n    \"angajatorId\": \"caee860a-daea-480e-a945-bdd3579477ef\"\r\n}",
+											"raw": "{\r\n    \"id\": \"1d2bd9f2-8ba7-4092-abc4-c36429cfea65\",\r\n    \"nume\":\"Tip spor angajator modificat\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2408,7 +2408,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"id\": \"AD3B3732-B56C-4124-8B9D-E76D801B1F25\",\r\n    \"nume\":\"Tip spor angajator modificat\",\r\n    \"angajatorId\": \"f40f8cd5-b3e5-4610-b3d4-d9b8ed2432f9\"\r\n}",
+											"raw": "{\r\n    \"id\": \"AD3B3732-B56C-4124-8B9D-E76D801B1F25\",\r\n    \"nume\":\"Tip spor angajator modificat\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
