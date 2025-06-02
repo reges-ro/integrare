@@ -192,7 +192,70 @@ Mesajul urmator inregistreaza un salariat nou in sistem.
 
 Majoritatea tipurilor de date din schema XSD contin si nomenclatoarele incluse. Nomenclatoarele COR, CAEN si sporuri vor fi expuse de API in format JSON si XML.
 
-Puteti consulta aici o varianta draft a acestora. [Nomenclatoare in format JSON](nomenclatoare/nomenclatoare.json)
+Le gasiti aici
+https://api.dev.inspectiamuncii.org/api/Nomenclator?tip=toate 
+sau individual aici
+https://api.dev.inspectiamuncii.org/api/Nomenclator?tip=GradProfesionalL153
+
+In general toate nomenclatoarele au un ID sau un Cod care le identifica unic. Recomandam salvarea in baza de date proprie a acestor nomenclatoare si actualizarea periodica integrala. Pot exista situatii cand denumiri de tari, coduri ocupationale, caen sa se modifice. Vom anunta pe canalele clasice de comunicare orice schimbare semneificativa.
+
+- ActIdentitatePF
+- AnexaL153
+- Apatrid
+- CategorieAngajator
+- Cetatenie
+- Cor
+- DomeniuActivitate
+- ExceptieDataSfarsit
+- FormaJuridica
+- FormaOrganizare
+- FormaProprietate
+- GradatieL153
+- GradHandicap
+- GradInvaliditate
+- GradProfesionalL153
+- Judet
+- Localitate
+- Moneda
+- Nationalitate
+  Atenentie: din motive de compatibilitate schema API obliga transmiterea Numelui tarii (campul NUME din nomenclator), cu toate acestea va recomandam sa stocati in bazele de date proprii ID-ul nationalitatii care este in forma de UUID.
+- NivelInfiintare
+- NivelStudii
+- NormaTimpMunca
+- RepartizareIntervalTimp
+- RepartizareMunca
+- RepartizareTimpMunca
+- SpecialitateFunctieL153
+- SpecialitateStructuraAprobataL153
+- StarePropunere
+- StareContractMunca
+- StructuraAprobataL153
+- TemeiDetasare
+- TemeiIncetare
+- TemeiReactivare
+- TemeiSuspendare
+- TipActIdentitate
+- TipAutorizatie
+- TipAvizAngajare
+- TipAutorizatieExceptie
+- TipCalitate
+- TipCerere
+- TipContractMunca
+- TipDelegat
+- TipDocumentJustificativ
+- TipDurata
+- TipHandicap
+- TipIdentificare
+- TipLocMunca
+- TipMutare
+- TipNorma
+- TipNotificare
+- TipSesizare
+- TipSporAngajator
+- TipSporPredefinit
+- TipTemeiLegal
+- TipTransfer
+- TipTura
 
 ## 6 Migrarea datelor
 
@@ -202,12 +265,12 @@ Dezvoltatorii de programe vor avea optiunea de a exporta lista contractelor cu I
 
 ## 7 Mediul de test
 
-Disponibil la adresa *.test.inspectiamuncii.org astfel
+Disponibil la adresa *.dev.inspectiamuncii.org astfel
 
-- Portal web https://reges.test.inspectiamuncii.org	
-- API https://api.test.inspectiamuncii.org	
-- Aplicatia Angajator https://reges.test.inspectiamuncii.org/app/index.html
-- SWAGGER https://api.test.inspectiamuncii.org/swagger/
+- Portal web https://reges.dev.inspectiamuncii.org	
+- API https://api.dev.inspectiamuncii.org	
+- Aplicatia Angajator https://reges.dev.inspectiamuncii.org/app/index.html
+- SWAGGER https://api.dev.inspectiamuncii.org/swagger/
 
 NOTA: multe componente sunt early-alpha, este posibil sa mai intampinati erori, semnalati pe GitHub si vom remedia. Chiar si API mai poate suferi schimbari.
 
@@ -261,6 +324,16 @@ Folositi aceste chei pentru a initia un client OpenID din aplicatiile dvs.
 #### Mai multi consumatori de mesaje in paralel
 Pentru a putea depana cazuri sau pentru momente cand doriti sa primiti din nou toate mesajele aveti posibilitatea sa folositi un **consumerID**. Toate metodele de citit mesaje pot primi un parametru optional numit **consumerId** care identifica in mod unic un nou consumator (altul decat cel implicit) cu ajutorul caruia se pot citi mesajele in aceeasi ordine de la inceputul cozii pana la final. Exemplu /api/Status/PollMessage?consumerId=12 sau /api/Status/PollMessage?consumerId=1212 fiecare va citi mesajul urmator din coada de la inceputul cozii, independent de celalalt consumator.
 
+### Shradiing - feliere - spargere  baza de date interna in mai multe baze/shrads din motive de confidentialitate date
+
+Pentru a putea raporta din doua sau mai multe aplicatii in acelasi registru al aceluiasi Angajator va recomandam sa tineti cont de urmatoarele:
+-	Se va trece la Reges Online concomitent cu ambele aplicatii
+-	Setarea aceluiasi user si parola de API in ambele aplicatii
+-	La importul de referinte se vor salva doar referintele angajatilor si contractelor aflate in baza aplicatiei
+-	Nu vor exista aceiasi angajati in ambele aplicatii
+-   Se va tine in fiecare aplicatie o baza de date cu messageResponseId primite pentru a primi doar messageResultId destinat respectivei aplicatii
+-	Consumarea raspunsurilor se va face pe id-uri de consumerId diferite pentru fiecare aplicatie in parte pentru a nu isi consuma mesajele aplicatiile intre ele. Se vor ignora mesajele ce nu sunt generate din aplicatia respective.
+
 #### Generatoare de cod
 Recomandam sa folositi xchema XSD pentru a genera cod specific platformelor astfel:
 - pentru C# https://learn.microsoft.com/en-us/dotnet/standard/serialization/xml-schema-def-tool-gen
@@ -280,5 +353,5 @@ Recomandam sa folositi xchema XSD pentru a genera cod specific platformelor astf
 
 ## 9. Nomenclatoare
 
-Nomenclatoarele pot fi descarcate prin API de la acest link https://api.test.inspectiamuncii.org/api/Nomenclator?tip=toate
+Nomenclatoarele pot fi descarcate prin API de la acest link https://api.dev.inspectiamuncii.org/api/Nomenclator?tip=toate
 
