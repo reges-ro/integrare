@@ -197,6 +197,8 @@ https://api.dev.inspectiamuncii.org/api/Nomenclator?tip=toate
 sau individual aici
 https://api.dev.inspectiamuncii.org/api/Nomenclator?tip=GradProfesionalL153
 
+In general toate nomenclatoarele au un ID sau un Cod care le identifica unic. Recomandam salvarea in baza de date proprie a acestor nomenclatoare si actualizarea periodica integrala. Pot exista situatii cand denumiri de tari, coduri ocupationale, caen sa se modifice. Vom anunta pe canalele clasice de comunicare orice schimbare semneificativa.
+
 - ActIdentitatePF
 - AnexaL153
 - Apatrid
@@ -216,6 +218,7 @@ https://api.dev.inspectiamuncii.org/api/Nomenclator?tip=GradProfesionalL153
 - Localitate
 - Moneda
 - Nationalitate
+  Atenentie: din motive de compatibilitate schema API obliga transmiterea Numelui tarii (campul NUME din nomenclator), cu toate acestea va recomandam sa stocati in bazele de date proprii ID-ul nationalitatii care este in forma de UUID.
 - NivelInfiintare
 - NivelStudii
 - NormaTimpMunca
