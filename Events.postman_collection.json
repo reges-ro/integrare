@@ -1857,7 +1857,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\"messageId\" : null}",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4327,7 +4327,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "<CommitParams>\r\n    <MessageId></MessageId>\r\n</CommitParams>",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "xml"

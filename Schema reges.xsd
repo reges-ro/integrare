@@ -511,7 +511,7 @@
                     <xs:element minOccurs="1" name="FormaJuridicaPJ" type="reges:FormaJuridicaPJ"/>
                     <xs:element minOccurs="0" name="FormaOrganizarePJ" nillable="true"
                         type="reges:FormaOrganizarePJ"/>
-                    <xs:element minOccurs="0" name="FormaProprietate" nillable="true"
+                    <xs:element minOccurs="1" name="FormaProprietate"
                         type="reges:FormaProprietate"/>
                     <xs:element minOccurs="0" name="NivelInfiintare" nillable="true"
                         type="reges:NivelInfiintare"/>
@@ -739,7 +739,7 @@
                     <xs:element minOccurs="0" name="Detalii" nillable="true">
                         <xs:simpleType>
                             <xs:restriction base="xs:string">
-                                <xs:maxLength value="256"/>
+                                <xs:maxLength value="1024"/>
                             </xs:restriction>
                         </xs:simpleType>
                     </xs:element>
@@ -784,6 +784,9 @@
                     <xs:element minOccurs="0" name="DataCertificatHandicap" nillable="true" type="xs:dateTime"/>
                     <xs:element minOccurs="0" name="NumarCertificatHandicap" type="xs:string"/>
                     <xs:element minOccurs="0" name="DataValabilitateCertificatHandicap" nillable="true" type="xs:dateTime"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="CuiUtilizator" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="NumeUtilizator" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="NationalitateUtilizator" type="reges:Nationalitate" />
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -997,7 +1000,9 @@
             <xs:enumeration value="Art31Alin1"/>
             <xs:enumeration value="Art50LiteraA"/>
             <xs:enumeration value="Art50LiteraB"/>
-			<xs:enumeration value="Fara"/>
+            <xs:enumeration value="Art51Alin1LiteraH"/>
+            <xs:enumeration value="Art52Alin1LiteraF"/>
+          <xs:enumeration value="Fara"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="TemeiReactivare">
