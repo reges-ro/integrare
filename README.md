@@ -322,6 +322,9 @@ Folositi aceste chei pentru a initia un client OpenID din aplicatiile dvs.
 - POST /api/Status/CommitReadBatch - trece peste urmatoarele N mesaje din coada angajatorului, altfel metoda ReadBatch va citi acelasi mesaj in continuu. Atentie, daca metoda ReadBatch returneaza P mesaje, P <> N atunci CommitReadBatch se apeleaza cu P
 
 #### Mai multi consumatori de mesaje in paralel
+
+O scurta explicatie aici https://www.youtube.com/watch?v=NCMrh4l86Rc
+
 Pentru a putea depana cazuri sau pentru momente cand doriti sa primiti din nou toate mesajele aveti posibilitatea sa folositi un **consumerID**. Toate metodele de citit mesaje pot primi un parametru optional numit **consumerId** care identifica in mod unic un nou consumator (altul decat cel implicit) cu ajutorul caruia se pot citi mesajele in aceeasi ordine de la inceputul cozii pana la final. Exemplu /api/Status/PollMessage?consumerId=12 sau /api/Status/PollMessage?consumerId=1212 fiecare va citi mesajul urmator din coada de la inceputul cozii, independent de celalalt consumator.
 
 ### Shradiing - feliere - spargere  baza de date interna in mai multe baze/shrads din motive de confidentialitate date
