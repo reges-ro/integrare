@@ -1512,7 +1512,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"salariat\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareSalariat\",\r\n    \"authorId\": \"D674EBEA-A672-4B62-96C6-0AD8ABBFE0DE\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"CM\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"info\":\r\n  {\r\n    \"localitate\": {\"codSiruta\":179141},\r\n    \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n    \"cnp\":\"123897456\",\r\n    \"nume\": \"SAMPATH\",\r\n    \"prenume\": \"SUMEDHA\",\r\n    \"dataNastere\": \"1990-06-15T00:00:00\",\r\n    \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n    \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n    \"tipActIdentitate\": \"Pasaport\",\r\n    \"apatrid\": \"CuDreptDeSedereInUe\",\r\n    \"detaliiSalariatStrain\" :\r\n    {\r\n            \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"tipAutorizatie\": \"Exceptie\",\r\n            \"tipAutorizatieExceptie\": \"Art32LiteraK\",\r\n            \"numarAutorizatie\": \"1234K\"\r\n    },\r\n    \"mentiuni\": \"Mentiuni salariat\",\r\n    \"tipHandicap\":\"Fizic\",\r\n    \"gradHandicap\":\"Mediu\",\r\n    \"dataCertificatHandicap\": \"2000-01-01T18:30:00.000\",\r\n    \"numarCertificatHandicap\": \"12345\",\r\n    \"dataValabilitateCertificatHandicap\": \"2030-01-01T18:30:00.000\",\r\n    \"gradInvaliditate\":\"Grad1\"    \r\n  }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"salariat\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5e-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"ModificareSalariat\",\r\n    \"authorId\": \"D674EBEA-A672-4B62-96C6-0AD8ABBFE0DE\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"CM\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaSalariat\":{\r\n                    \"id\":\"ABC29C38-2E14-42A4-8EF7-6DDCEFFC312F\"\r\n            },\r\n  \"info\":\r\n  {\r\n    \"localitate\": {\"codSiruta\":179141},\r\n    \"adresa\": \"STR. SALARIATULUI, NR. 1\",\r\n    \"cnp\":\"123897456\",\r\n    \"nume\": \"SAMPATH\",\r\n    \"prenume\": \"SUMEDHA\",\r\n    \"dataNastere\": \"1990-06-15T00:00:00\",\r\n    \"nationalitate\": {\"nume\":\"SRI LANKA\"},\r\n    \"taraDomiciliu\": {\"nume\":\"SRI LANKA\"},\r\n    \"tipActIdentitate\": \"Pasaport\",\r\n    \"apatrid\": \"CuDreptDeSedereInUe\",\r\n    \"detaliiSalariatStrain\" :\r\n    {\r\n            \"dataInceputAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"dataSfarsitAutorizatie\": \"2024-01-01T00:00:00\",\r\n            \"tipAutorizatie\": \"Exceptie\",\r\n            \"tipAutorizatieExceptie\": \"Art32LiteraK\",\r\n            \"numarAutorizatie\": \"1234K\"\r\n    },\r\n    \"mentiuni\": \"Mentiuni salariat\",\r\n    \"tipHandicap\":\"Fizic\",\r\n    \"gradHandicap\":\"Mediu\",\r\n    \"dataCertificatHandicap\": \"2000-01-01T18:30:00.000\",\r\n    \"numarCertificatHandicap\": \"12345\",\r\n    \"dataValabilitateCertificatHandicap\": \"2030-01-01T18:30:00.000\",\r\n    \"gradInvaliditate\":\"Grad1\"    \r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2408,7 +2408,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"id\": \"AD3B3732-B56C-4124-8B9D-E76D801B1F25\",\r\n    \"nume\":\"Tip spor angajator modificat\"\r\n}",
+											"raw": "{\r\n    \"id\": \"1d2bd9f2-8ba7-4092-abc4-c36429cfea65\",\r\n    \"nume\":\"Tip spor angajator\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2448,7 +2448,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{URL}}/api/Nomenclator?tip=nationalitate&angajatorId=caee860a-daea-480e-a945-bdd3579477ef",
+									"raw": "{{URL}}/api/Nomenclator?tip=toate&angajatorId=caee860a-daea-480e-a945-bdd3579477ef",
 									"host": [
 										"{{URL}}"
 									],
@@ -2459,7 +2459,7 @@
 									"query": [
 										{
 											"key": "tip",
-											"value": "nationalitate"
+											"value": "toate"
 										},
 										{
 											"key": "angajatorId",
@@ -4783,7 +4783,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<TipSporAngajator>\r\n    <Nume>Tip spor angajator</Nume>\r\n    <AngajatorId>caee860a-daea-480e-a945-bdd3579477ef</AngajatorId>\r\n</TipSporAngajator>\r\n",
+											"raw": "<TipSporAngajator>\r\n    <Nume>Tip spor angajator</Nume>\r\n    <AngajatorId>f40f8cd5-b3e5-4610-b3d4-d9b8ed2432f9</AngajatorId>\r\n</TipSporAngajator>\r\n",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -4917,7 +4917,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{URL}}/api/Nomenclator?tip=nationalitate&angajatorId=caee860a-daea-480e-a945-bdd3579477ef",
+									"raw": "{{URL}}/api/Nomenclator?tip=tipsporangajator&angajatorId=caee860a-daea-480e-a945-bdd3579477ef",
 									"host": [
 										"{{URL}}"
 									],
@@ -4928,7 +4928,7 @@
 									"query": [
 										{
 											"key": "tip",
-											"value": "nationalitate"
+											"value": "tipsporangajator"
 										},
 										{
 											"key": "angajatorId",
