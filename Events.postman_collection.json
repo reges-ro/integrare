@@ -818,7 +818,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"RadiereContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  }\r\n}",
+											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"RadiereContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"4F8CB938-EA29-498D-A897-377A9794B204\"\r\n  },\r\n  \"continut\":\r\n  {\r\n    \"$type\": \"continutContract\",\r\n    \"referintaSalariat\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"1C390DA5-14E7-4EE5-ACE1-E5B1891DF37D\"\r\n    },\r\n    \"cor\":{},    \r\n    \"numarContract\":\"12345\",\r\n    \"stareCurenta\":{},\r\n    \"timpMunca\":{},\r\n    \"tipContract\":\"ContractIndividualMunca\",\r\n    \"motivRadiere\": \"Adaugat din greseala!\"\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -850,51 +850,6 @@
 						{
 							"name": "Detasare",
 							"item": [
-								{
-									"name": "DetasareContract",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{AuthToken}}",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n  \"$type\" : \"contract\",\r\n  \"header\": {\r\n    \"messageId\": \"117f9b03-9efb-4f5a-8ebb-7ab3b0c792af\",\r\n    \"clientApplication\": \"SAP\",\r\n    \"version\": \"5\",\r\n    \"operation\": \"DetasareContract\",\r\n    \"authorId\": \"caee860a-daea-480e-a945-bdd3579477ef\",\r\n    \"sessionId\": \"117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf\",\r\n    \"user\": \"ion\",\r\n    \"timestamp\": \"2024-06-18T14:19:58.917Z\"\r\n  },\r\n  \"referintaContract\": {\r\n        \"$type\" : \"referinta\",\r\n        \"id\": \"1579AEE4-3CDF-4687-94AC-0AAC3B40E670\"\r\n  },\r\n  \"actiune\": \r\n  {\r\n        \"$type\":\"actiuneDetasare\",\r\n        \"temeiDetasare\":\"Transnationala\",\r\n        \"angajatorNume\": \"SAP AG\",\r\n        \"angajatorCui\": \"12345\",\r\n        \"dataInceput\": \"2024-09-20T13:06:22.7010678+00:00\",\r\n        \"dataSfarsit\": \"2024-09-27T13:06:22.7010678+00:00\",\r\n        \"nationalitate\": {\"nume\": \"Germania\"},\r\n        \"cor\":\r\n        {\r\n            \"cod\":251204,\r\n            \"versiune\":10\r\n        }\r\n    }\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/api/Contract",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"api",
-												"Contract"
-											],
-											"query": [
-												{
-													"key": "",
-													"value": "",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"response": []
-								},
 								{
 									"name": "CorectieDetasareContract",
 									"request": {
@@ -3286,7 +3241,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>RadiereContract</Operation>\r\n        <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n</Message>",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>RadiereContract</Operation>\r\n        <AuthorId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792cf</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>\r\n    </ReferintaContract>\r\n    <Continut>\r\n        <ReferintaSalariat>\r\n            <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>\r\n        </ReferintaSalariat>\r\n        <Cor/>\r\n        <NumarContract>12345</NumarContract>\r\n        <StareCurenta/>\r\n        <TimpMunca/>\r\n        <TipContract>ContractIndividualMunca</TipContract>\r\n        <MotivRadiere>Adaugat din greseala</MotivRadiere>\r\n    </Continut>\r\n</Message>",
 											"options": {
 												"raw": {
 													"language": "xml"
@@ -3311,49 +3266,6 @@
 						{
 							"name": "Detasare",
 							"item": [
-								{
-									"name": "DetasareContract",
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "text/xml",
-												"type": "text"
-											},
-											{
-												"key": "Accept",
-												"value": "text/xml",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer {{AuthToken}}",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Message xsi:type=\"Contract\" xmlns=\"http://www.inspectiamuncii.ro/reges2025\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.inspectiamuncii.ro/reges2025\">\r\n    <Header>\r\n        <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>\r\n        <ClientApplication>SAP</ClientApplication>\r\n        <Version>5</Version>\r\n        <Operation>DetasareContract</Operation>\r\n        <AuthorId>10A5B574-ED00-4747-95F5-65E6B813E98D</AuthorId>\r\n        <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>\r\n        <User>Ion</User>\r\n        <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>\r\n    </Header>\r\n    <ReferintaContract>\r\n        <Id>1579AEE4-3CDF-4687-94AC-0AAC3B40E670</Id>\r\n    </ReferintaContract>\r\n    <Actiune xsi:type=\"ActiuneDetasare\">\r\n        <TemeiDetasare>Transnationala</TemeiDetasare>\r\n        <AngajatorNume>SAP AG</AngajatorNume>\r\n        <AngajatorCui>12345</AngajatorCui>\r\n        <DataInceput>2024-09-20T13:06:22.7010678+00:00</DataInceput>\r\n        <DataSfarsit>2024-09-27T13:06:22.7010678+00:00</DataSfarsit>\r\n        <Nationalitate>\r\n            <Nume>ROMÂNIA</Nume>\r\n        </Nationalitate>\r\n        <Cor>\r\n            <Cod>251204</Cod>\r\n            <Versiune>10</Versiune>\r\n        </Cor>\r\n    </Actiune>\r\n</Message>",
-											"options": {
-												"raw": {
-													"language": "xml"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL}}/api/Contract",
-											"host": [
-												"{{URL}}"
-											],
-											"path": [
-												"api",
-												"Contract"
-											]
-										}
-									},
-									"response": []
-								},
 								{
 									"name": "CorectieDetasareContract",
 									"request": {
@@ -5009,13 +4921,13 @@
 							"type": "text"
 						},
 						{
-							"key": "password",
-							"value": "kg$TcBm37f02_CWihH(N",
+							"key": "client_secret",
+							"value": "FjtrYvDTGZKiyHGdSWymOvxhqifTJ7Em",
 							"type": "text"
 						},
 						{
-							"key": "client_secret",
-							"value": "FjtrYvDTGZKiyHGdSWymOvxhqifTJ7Em",
+							"key": "password",
+							"value": "",
 							"type": "text"
 						}
 					]
