@@ -32,7 +32,11 @@
       <xs:enumeration value="PropunereMutareContract"/>
       <xs:enumeration value="AcceptarePropunereMutareContract"/>
       <xs:enumeration value="RespingerePropunereMutareContract"/>
-      <xs:enumeration value="DetasareContract"/>
+      <xs:enumeration value="DetasareContract">
+        <xs:annotation>
+          <xs:documentation>Această operație nu mai este folosită. Pentru detașarea unui contract se folosește operația PropunereDetasareContract în asociere cu una din operațiile AcceptarePropunereDetasareContract sau RespingerePropunereDetasareContract</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="CorectieDetasareContract"/>
       <xs:enumeration value="PrelungireDetasareContract"/>
       <xs:enumeration value="AnulareDetasareContract"/>
@@ -73,6 +77,7 @@
       <xs:enumeration value="AdaugareSuspendareInIstoricContract"/>
       <xs:enumeration value="ExportContracte"/>
       <xs:enumeration value="PreluareRegistru"/>
+      <xs:enumeration value="AdaugareContractInitial"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="Header">
@@ -2257,6 +2262,7 @@
       <xs:enumeration value="CIF"/>
       <xs:enumeration value="CNP"/>
       <xs:enumeration value="Alta"/>
+      <xs:enumeration value="NIF"/>
     </xs:restriction>
   </xs:simpleType>
   
@@ -2443,6 +2449,7 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="JSON"/>
       <xs:enumeration value="XML"/>
+	  <xs:enumeration value="EXCELOPENXML"/>
     </xs:restriction>
   </xs:simpleType>
   
