@@ -78,6 +78,7 @@
       <xs:enumeration value="ExportContracte"/>
       <xs:enumeration value="PreluareRegistru"/>
       <xs:enumeration value="AdaugareContractInitial"/>
+      <xs:enumeration value="ActualizareSporuri"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="Header">
@@ -1459,6 +1460,11 @@
                 <xs:documentation>Numele angajatorului la care se muta contractul. Se completeaza doar in cazul tipului de mesaj PropunereMutareContract</xs:documentation>
               </xs:annotation>
             </xs:element>
+            <xs:element name="IdAngajatorDestinatie" type="reges:Referinta" minOccurs="0" maxOccurs="1">
+              <xs:annotation>
+                <xs:documentation>Referinta angajatorului destinatie. Se transmite in cazul in care sunt mai multi angajatori cu acelasi CUI - ex. firme cu filiale, organizatii care tin de consilii judetene etc.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
             <xs:element name="NationalitateAngajatorDestinatie" type="reges:Nationalitate" minOccurs="0" maxOccurs="1">
               <xs:annotation>
                 <xs:documentation>Nationalitatea angajatorului la care se muta contractul. Se completeaza doar in cazul tipului de mesaj PropunereMutareContract</xs:documentation>
@@ -1676,7 +1682,7 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="Transnationala"/>
       <xs:enumeration value="CodulMuncii"/>
-      <xs:enumeration value="MuncaTemporara"/>
+      <xs:enumeration value="DetasareNonUESEE"/>
       <xs:enumeration value="Fara"/>
     </xs:restriction>
   </xs:simpleType>
