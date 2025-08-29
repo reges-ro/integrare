@@ -1682,6 +1682,11 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="Transnationala"/>
       <xs:enumeration value="CodulMuncii"/>
+      <xs:enumeration value="MuncaTemporara">
+        <xs:annotation>
+          <xs:documentation>Această opțiune nu mai este folosită</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="DetasareNonUESEE"/>
       <xs:enumeration value="Fara"/>
     </xs:restriction>
