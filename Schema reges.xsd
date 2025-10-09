@@ -43,11 +43,23 @@
       <xs:enumeration value="IncetareDetasareContract"/>
       <xs:enumeration value="AnulareIncetareDetasareContract"/>
       <xs:enumeration value="CorectieIncetareDetasareContract"/>
-      <xs:enumeration value="TransferContract"/>
+      <xs:enumeration value="TransferContract">
+        <xs:annotation>
+          <xs:documentation>Această operație nu mai este folosită. Pentru transferul unui contract se folosește operația PropunereMutareContract cu TipMutare Transfer în asociere cu una din operațiile AcceptarePropunereMutareContract sau RespingerePropunerMutareContract</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="AnulareTransferContract"/>
-      <xs:enumeration value="SchimbareLocMuncaContract"/>
+      <xs:enumeration value="SchimbareLocMuncaContract">
+        <xs:annotation>
+          <xs:documentation>Această operație nu mai este folosită. Pentru schimbarea locului de munca pentru un contract se folosește operația PropunereMutareContract cu TipMutare SchimbareLocMunca în asociere cu una din operațiile AcceptarePropunereMutareContract sau RespingerePropunerMutareContract</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="AnulareSchimbareLocMuncaContract"/>
-      <xs:enumeration value="SchimbareGestiuneRegistruContract"/>
+      <xs:enumeration value="SchimbareGestiuneRegistruContract">
+        <xs:annotation>
+          <xs:documentation>Această operație nu mai este folosită. Pentru schimbarea gestiunii registrului pentru un contract se folosește operația PropunereMutareContract cu TipMutare SchimbareGestiuneRegistru în asociere cu una din operațiile AcceptarePropunereMutareContract sau RespingerePropunerMutareContract</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="AnulareSchimbareGestiuneRegistruContract"/>
       <xs:enumeration value="ModificareDetasareContract"/>
       <xs:enumeration value="CorectieReactivareContract"/>
@@ -79,6 +91,12 @@
       <xs:enumeration value="PreluareRegistru"/>
       <xs:enumeration value="AdaugareContractInitial"/>
       <xs:enumeration value="ActualizareSporuri"/>
+      <xs:enumeration value="BlocareAPIKeyReadonly"/>
+      <xs:enumeration value="CorectieIstoricContractCuPropagare"/>
+      <xs:enumeration value="AdaugareModificareInIstoricContractCuPropagare"/>
+      <xs:enumeration value="RadierePropunereDetasareContract"/>
+      <xs:enumeration value="ModificarePropunereDetasareContract"/>
+      <xs:enumeration value="RadierePropunereMutareContract"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="Header">
@@ -975,7 +993,7 @@
             </xs:element>
             <xs:element name="Continut" type="reges:ContinutContract" minOccurs="0" maxOccurs="1">
               <xs:annotation>
-                <xs:documentation>Informatiile din contract, Se transmite in cazul mesajelor de tipul ModificareContract, CorectieContract, CorectieIstoricContract, AdaugareModificareInIstoricContract, AdaugareSuspendareInIstoricContract, PropunereDetasareContract, AcceptarePropunereDetasareContract, PropunereMutareContract, AcceptarePropunereMutareContract</xs:documentation>
+                <xs:documentation>Informatiile din contract, Se transmite in cazul mesajelor de tipul ModificareContract, CorectieContract, CorectieIstoricContract, AdaugareModificareInIstoricContract, AdaugareSuspendareInIstoricContract, PropunereDetasareContract, ModificarePropunereDetasareContract, AcceptarePropunereDetasareContract, PropunereMutareContract, AcceptarePropunereMutareContract</xs:documentation>
               </xs:annotation>
             </xs:element>
             <xs:element name="DocumentJustificativ" type="reges:DocumentJustificativ" minOccurs="0" maxOccurs="1">
@@ -1338,7 +1356,7 @@
           <xs:sequence>
             <xs:element name="Referinta" type="reges:Referinta" minOccurs="0" maxOccurs="1">
               <xs:annotation>
-                <xs:documentation>Referinta propunerii de detasare. Se transmite doar in cazul tipurilor de mesaje AcceptarePropunereDetasareContract, RespingerePropunereDetasareContract</xs:documentation>
+                <xs:documentation>Referinta propunerii de detasare. Se transmite doar in cazul tipurilor de mesaje AcceptarePropunereDetasareContract, RespingerePropunereDetasareContract, RadierePropunereDetasareContract</xs:documentation>
               </xs:annotation>
             </xs:element>
             <xs:element name="ReferintaContract" type="reges:Referinta" minOccurs="0" maxOccurs="1">
@@ -1432,7 +1450,7 @@
           <xs:sequence>
             <xs:element name="Referinta" type="reges:Referinta" minOccurs="0" maxOccurs="1">
               <xs:annotation>
-                <xs:documentation>Referinta propunerii de detasare. Se transmite doar in cazul tipurilor de mesaje AcceptarePropunereMutareContract, RespingerePropunereMutareContract</xs:documentation>
+                <xs:documentation>Referinta propunerii de detasare. Se transmite doar in cazul tipurilor de mesaje AcceptarePropunereMutareContract, RespingerePropunereMutareContract, RadierePropunereMutareContract</xs:documentation>
               </xs:annotation>
             </xs:element>
             <xs:element name="ReferintaContract" type="reges:Referinta" minOccurs="0" maxOccurs="1">
@@ -2470,6 +2488,7 @@
         <xs:sequence>
           <xs:element name="Entitate" type="reges:Entitate" minOccurs="1" maxOccurs="1"/>
           <xs:element name="FormatExport" type="reges:FormatExport" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="Stare" type="xs:string" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
