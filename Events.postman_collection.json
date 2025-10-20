@@ -5663,7 +5663,7 @@
 					"name": "Detasare",
 					"item": [
 						{
-							"name": "PropuneriPrimite",
+							"name": "[DEPRECATED]PropuneriPrimite",
 							"item": [
 								{
 									"name": "PollMessage",
@@ -5929,6 +5929,272 @@
 							]
 						},
 						{
+							"name": "Propuneri",
+							"item": [
+								{
+									"name": "PollMessage",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/api/Detasare/Propuneri/PollMessage",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Detasare",
+												"Propuneri",
+												"PollMessage"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PollBatch",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"messages\" : 5}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Detasare/Propuneri/PollBatch",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Detasare",
+												"Propuneri",
+												"PollBatch"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ReadBatch",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"messages\" : 5}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Detasare/Propuneri/ReadBatch",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Detasare",
+												"Propuneri",
+												"ReadBatch"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ReadMessage",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Detasare/Propuneri/ReadMessage",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Detasare",
+												"Propuneri",
+												"ReadMessage"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CommitRead",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Detasare/Propuneri/CommitRead",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Detasare",
+												"Propuneri",
+												"CommitRead"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CommitReadBatch",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"messages\" : 5}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Detasare/Propuneri/CommitReadBatch",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Detasare",
+												"Propuneri",
+												"CommitReadBatch"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "PropunereDetasareContract",
 							"request": {
 								"method": "POST",
@@ -6154,7 +6420,7 @@
 					"name": "Mutare",
 					"item": [
 						{
-							"name": "PropuneriPrimite",
+							"name": "[DEPRECATED]PropuneriPrimite",
 							"item": [
 								{
 									"name": "PollMessage",
@@ -6313,14 +6579,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{URL}}/api/Mutare/PropuneriPrimite/ReadMessage",
+											"raw": "{{URL}}/api/Mutare/Propuneri/ReadMessage",
 											"host": [
 												"{{URL}}"
 											],
 											"path": [
 												"api",
 												"Mutare",
-												"PropuneriPrimite",
+												"Propuneri",
 												"ReadMessage"
 											]
 										}
@@ -6411,6 +6677,272 @@
 												"api",
 												"Mutare",
 												"PropuneriPrimite",
+												"CommitReadBatch"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Propuneri",
+							"item": [
+								{
+									"name": "PollMessage",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{URL}}/api/Mutare/Propuneri/PollMessage",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Mutare",
+												"Propuneri",
+												"PollMessage"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PollBatch",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"messages\" : 5}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Mutare/Propuneri/PollBatch",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Mutare",
+												"Propuneri",
+												"PollBatch"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ReadBatch",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"messages\" : 5}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Mutare/Propuneri/ReadBatch",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Mutare",
+												"Propuneri",
+												"ReadBatch"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ReadMessage",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Mutare/PropuneriPrimite/ReadMessage",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Mutare",
+												"PropuneriPrimite",
+												"ReadMessage"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CommitRead",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Mutare/Propuneri/CommitRead",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Mutare",
+												"Propuneri",
+												"CommitRead"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CommitReadBatch",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthToken}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "text/xml",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"messages\" : 5}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}/api/Mutare/Propuneri/CommitReadBatch",
+											"host": [
+												"{{URL}}"
+											],
+											"path": [
+												"api",
+												"Mutare",
+												"Propuneri",
 												"CommitReadBatch"
 											]
 										}
