@@ -3482,6 +3482,236 @@
 					]
 				},
 				{
+					"name": "Notificare",
+					"item": [
+						{
+							"name": "PollMessage",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/Notificare/PollMessage",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"PollMessage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PollBatch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"messages\" : 5}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/PollBatch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"PollBatch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ReadBatch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"messages\" : 5}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/ReadBatch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"ReadBatch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ReadMessage",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/ReadMessage",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"ReadMessage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CommitRead",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/CommitRead",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"CommitRead"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CommitReadBatch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"messages\" : 5}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/CommitReadBatch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"CommitReadBatch"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Nomenclator",
 					"item": [
 						{
@@ -7210,6 +7440,266 @@
 										"api",
 										"Mutare",
 										"Propunere"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Notificare",
+					"item": [
+						{
+							"name": "PollMessage",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/Notificare/PollMessage",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"PollMessage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PollBatch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"messages\" : 5}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/PollBatch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"PollBatch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ReadBatch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"messages\" : 5}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/ReadBatch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"ReadBatch"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ReadMessage",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/ReadMessage",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"ReadMessage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CommitRead",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/CommitRead",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"CommitRead"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CommitReadBatch",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthToken}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "text/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"messages\" : 5}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/Notificare/CommitReadBatch",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"Notificare",
+										"CommitReadBatch"
 									]
 								}
 							},
