@@ -1409,6 +1409,11 @@
                 <xs:documentation>Data propunerii de detasare</xs:documentation>
               </xs:annotation>
             </xs:element>
+            <xs:element name="NumarPropunere" type="xs:string" minOccurs="0" maxOccurs="1">
+              <xs:annotation>
+                <xs:documentation>Numarul propunerii de detasare</xs:documentation>
+              </xs:annotation>
+            </xs:element>
             <xs:element name="NoteSursa" type="xs:string" minOccurs="0" maxOccurs="1">
               <xs:annotation>
                 <xs:documentation>Note ale angajatorului sursa, Se completeaza doar in mesajele de tipul PropunereDetasareContract</xs:documentation>
@@ -1513,6 +1518,11 @@
                 <xs:documentation>Data propunerii de mutare</xs:documentation>
               </xs:annotation>
             </xs:element>
+            <xs:element name="NumarPropunere" type="xs:string" minOccurs="0" maxOccurs="1">
+              <xs:annotation>
+                <xs:documentation>Numarul propunerii de mutare</xs:documentation>
+              </xs:annotation>
+            </xs:element>            
             <xs:element name="NoteSursa" type="xs:string" minOccurs="0" maxOccurs="1">
               <xs:annotation>
                 <xs:documentation>Note ale angajatorului sursa, Se completeaza doar in mesajele de tipul PropunereMutareContract</xs:documentation>
