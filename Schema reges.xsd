@@ -97,6 +97,7 @@
       <xs:enumeration value="RadierePropunereDetasareContract"/>
       <xs:enumeration value="ModificarePropunereDetasareContract"/>
       <xs:enumeration value="RadierePropunereMutareContract"/>
+      <xs:enumeration value="ImportBazaRevisal"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="Header">
@@ -645,6 +646,16 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element minOccurs="0" name="Alias">
+        <xs:annotation>
+          <xs:documentation>Aliasul angajatorului</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="500"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="DetaliiAngajatorPersoanaJuridica">
@@ -1001,6 +1012,11 @@
                 <xs:documentation>Informatii referitoare la documentul justificativ ce sta la baza modificarii/suspendarii/incetarii contractului. Se transmite in toate operatiile de modificare/suspendare/incetare contract</xs:documentation>
               </xs:annotation>
             </xs:element>
+            <xs:element name ="MotivRadiere" type ="xs:string" minOccurs ="0" maxOccurs ="1" >
+              <xs:annotation>
+                <xs:documentation>Motivul radierii in cazul in care contractul sau elementul de istoric al contractului este radiat. Se transmite doar in cazul mesajelor de tipul RadiereContract si RadiereIstoricContract</xs:documentation>
+              </xs:annotation>
+            </xs:element>            
           </xs:sequence>
         </xs:sequence>
       </xs:extension>
@@ -1114,7 +1130,7 @@
           </xs:element>
           <xs:element name="MotivRadiere" type="xs:string" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation>Motivul radierii contractului</xs:documentation>
+              <xs:documentation>Motivul radierii contractului. Acest camp va fi eliminat intr-o versiune viitoare a schemei. Folositi in continuare campul MotivRadiere din Contract</xs:documentation>
             </xs:annotation>
           </xs:element>
           <xs:element minOccurs="1" name="Salariu" type="xs:int">
@@ -2504,6 +2520,18 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="ExportDate" type="reges:ExportDate"/>
+
+  <xs:complexType name="ImportBaza">
+    <xs:complexContent>
+      <xs:extension base="reges:Message">
+        <xs:sequence>
+          <xs:element name="Fisier" type="reges:Fisier" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportBaza" type="reges:ImportBaza"/>
+
   <xs:complexType name="Batch">
     <xs:sequence>
       <xs:element type="reges:Message" name="Message" maxOccurs="unbounded"/>
