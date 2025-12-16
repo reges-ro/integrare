@@ -98,6 +98,7 @@
       <xs:enumeration value="ModificarePropunereDetasareContract"/>
       <xs:enumeration value="RadierePropunereMutareContract"/>
       <xs:enumeration value="ImportBazaRevisal"/>
+      <xs:enumeration value="IncetarePropunereDetasareContract"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="Header">
@@ -1359,6 +1360,7 @@
       <xs:enumeration value="Propus"/>
       <xs:enumeration value="Acceptat"/>
       <xs:enumeration value="Respins"/>
+      <xs:enumeration value="Incetat"/>
     </xs:restriction>
   </xs:simpleType>
   
@@ -2526,6 +2528,7 @@
       <xs:extension base="reges:Message">
         <xs:sequence>
           <xs:element name="Fisier" type="reges:Fisier" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="AngajatorNou" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
