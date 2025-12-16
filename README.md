@@ -48,7 +48,7 @@ Se vor putea transmite urmatoarele informatii catre REGES-Online:
 
 Toate mesajele transmise trec prin 2 tipuri de verificari, sincrone si asincrone.
 
-1. Verificarile sincrone se refera la structura mesajului (forma) si tin de respectarea schemei XSD/JSON, orice mesaj care nu respecta schema va fi respins de sistem, nu va fi transmis mai departe pentru procesare
+1. Verificarile sincrone se refera la structura mesajului (forma) si tin de respectarea schemei XSD/JSON, orice mesaj care nu respecta schema va fi respins de sistem, nu va fi transmis mai departe pentru procesare.
 2. Verificarile asincrone se refera la continutul mesajului (fond) si tin de corelarea datelor din interiorul mesajului cu baza de date REGES, astfel incat in registru sa mentinem o baza de date consistenta. 
 
 Pentru o buna gestionare a mesajelor de raspuns recomandam dezvoltatorilor sa salveze ID-urile returnate de REGES Online atat pentru MessageResponse cat si MessageResult, sa asocieze in propriile baze de date aceste ID-uri pentru entitatile salariat si contract, astfel incat sa poata fi referite ulterior.
@@ -56,8 +56,8 @@ Pentru o buna gestionare a mesajelor de raspuns recomandam dezvoltatorilor sa sa
 ### 2.2 Obtinerea raspunsurilor
 
 Raspunsurile de la API sunt de 2 tipuri:
-1. Raspunsuri sincrone, ca urmare a unui apel de metoda API este returnat un mesaj de tip MessageResponse, care contine un ID de raspuns, denumit si recipisa, acest ID confirma inregistrarea solicitarii si depozitarea acesteia in coada de procesare
-2. Raspunsuri asincrone, ca urmare a procesarii REGES-Online a unui apel API, dupa ce s-a finalizat respectiva operatione se pune in coada API a angajatorului respectiv un mesaj de tip MessageResult, mesaj care contine un identificator al rezultatului (cod contract, cod salariat) precum si un cod de succes/fail impreuna cu o explicatie a problemei intalnite.
+1. Raspunsuri sincrone, ca urmare a unui apel de metoda API este returnat un mesaj de tip MessageResponse, care contine un ID de raspuns, denumit si recipisa, acest ID confirma inregistrarea solicitarii si depozitarea acesteia in coada de procesare. În cazul mesajelor individuale care nu respectă schema API va întoarce un răspuns cu HTTP Code 400 - Bad request și o enumrare a problemelor apărute la validarea cu schema xsd. În cazul mesajelor transmise în batch care nu respectă schema API întoarce un MessageResponse cu ResponseId=00000000-0000-0000-0000-000000000000
+2. Raspunsuri asincrone, ca urmare a procesarii REGES-Online a unui apel API, dupa ce s-a finalizat respectiva operatione se pune in coada API a angajatorului respectiv un mesaj de tip MessageResult, mesaj care contine un identificator al rezultatului (cod contract, cod salariat) precum si un cod de succes/fail impreuna cu o explicatie a problemei intalnite. În cazul în care procesarea se face în mai mulți pași și eeste de așteptat ca server-ul să mai întoarcă unul sau mai multe MessageResult asociat(e) procesării comenzii, MessageResult-ul curent va conține un flag RelatedResultsExpected=true
 
 ## 3. Structura datelor si a mesajelor
 
@@ -71,6 +71,8 @@ API accepta urmatoarele tipuri de mesaje prin interfata publica (api.inspectiamu
 
 1. Contract
 2. Salariat
+3. PropunereDetasareContract
+4. PropunereMutareContract
 
 Mesajele au asociat un tip MessageType, cele de interes pentru API fiind cele specifice contractului (AdaugareContract, RadiereContract, etc.) precum si cele specifice salariatului (InregistrareSalariat, ModificareSalariat, etc.)
 
@@ -162,7 +164,7 @@ Mesajul urmator inregistreaza un salariat nou in sistem.
     <?xml version="1.0" encoding="UTF-8"?>
     <Message xsi:type="Salariat" xmlns="http://www.inspectiamuncii.ro/reges2025"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025 file:/D:/Proiecte/Ale%20mele/Revisal/RevisalEvents/Communication/Messages/Schemas/SchemaReges.xsd">
+    xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025">
         <Header>
             <MessageId>117f9b03-9efb-4f5e-8ebb-7ab3b0c792af</MessageId>
             <ClientApplication>117f9b03-9efb-4f5e-8ebb-7ab3b0c792bf</ClientApplication>
@@ -187,6 +189,163 @@ Mesajul urmator inregistreaza un salariat nou in sistem.
             <TipActIdentitate>CarteIdentitate</TipActIdentitate>
         </Info>
     </Message>
+
+### 4.4 Detașare contract
+
+Spre deosebire de Revisal, în REGES Online transmiterea unei detașări nu se face printr-un mesaj de tip DetasareContract ci printr-o propunere de detașare marcată printr-un mesaj de tip PropunereDetasareContract. Angajatorul sursa transmite un astfel de mesaj iar angajatorul destinație poate răspunde cu un mesaj de tipul AcceptarePropunereDetasareContract sau RespingerePropunereDetasareContract. În cazul detașărilor pe codul muncii, dacă se transmite propunere de detașare pe toată norma înscrisă în contract contractul este trecut automat în starea Detasat la angajatorul sursă.
+
+#### 4.4.1 PropunereDetasareContract
+
+Mesajul următor tranmite o propunere de detașare contract
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <Message xsi:type="PropunereDetasareContract" xmlns="http://www.inspectiamuncii.ro/reges2025"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025">
+        <Header>
+            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>
+            <ClientApplication>SAP</ClientApplication>
+            <Version>5</Version>
+            <Operation>PropunereDetasareContract</Operation>
+            <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>
+            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>
+            <User>Ion</User>
+            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>
+        </Header>
+        <TemeiDetasare>Transnationala</TemeiDetasare>
+        <ReferintaContract>
+            <Id>0C2E8ADF-44DC-4A41-B1E5-3C4013F306AC</Id>
+        </ReferintaContract>
+        <CUIAngajatorDestinatie>29451076112</CUIAngajatorDestinatie>
+        <NumeAngajatorDestinatie>SAP AG</NumeAngajatorDestinatie>
+        <NationalitateAngajatorDestinatie>
+            <Nume>GERMANIA</Nume>
+        </NationalitateAngajatorDestinatie>
+        <CUIAngajatorSursa>13373052</CUIAngajatorSursa>
+        <DataPropunere>2024-12-01T00:00:00.000</DataPropunere>
+        <NumarPropunere>PD1234</NumarPropunere>
+        <DataInceput>2025-01-01T00:00:00.000</DataInceput>
+        <DataSfarsit>2025-12-31T00:00:00.000</DataSfarsit>
+        <NoteSursa>Detasat cu 2h</NoteSursa>
+        <ContinutContract>
+            <ReferintaSalariat>
+                <Id>BEEE0A8B-4DCA-41BC-906C-E79627452B1E</Id>
+            </ReferintaSalariat>
+            <Cor>
+                <Cod>251204</Cod>
+                <Versiune>10</Versiune>
+            </Cor>
+            <DataConsemnare>2024-06-18T14:19:58.917Z</DataConsemnare>
+            <DataContract>2024-06-18T14:19:58.917Z</DataContract>
+            <DataInceputContract>2024-06-18T14:19:58.917Z</DataInceputContract>
+            <ExceptieDataSfarsit>Art83LitH</ExceptieDataSfarsit>
+            <NumarContract>12345</NumarContract>
+            <Radiat>false</Radiat>
+            <Salariu>1000</Salariu>
+            <SalariuValuta>800</SalariuValuta>
+            <Moneda>EUR</Moneda>
+            <NivelStudii>MG</NivelStudii>
+            <StareCurenta>
+            </StareCurenta>
+            <TimpMunca>
+                <Norma>NormaIntreaga840</Norma>
+                <Durata>40</Durata>
+                <IntervalTimp>OrePeZi</IntervalTimp>
+                <Repartizare>OreDeZi</Repartizare>
+                <RepartizareMunca>Zilnic</RepartizareMunca>          
+                <InceputInterval>2024-01-01T10:30:00.000</InceputInterval>
+                <SfarsitInterval>2024-01-01T18:30:00.000</SfarsitInterval>
+                <NotaRepartizareMunca>Miercuri vine de la 12:00</NotaRepartizareMunca>
+                <TipTura>Alta</TipTura>
+                <ObservatiiTipTuraAlta>Program flexibil</ObservatiiTipTuraAlta>
+            </TimpMunca>
+            <TipContract>ContractMuncaTemporara</TipContract>
+            <TipDurata>Determinata</TipDurata>
+            <TipNorma>NormaOUG132</TipNorma>
+            <TipLocMunca>Mobil</TipLocMunca>
+            <JudetLocMunca>AG</JudetLocMunca>
+            <SporuriSalariu>
+                <Spor>
+                    <IsProcent>false</IsProcent>
+                    <Valoare>2000</Valoare>
+                    <ValoareValuta>400</ValoareValuta>
+                    <Moneda>EUR</Moneda>
+                    <Tip xsi:type="TipSpor">
+                        <Referinta>
+                            <Id>7178F5A4-687F-4DA7-928C-1395EC531879</Id>
+                        </Referinta>
+                        <Nume>Salariu de merit</Nume>
+                    </Tip>
+                </Spor>
+                <Spor>
+                    <IsProcent>false</IsProcent>
+                    <Valoare>1000</Valoare>
+                    <ValoareValuta>225</ValoareValuta>
+                    <Moneda>USD</Moneda>
+                    <Tip xsi:type="TipSporAngajator">
+                        <Referinta>
+                            <Id>30195246-89CE-4E33-AC15-F4E8628CAB4D</Id>
+                        </Referinta>
+                        <Nume>Salariu de merit angajator</Nume>
+                    </Tip>
+                </Spor>
+            </SporuriSalariu>
+        </ContinutContract>
+        <InfoSalariat>
+            <Localitate>
+                <CodSiruta>179141</CodSiruta>
+            </Localitate>
+            <Adresa>STR. SALARIATULUI, NR. 1</Adresa>
+            <Cnp>123987456</Cnp>
+            <Nume>SAMPATH</Nume>
+            <Prenume>SUMEDHA</Prenume>
+            <DataNastere>1990-06-15T00:00:00</DataNastere>
+            <Nationalitate>
+                <Nume>ROMÂNIA</Nume>
+            </Nationalitate>
+            <TaraDomiciliu>
+                <Nume>ROMÂNIA</Nume>
+            </TaraDomiciliu>
+            <TipActIdentitate>Pasaport</TipActIdentitate>
+            <Apatrid>CuDreptDeSedereInUe</Apatrid>
+            <DetaliiSalariatStrain>
+                <DataInceputAutorizatie>2024-01-01T00:00:00</DataInceputAutorizatie>
+                <DataSfarsitAutorizatie>2024-09-01T00:00:00</DataSfarsitAutorizatie>
+                <TipAutorizatie>Exceptie</TipAutorizatie>
+                <TipAutorizatieExceptie>Art32LiteraK</TipAutorizatieExceptie>
+                <NumarAutorizatie>1234K</NumarAutorizatie>
+            </DetaliiSalariatStrain>
+            <Mentiuni>Mentiuni salariat</Mentiuni>
+        </InfoSalariat>    
+    </Message>
+
+
+#### 4.4.2 Încetarea detașării
+
+În cazul în care dorește încetarea unei detașări angajatorul sursă poate trimite un mesaj de tipul IncetarePropunereDetasareContract
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <Message xsi:type="PropunereDetasareContract" xmlns="http://www.inspectiamuncii.ro/reges2025"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.inspectiamuncii.ro/reges2025">
+        <Header>
+            <MessageId>117f9b03-9efb-4f5e-8eab-7ab3b0c792af</MessageId>
+            <ClientApplication>SAP</ClientApplication>
+            <Version>5</Version>
+            <Operation>IncetarePropunereDetasareContract</Operation>
+            <AuthorId>caee860a-daea-480e-a945-bdd3579477ef</AuthorId>
+            <SessionId>117f9b04-9efb-4f5e-8ebb-7ab3b0c792cf</SessionId>
+            <User>Ion</User>
+            <Timestamp>2024-06-18T14:19:58.917Z</Timestamp>
+        </Header>
+        <Referinta>
+            <Id>3571AF32-5352-43E7-BBA9-1018B33C0749</Id>
+        </Referinta>        
+    </Message>
+
+Dacă contractul la angajatorul sursă este în starea Detasat, și nu mai există alte propuneri de detașare, în urma comenzii IncetarePropunereDetasareContract acesta este trecut automat în starea Activ.
+Dacă mai există alte propuneri de detașare contractul va redeveni Activ la sursă abia după încetarea tuturor propunerilor de detașare.
+
 
 ## 5 Nomenclatoare
 
