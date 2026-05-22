@@ -319,6 +319,11 @@ Mesajul următor tranmite o propunere de detașare contract
         </InfoSalariat>    
     </Message>
 
+După transmiterea unei propuneri de detașare angajatorul destinație poate obține lista acestori propuneri apelând endpoint-urile /api/Detasare/Propuneri - /PollMessage, /PollBatch, /ReadBatch, /ReadMessage, /CommitRead, /CommitReadBatch.
+Ulterior obținerii propunerilor de detașare angajagtorul destinație le poate accepta sau respinge. În urma acceptării/respingerii propunerilor se trimit automat mesaje de informare către angajatorul sursă. Acesta poate obține notificările apelând aceleași endpoint-uri /api/Detasare/Propuneri - /PollMessage, /PollBatch, /ReadBatch, /ReadMessage, /CommitRead, /CommitReadBatch.
+
+În cazul mutărilor fluxul este similar, diferind doar endpoint-urile /api/Mutare/Propuneri.
+
 
 #### 4.4.2 Încetarea detașării
 
